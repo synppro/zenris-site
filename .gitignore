@@ -2,3 +2,11 @@ node_modules/
 dist/
 .astro/
 .DS_Store
+
+# loguri de test ale mailerului
+deploy/demo-mailer/mailer.log
+deploy/demo-mailer/mailer.err
+
+# config SMTP real (conține parola) — NICIODATĂ în repo; doar smtp.example.json
+**/smtp.config.json
+**/smtp.json

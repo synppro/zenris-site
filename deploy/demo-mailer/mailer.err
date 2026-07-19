@@ -1,7 +1,0 @@
-[reject] honeypot ip=::1
-[reject] prea rapid (500ms) ip=::1
-[reject] origin https://rau.ro ip=::1
-[reject] rate ip=::1
-[reject] rate ip=::1
-[reject] rate ip=::1
-[reject] rate ip=::1
