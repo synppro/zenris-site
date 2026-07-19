@@ -1,29 +1,9 @@
 /* ZenRIS — design system site prezentare
-   Direcție: dark-first („camera de citire"), accent = albastrul produsului #2563eb,
-   imagistică medicală reală, tipografie geometrică soft (Manrope). */
+   Direcție: light implicit (alb), cu temă dark opțională („camera de citire").
+   Accent = albastrul produsului #2563eb, imagistică medicală reală, Manrope. */
 
 :root {
-  --ink: #070910;
-  --panel: #0d1119;
-  --panel-2: #10161f;
-  --line: #1c2531;
-  --blue: #2563eb;
-  --blue-dim: #1d4fc0;
-  --blue-soft: #7fa4f8;
-  --pale: #b9c8dc;
-  --mut: #8093a8;
-  --hi: #edf1f7;
-  --glow: rgba(37, 99, 235, 0.2);
-  --ok: #34d399;
-  --warn: #fbbf24;
-  --font: 'Manrope Variable', 'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif;
-  --mono: 'Cascadia Code', Consolas, ui-monospace, monospace;
-  --radius: 14px;
-  --wrap: 1180px;
-  color-scheme: dark;
-}
-
-:root[data-theme='light'] {
+  /* Tema albă — implicită */
   --ink: #f5f7fb;
   --panel: #ffffff;
   --panel-2: #eef2f8;
@@ -35,7 +15,29 @@
   --mut: #5e6e82;
   --hi: #0c1626;
   --glow: rgba(37, 99, 235, 0.12);
+  --ok: #0e9f6e;
+  --warn: #b45309;
+  --font: 'Manrope Variable', 'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif;
+  --mono: 'Cascadia Code', Consolas, ui-monospace, monospace;
+  --radius: 14px;
+  --wrap: 1180px;
   color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  /* Tema întunecată — opțională, prin toggle */
+  --ink: #070910;
+  --panel: #0d1119;
+  --panel-2: #10161f;
+  --line: #1c2531;
+  --blue-soft: #7fa4f8;
+  --pale: #b9c8dc;
+  --mut: #8093a8;
+  --hi: #edf1f7;
+  --glow: rgba(37, 99, 235, 0.2);
+  --ok: #34d399;
+  --warn: #fbbf24;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
