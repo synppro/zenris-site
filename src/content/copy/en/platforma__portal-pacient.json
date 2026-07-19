@@ -1,0 +1,46 @@
+{
+  "slug": "platforma/portal-pacient",
+  "seo_title": "Patient and referring physician portal — ZenPortal | ZenRIS",
+  "seo_description": "The patient gets a secure link: report and images in the browser, no CDs. The referring physician sees their studies. All under the clinic's brand.",
+  "hero": {
+    "eyebrow": "Platform · ZenPortal",
+    "h1": "The result reaches the patient. Not the other way around.",
+    "lead": "The report is validated, the patient gets a secure link: report and images, right in the browser, on any device. No CDs, no second trip. The referring physician sees their patients immediately. All under your clinic's brand."
+  },
+  "sections": [
+    {
+      "heading": "A link instead of a trip",
+      "body": "The patient gets the link by SMS or email. They open it on their phone and see the signed report, on the clinic's template. Below the report, the images: the ZenView viewer runs right in the browser, nothing to install.\n\nThe CD drops out of the workflow. No more burning it, no more losing it, and no one comes back for it.",
+      "bullets": [
+        "**No CDs.** Images display in the browser, at diagnostic quality.",
+        "**No installs.** Phone, tablet, laptop — any browser is enough.",
+        "**No return trips.** The result goes to the patient, not the patient to the result."
+      ],
+      "visual_note": "Phone mockup: SMS with link → signed report and images in the mobile browser"
+    },
+    {
+      "heading": "The referrer who sees, comes back",
+      "body": "The referring physician sees their own patients' studies — report and images, in the browser, right after validation. No more asking for the CD at the practice: they see exactly what your radiologist saw.\n\nThe clinic that delivers like this is the clinic they refer to next time. And their access stops at their own patients — the rest of the archive doesn't exist for them.",
+      "visual_note": "The referring physician's study list, one study open in the viewer"
+    },
+    {
+      "heading": "Links that expire. Access you can see.",
+      "body": "Every link has an expiry date, set by the clinic. Once expired, it opens nothing.\n\nEvery access lands in the audit log: who, when, which study. A GDPR request gets a report, not an investigation. Data stays encrypted in transit and at rest, on your servers or in EU hosting.",
+      "visual_note": "Link with expiry countdown + audit log excerpt (who/when/what)"
+    },
+    {
+      "heading": "A question that disappears",
+      "body": "“Is my result ready?” — the question that keeps every front desk's phone busy. ZenPortal removes it: the patient is notified automatically the moment the report is validated.\n\nNo one calls to ask, no one comes back for an envelope. The front desk is left for appointments and patients, not result status.",
+      "visual_note": "Illustrative comparison: phone ringing at the front desk vs. notification sent automatically"
+    },
+    {
+      "heading": "The portal carries your clinic's name",
+      "body": "The patient opens the link and sees your clinic: logo, colors, contact details — on the portal and on the report. ZenRIS stays in the background, where it belongs.\n\nThe experience remains the clinic's, from booking to the last result. Loyalty starts with what the patient sees on screen.",
+      "visual_note": "Portal mockup with generic clinic branding; same branding on the PDF report"
+    }
+  ],
+  "closing": {
+    "heading": "See what the patient sees",
+    "body": "Ask for a demo and we'll send you a link — exactly the one your patient would get. Open it on your phone, in the browser. The rest explains itself."
+  }
+}

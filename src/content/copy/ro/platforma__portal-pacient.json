@@ -1,0 +1,46 @@
+{
+  "slug": "platforma/portal-pacient",
+  "seo_title": "Portal pacient și medic trimițător — ZenPortal | ZenRIS",
+  "seo_description": "Pacientul primește un link securizat: raport și imagini în browser, fără CD-uri. Medicul trimițător își vede studiile. Sub brandul clinicii.",
+  "hero": {
+    "eyebrow": "Platforma · ZenPortal",
+    "h1": "Rezultatul ajunge la pacient. Nu invers.",
+    "lead": "Raportul e validat, pacientul primește un link securizat: raport și imagini, direct în browser, pe orice dispozitiv. Fără CD-uri, fără al doilea drum. Medicul trimițător își vede pacienții imediat. Totul sub brandul clinicii tale."
+  },
+  "sections": [
+    {
+      "heading": "Un link în loc de un drum",
+      "body": "Pacientul primește linkul prin SMS sau e-mail. Îl deschide pe telefon și vede raportul semnat, pe șablonul clinicii. Sub raport, imaginile: vizualizatorul ZenView rulează direct în browser, fără nicio instalare.\n\nCD-ul iese din flux. Nu se mai inscripționează, nu se mai pierde și nimeni nu se mai întoarce după el.",
+      "bullets": [
+        "**Fără CD-uri.** Imaginile se văd în browser, la calitate diagnostică.",
+        "**Fără instalări.** Telefon, tabletă, laptop — orice browser e de ajuns.",
+        "**Fără drumuri înapoi.** Rezultatul pleacă spre pacient, nu pacientul spre rezultat."
+      ],
+      "visual_note": "Mockup telefon: SMS cu link → raport semnat și imagini în browserul mobil"
+    },
+    {
+      "heading": "Medicul care vede, revine",
+      "body": "Medicul trimițător își vede studiile pacienților lui — raport și imagini, în browser, imediat după validare. Nu mai cere CD-ul la cabinet: vede exact ce a văzut radiologul tău.\n\nClinica ce livrează așa devine clinica la care trimite data viitoare. Iar accesul lui se oprește la pacienții lui — restul arhivei nu există pentru el.",
+      "visual_note": "Lista studiilor medicului trimițător, un studiu deschis în viewer"
+    },
+    {
+      "heading": "Linkuri care expiră. Accese care se văd.",
+      "body": "Fiecare link are termen de valabilitate, stabilit de clinică. După expirare, nu mai deschide nimic.\n\nFiecare accesare intră în jurnalul de audit: cine, când, ce studiu. La o solicitare GDPR, răspunsul e un raport, nu o anchetă. Datele rămân criptate în tranzit și în repaus, pe serverele tale sau în găzduire UE.",
+      "visual_note": "Link cu contor de expirare + extras din jurnalul de audit (cine/când/ce)"
+    },
+    {
+      "heading": "O întrebare care dispare",
+      "body": "„E gata rezultatul?” — întrebarea care ține ocupat telefonul oricărei recepții. ZenPortal o elimină: pacientul e anunțat automat în momentul în care raportul e validat.\n\nNimeni nu mai sună să întrebe, nimeni nu mai vine după un plic. Recepția rămâne pentru programări și pacienți, nu pentru statutul rezultatelor.",
+      "visual_note": "Comparație ilustrativă: telefon care sună la recepție vs. notificare trimisă automat"
+    },
+    {
+      "heading": "Portalul poartă numele clinicii",
+      "body": "Pacientul deschide linkul și vede clinica ta: logo, culori, date de contact — pe portal și pe raport. ZenRIS stă în spate, unde îi e locul.\n\nExperiența rămâne a clinicii, de la programare până la ultimul rezultat. Fidelizarea începe cu ce vede pacientul pe ecran.",
+      "visual_note": "Mockup portal cu branding generic de clinică; același branding pe raportul PDF"
+    }
+  ],
+  "closing": {
+    "heading": "Vezi ce vede pacientul",
+    "body": "Cere un demo și îți trimitem un link — exact ca acela pe care l-ar primi pacientul tău. Îl deschizi pe telefon, în browser. Restul se explică singur."
+  }
+}

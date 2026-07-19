@@ -1,0 +1,46 @@
+{
+  "slug": "solutii/teleradiologie",
+  "seo_title": "Teleradiologie la scară | ZenRIS RIS+PACS",
+  "seo_description": "Un tenant, oricâte clinici-client, fiecare cu PACS-ul ei. Alocare automată, termene măsurate, radiologi în browser. Onboarding posibil în aceeași zi.",
+  "hero": {
+    "eyebrow": "Soluții · Teleradiologie",
+    "h1": "Un tenant. Oricâte clinici. Zero amestec.",
+    "lead": "Citești pentru clinici care nu au voie să se vadă între ele. ZenRIS ține fiecare clinică în arhiva ei PACS, iar radiologii tăi le văd pe toate: un singur worklist, în browser, de oriunde."
+  },
+  "sections": [
+    {
+      "heading": "Fiecare clinică, arhiva ei.",
+      "body": "Multi-tenancy în ZenRIS nu e un filtru peste o bază comună. Fiecare clinică-client e o instituție separată în tenantul tău, cu arhiva ei PACS: stocare proprie, worklist propriu, pacienții ei. Un studiu al clinicii A nu poate ajunge la clinica B, pentru că arhivele lor nu se ating nicăieri.\n\nLa contract, asta se spune simplu: datele stau separat prin construcție, nu prin promisiune. Jurnalul de audit arată oricând cine le-a deschis.",
+      "visual_note": "Diagramă: un tenant cu N instituții, fiecare cu arhiva ei; pool-ul de radiologi deasupra, fără legături între instituții."
+    },
+    {
+      "heading": "Ei nu se văd. Tu îi vezi pe toți.",
+      "body": "Deasupra arhivelor izolate stă pool-ul tău. ZenTelerad adună examinările din toate clinicile într-un singur worklist, iar ZenFlow le împarte singur: subspecialitate, modalitate, urgență, încărcarea fiecărui radiolog. Nimeni nu mai distribuie cazuri pe e-mail.\n\nFiecare client are termenele lui. Le definești o dată — pe tip de examinare, pe urgență — și fiecare caz intră în worklist cu ceasul pornit. Ce se apropie de termen urcă. Ce depășește escaladează.",
+      "visual_note": "Mockup worklist unificat: badge de client pe fiecare rând, countdown de termen, urgențele sus."
+    },
+    {
+      "heading": "Client nou în aceeași zi.",
+      "body": "Un client nou nu e un proiect de integrare. Creezi instituția în tenant, configurezi conexiunea DICOM criptată dinspre aparatele clinicii, definești termene și tarife. Fără instalări pe stațiile clinicii, fără chei hardware. Prima examinare poate intra în worklist în aceeași zi.\n\nPersonalul clinicii primește conturi cu vedere strict pe arhiva lor: trimit, urmăresc statusul, descarcă raportul semnat.",
+      "visual_note": "Cronologie ilustrativă a unei zile de onboarding: dimineața — instituția creată; prânz — conexiunea DICOM activă; după-amiaza — prima examinare în worklist."
+    },
+    {
+      "heading": "Radiologul are nevoie de un browser. Atât.",
+      "body": "Vizualizatorul diagnostic ZenView rulează în browser, cu tot ce ține de citire. Raportul se scrie în ZenReport, iar cu ZenVoice se dictează în română, pe șablonul agreat cu clientul.\n\nAcasă la radiolog nu se instalează nimic: un cont, 2FA, un URL. Cine vrea viewer desktop are opțiuni — ZenView Desktop sau integrarea cu RadiAnt. Opțiuni, nu condiții.",
+      "visual_note": "Fotografie/mockup: radiolog acasă, laptop, ZenView deschis în browser."
+    },
+    {
+      "heading": "Cifre pe radiolog, factură pe client.",
+      "body": "Rapoartele de productivitate răspund exact la ce te întreabă clienții și contabilitatea: câte examinări a citit fiecare radiolog, în cât timp, cu ce rată de încadrare în termen — pe client, pe modalitate, pe perioadă. Plătești colaboratorii pe cifre, nu pe estimări. Gărzile și acoperirea de noapte se planifică în ZenShift, nu în tabele partajate.\n\nZenBill ține evidența per client: volume, tipuri de examinări, tarifele din contractul fiecăruia. Facturi separate, evidență separată. Iar dacă un client decontează prin CNAS, raportarea instituției lui merge complet automat prin ZenAgent — fără aplicația SIUI pe vreun desktop, fără exporturi manuale.",
+      "visual_note": "Două mockup-uri alăturate: tabel de productivitate pe radiologi și listă de facturi pe clienți."
+    },
+    {
+      "heading": "Datele stau unde spui tu.",
+      "body": "Serverele tale sau găzduire în UE/România — platforma e aceeași, cu aceleași funcții. Criptare în tranzit și în repaus, jurnal de audit complet, 2FA și SSO (AD/LDAP/SAML), backup și plan de recuperare. Dispozitiv medical Clasa I, înregistrat la ANMDMR. Conform GDPR.",
+      "visual_note": "Rând de pictograme sobre: criptare, audit, 2FA/SSO, backup, ANMDMR, GDPR."
+    }
+  ],
+  "closing": {
+    "heading": "Două clinici, un pool, zero amestec. În demo.",
+    "body": "Cere un demo și îl vezi în browserul tău, pe date fictive: două clinici-client izolate, un worklist comun, alocare automată, un raport dictat în română. Iar când semnezi primul client real, onboarding-ul poate fi o zi de lucru, nu un trimestru."
+  }
+}

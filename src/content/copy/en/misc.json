@@ -1,0 +1,33 @@
+{
+  "demo": {
+    "title": "Book a demo — ZenRIS",
+    "description": "See ZenRIS live, in your browser: 30 minutes, on your clinic's workflow. Bring your own anonymized DICOM files.",
+    "eyebrow": "Demo",
+    "h1": "See ZenRIS on your own studies.",
+    "lead": "30 minutes, over video, in your browser. We show you the full workflow — from scheduling to signed report and CNAS (Romania's national health insurance house) reimbursement — on your clinic's scenarios.",
+    "points_html": [
+      "<strong>Bring your studies.</strong> Your own anonymized DICOM files — we follow them through the platform together.",
+      "<strong>Bring your IT team.</strong> We answer architecture and security questions on the spot.",
+      "<strong>No installs.</strong> You get a link. That's it."
+    ],
+    "mono": "The demo runs in your browser. Obviously.",
+    "f_name": "Full name",
+    "f_email": "Email",
+    "f_phone": "Phone",
+    "f_inst": "Institution",
+    "f_msg": "What do you want to see in the demo?",
+    "f_msg_placeholder": "e.g. teleradiology with pools, CNAS reimbursement, patient portal",
+    "f_submit": "Send request",
+    "f_note": "We reply the same business day. Form data is used only to schedule your demo."
+  },
+  "noutati": {
+    "title": "What's new — ZenRIS",
+    "description": "What's new in the ZenRIS platform: releases, features, improvements. A public log of the development.",
+    "eyebrow": "What's new",
+    "h1": "A living product leaves a trail.",
+    "lead": "This is where we publish what changes in ZenRIS — releases, new features, improvements. No press releases. Just the development log.",
+    "entry_date": "2026",
+    "entry_title": "zenris.ro relaunches",
+    "entry_body": "The site you are reading right now: one promise — all of radiology, in a single browser — and a demo that proves it. From here on, every notable ZenRIS release lands on this page."
+  }
+}

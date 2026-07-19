@@ -1,0 +1,353 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/home.css';
+import brain0 from '../assets/ct/brain_0.png';
+import brain1 from '../assets/ct/brain_1.png';
+import brain2 from '../assets/ct/brain_2.png';
+import os1 from '../assets/ct/os_1.png';
+
+const steps = [
+  {
+    time: '08:52', title: 'Programarea', mod: 'ZenPlan',
+    body: 'Recepția vede în timp real toate locațiile, echipamentele și medicii. Pacientul primește confirmarea și instrucțiunile de pregătire pe SMS — iar dacă se eliberează un loc mai devreme, lista de așteptare îl propune singură.',
+  },
+  {
+    time: '09:41', title: 'Achiziția', mod: 'Integrarea cu echipamentele',
+    body: 'La ora programării, datele pacientului sunt deja pe consola echipamentului, prin worklist DICOM. Nimeni nu retastează nimic: zero erori de identitate, zero studii rătăcite.',
+  },
+  {
+    time: '09:44', title: 'Sosirea și prioritizarea', mod: 'ZenPACS + ZenFlow',
+    body: 'Imaginile intră în arhiva instituției în câteva secunde. Rutarea își face treaba singură: studiile anterioare se atașează pentru comparație, iar AI-ul urcă urgențele în capul listei — înainte să apuce cineva să întrebe.',
+  },
+  {
+    time: '09:52', title: 'Interpretarea', mod: 'ZenView',
+    body: 'Radiologul deschide studiul într-un tab: MPR, 3D, comparație cu examinările vechi, protocoale de afișare care aranjează seriile exact cum îi place. În browser — la spital, sau de acasă, din gardă.',
+  },
+  {
+    time: '10:05', title: 'Raportarea', mod: 'ZenReport + ZenVoice',
+    body: 'Vorbește. Raportul se scrie singur, în română, pe șablonul secției. AI-ul structurează textul și propune concluzia; semnarea e un click, iar fiecare versiune rămâne în istoric.',
+  },
+  {
+    time: '10:13', title: 'Distribuția și decontul', mod: 'ZenPortal + ZenBill · ZenAgent',
+    body: 'Pacientul și medicul trimițător primesc linkul securizat cu imaginile și raportul — fără CD-uri, fără drumuri înapoi la clinică. În fundal, serviciile sunt deja tarifate, iar raportarea CNAS pleacă automat: fără SIUI desktop, fără exporturi.',
+  },
+];
+
+const modules = [
+  { name: 'ZenView', href: '/platforma/pacs-viewer/', text: 'Vizualizator diagnostic în browser: MPR, 3D, comparații, mamografie. Pentru puriști, există și ZenView Desktop — opțiune, nu obligație.' },
+  { name: 'ZenPACS', href: '/platforma/pacs-viewer/', text: 'Arhiva DICOM a fiecărei instituții: orice echipament se conectează direct, studiile anterioare se atașează singure.' },
+  { name: 'ZenReport', href: '/platforma/ris-raportare/', text: 'Rapoarte structurate pe șabloanele secției, semnare electronică, istoric complet de versiuni.' },
+  { name: 'ZenTelerad', href: '/platforma/teleradiologie/', text: 'Teleradiologie cu pool-uri, alocare automată și termene vizibile — radiologia ta, extinsă la scară.' },
+  { name: 'ZenVoice', href: null, text: 'Dictare vocală în română: vorbești, raportul se scrie.' },
+  { name: 'ZenFlow', href: null, text: 'Automatizări și triage AI: rutare pe reguli, escaladări, notificări. Urgențele nu așteaptă.' },
+  { name: 'ZenPlan', href: null, text: 'Programări multi-locație: calendar pe echipamente și medici, SMS-uri, listă de așteptare.' },
+  { name: 'ZenShift', href: null, text: 'Programatorul de gărzi — cine e de gardă știe și rutarea studiilor, automat.' },
+  { name: 'ZenPortal', href: '/platforma/portal-pacient/', text: 'Rezultatele ajung la pacient și la trimițător printr-un link sigur. CD-uri: zero.' },
+  { name: 'ZenBill · ZenAgent', href: null, text: 'Facturare și decontare CNAS complet automată — fără SIUI desktop, fără exporturi.' },
+];
+---
+<Base
+  title="ZenRIS — Toată radiologia. Într-un singur browser."
+  description="Platformă completă RIS + PACS: programare, viewer diagnostic, dictare vocală în română, teleradiologie, portal pacient, facturare și decont CNAS automat. On-premise sau cloud, fără instalări pe stații."
+  lang="ro"
+  altHref="/en/"
+>
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">RIS · PACS · AI — on-premise sau cloud</p>
+      <h1>Toată radiologia.<br />Într-un singur browser.</h1>
+      <p class="lead">
+        De la programare până la <strong>decontarea CNAS</strong>: worklist, viewer diagnostic,
+        dictare vocală cu AI, teleradiologie, portal pacient și facturare — o singură platformă,
+        <strong>fără nicio instalare</strong> pe stații.
+      </p>
+      <div class="ctas">
+        <a class="btn btn-solid" href="/demo/">Programează un demo</a>
+        <a class="btn btn-ghost" href="#studiu">Vezi cum funcționează →</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><b>0</b> instalări pe stație</span>
+        <span class="chip">Decont CNAS <b>automat</b> — fără SIUI desktop</span>
+        <span class="chip">AI: dictare · triage · asistare raport</span>
+        <span class="chip">PACS <b>izolat</b> per instituție</span>
+      </div>
+    </div>
+    <div class="stage-glow">
+      <figure class="viewer">
+        <figcaption class="vbar">
+          <span class="t">Zen<i>View</i> — CT cerebral nativ</span>
+          <span>3 serii · 435 imagini</span>
+        </figcaption>
+        <div class="vbody">
+          <div class="vport">
+            <img class="poster" src={brain0.src} width="512" height="512" alt="" aria-hidden="true" loading="eager" />
+            <img class="f1" src={brain0.src} width="512" height="512" alt="Felie CT cerebral, fereastră de creier" loading="eager" />
+            <img class="f2" src={brain1.src} width="512" height="512" alt="" loading="eager" />
+            <img class="f3" src={brain2.src} width="512" height="512" alt="" loading="eager" />
+            <span class="ov tl">IONESCU&nbsp;M. · 58A · date fictive</span>
+            <span class="ov br">W 80 · L 40 · IM 82/144</span>
+            <div class="scrub"><i></i></div>
+          </div>
+          <div class="rail">
+            <img class="on" src={brain1.src} width="70" height="70" alt="" loading="eager" />
+            <img src={os1.src} width="70" height="70" alt="" loading="eager" />
+            <img src={brain2.src} width="70" height="70" alt="" loading="eager" />
+            <span class="more">+12 serii</span>
+          </div>
+        </div>
+      </figure>
+      <p class="credit">Studiu CT real (anonimizat), randat direct din arhiva ZenPACS — exact așa arată în browser.</p>
+    </div>
+  </section>
+
+  <section class="manifest">
+    <div class="wrap">
+      <p class="pre">Un RIS clasic vine cu instalări pe fiecare stație, chei hardware, licențe numărate
+        și cinci furnizori care nu-și vorbesc.</p>
+      <p class="pull-quote">ZenRIS vine cu <b>un URL</b>.</p>
+    </div>
+  </section>
+
+  <section class="section" id="studiu">
+    <div class="wrap">
+      <p class="eyebrow">Viața unui studiu</p>
+      <h2>Telefonul sună la 08:52.<br />La 10:13, raportul e semnat și decontul e pregătit.</h2>
+      <p class="lead">Urmărește un CT cerebral prin ZenRIS — de la programare până la plată.
+        Fiecare pas, un modul. Toate, un singur sistem.</p>
+    </div>
+    <div class="wrap story">
+      <div class="steps">
+        {steps.map((s, i) => (
+          <article class="step" data-step={i}>
+            <p class="stamp"><span class="time">{s.time}</span><span class="mod">{s.mod}</span></p>
+            <h3>{s.title}</h3>
+            <p>{s.body}</p>
+          </article>
+        ))}
+        <aside class="story-end">
+          <p class="pull-quote">Șase pași. 81 de minute.<br /><b>Un singur sistem.</b></p>
+          <p class="after">Și niciun program de instalat pe vreo stație. <span class="mono-trace">cronologie ilustrativă</span></p>
+        </aside>
+      </div>
+
+      <div class="stage" aria-hidden="true">
+        <div class="screen" data-visual="0">
+          <p class="s-head">ZenPlan · programări</p>
+          <div class="cal">
+            {['09:00','09:20','09:40','10:00','10:20','10:40'].map((hh, i) => (
+              <div class={'slot' + (i === 2 ? ' fill' : '') + (i < 2 ? ' busy' : '')}>{hh}{i === 2 && <b> CT cerebral — confirmat prin SMS</b>}</div>
+            ))}
+          </div>
+        </div>
+        <div class="screen" data-visual="1">
+          <p class="s-head">Consola echipamentului · worklist DICOM</p>
+          <div class="rows">
+            <div class="row dim">MODALITATE: CT · LISTĂ DE LUCRU</div>
+            <div class="row appear"><b>IONESCU M.</b> · CT cerebral nativ · 09:40</div>
+            <div class="row dim">— datele au venit singure din ZenRIS —</div>
+          </div>
+        </div>
+        <div class="screen" data-visual="2">
+          <p class="s-head">Worklist · ZenFlow</p>
+          <div class="rows">
+            <div class="row stat rise"><b>CT cerebral · IONESCU M.</b><span class="badge b-warn">URGENT ↑</span></div>
+            <div class="row">IRM lombar · POP S.<span class="badge">rutină</span></div>
+            <div class="row">RX torace · DINU V.<span class="badge">rutină</span></div>
+            <div class="row dim">+ studiile anterioare, atașate automat</div>
+          </div>
+        </div>
+        <div class="screen shot" data-visual="3">
+          <img src={brain1.src} width="512" height="512" alt="" loading="lazy" />
+          <span class="ov tl">ZenView · MPR · comparație 2024</span>
+          <span class="ov br">W 80 · L 40</span>
+        </div>
+        <div class="screen" data-visual="4">
+          <p class="s-head">ZenReport · ZenVoice</p>
+          <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <p class="typed">Examen CT cerebral nativ. Fără leziuni focale evidențiabile…<span class="caret"></span></p>
+          <div class="row sign"><b>Semnează raportul</b><span class="badge b-ok">v2 · istoric complet</span></div>
+        </div>
+        <div class="screen" data-visual="5">
+          <p class="s-head">ZenPortal · ZenBill</p>
+          <div class="phone">
+            <p><b>Rezultatul dumneavoastră e gata.</b></p>
+            <p class="dim">Raport + imagini · link securizat</p>
+          </div>
+          <div class="row"><span>Decont CNAS</span><span class="badge b-ok">trimis automat ✓</span></div>
+          <div class="row dim">fără SIUI desktop · fără exporturi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="izolare">
+    <div class="wrap">
+      <p class="eyebrow">Multi-instituție · izolare</p>
+      <h2>O platformă. Oricâte instituții.<br />Zero amestec de date.</h2>
+      <p class="lead">ZenRIS e construit pentru lanțuri de clinici, spitale și rețele de teleradiologie.
+        Fiecare instituție trăiește în propria arhivă PACS, cu utilizatorii, șabloanele și facturarea ei —
+        nu «separată logic» printr-un filtru într-o bază comună, ci separată la nivel de arhitectură.</p>
+
+      <div class="iso card">
+        <svg viewBox="0 0 960 400" id="iso-svg" role="img" data-pool-label="pool de radiologi" data-pool-active="3 studii alocate ✓" aria-label="Diagramă: trei instituții izolate, fiecare cu arhiva ei, conectate la platformă și la pool-ul de radiologi">
+          <g class="links">
+            <path class="lnk l-a" d="M262 90 C 340 90, 340 160, 402 175" />
+            <path class="lnk l-b" d="M262 200 C 330 200, 340 200, 402 200" />
+            <path class="lnk l-c" d="M262 310 C 340 310, 340 240, 402 225" />
+            <path class="lnk l-p" d="M622 200 C 690 200, 690 200, 738 200" />
+            <g class="nolink">
+              <path d="M150 122 L 150 158" /><path d="M150 232 L 150 268" />
+              <text x="168" y="145">✕</text><text x="168" y="255">✕</text>
+            </g>
+          </g>
+          <g class="inst i-a" data-inst="a" tabindex="0" role="button" aria-label="Clinica A">
+            <rect x="42" y="52" width="220" height="76" rx="14" />
+            <circle cx="80" cy="90" r="15" class="db" />
+            <text x="106" y="84" class="t1">Clinica A</text>
+            <text x="106" y="106" class="t2">arhivă PACS proprie</text>
+          </g>
+          <g class="inst i-b" data-inst="b" tabindex="0" role="button" aria-label="Spitalul B">
+            <rect x="42" y="162" width="220" height="76" rx="14" />
+            <circle cx="80" cy="200" r="15" class="db" />
+            <text x="106" y="194" class="t1">Spitalul B</text>
+            <text x="106" y="216" class="t2">arhivă PACS proprie</text>
+          </g>
+          <g class="inst i-c" data-inst="c" tabindex="0" role="button" aria-label="Centrul C">
+            <rect x="42" y="272" width="220" height="76" rx="14" />
+            <circle cx="80" cy="310" r="15" class="db" />
+            <text x="106" y="304" class="t1">Centrul C</text>
+            <text x="106" y="326" class="t2">arhivă PACS proprie</text>
+          </g>
+          <g class="hub">
+            <rect x="402" y="130" width="220" height="140" rx="16" />
+            <text x="512" y="188" class="t1" text-anchor="middle">ZenRIS</text>
+            <text x="512" y="212" class="t2" text-anchor="middle">o platformă, un tenant</text>
+          </g>
+          <g class="pool">
+            <rect x="738" y="140" width="182" height="120" rx="14" />
+            <circle cx="778" cy="184" r="13" class="av" /><circle cx="806" cy="184" r="13" class="av" /><circle cx="834" cy="184" r="13" class="av" />
+            <text x="829" y="230" class="t2" text-anchor="middle" id="pool-label">pool de radiologi</text>
+          </g>
+        </svg>
+        <div class="iso-ui">
+          <div class="iso-btns" role="group" aria-label="Explorează izolarea">
+            <button type="button" class="btn btn-ghost btn-xs" data-sel="a" data-note="Clinica A vede doar arhiva ei. Traseul aprins e singurul care există.">Clinica A</button>
+            <button type="button" class="btn btn-ghost btn-xs" data-sel="b" data-note="Spitalul B — aceeași regulă: arhiva lui, utilizatorii lui, facturarea lui.">Spitalul B</button>
+            <button type="button" class="btn btn-ghost btn-xs" data-sel="c" data-note="Centrul C e izolat de celelalte două. Nu „ascuns” — izolat.">Centrul C</button>
+            <button type="button" class="btn btn-ghost btn-xs" data-sel="radiolog" data-note="Radiologul din pool primește studii alocate din toate trei — dar clinicile nu se văd între ele.">Perspectiva radiologului</button>
+          </div>
+          <p class="iso-note" id="iso-note">Apasă pe o instituție: doar traseul ei se aprinde. Între instituții nu există nicio cale — ✕ nu e un ornament.</p>
+        </div>
+      </div>
+
+      <p class="pull-quote iso-quote">„Izolarea nu e o setare.<br /><b>E arhitectura.</b>”</p>
+
+      <ul class="check-list iso-points">
+        <li><strong>PACS propriu, per instituție.</strong> Datele unei clinici nu au cum să ajungă în alta — sunt arhive diferite, nu rânduri filtrate.</li>
+        <li><strong>Pool-uri peste granițe.</strong> Radiologul vede exact studiile alocate lui, din oricâte clinici. Clinicile nu se văd între ele. Niciodată.</li>
+        <li><strong>O instituție nouă, în aceeași zi.</strong> Arhivă proprie, utilizatori, antet de raport, tarife — fără să atingi restul platformei.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="deployment">
+    <div class="wrap">
+      <p class="eyebrow">On-premise · cloud</p>
+      <h2>Serverele tale sau ale noastre.<br />Produsul e același.</h2>
+      <p class="lead">Nu există «versiunea cloud» și «versiunea locală» — există un singur ZenRIS.
+        Alegerea e despre unde stau datele și cine administrează fierul, nu despre ce poate platforma.</p>
+
+      <div class="deploy card" data-deploy="onprem">
+        <div class="seg" role="tablist" aria-label="Mod de instalare">
+          <button type="button" role="tab" aria-selected="true" data-d="onprem">On-premise</button>
+          <button type="button" role="tab" aria-selected="false" data-d="cloud">Cloud</button>
+        </div>
+        <div class="d-pane" data-pane="onprem">
+          <p class="d-where mono-trace">perimetrul instituției tale</p>
+          <p>Datele nu părăsesc instituția. Echipamentele se conectează direct în rețeaua locală,
+             controlul e total, iar accesul rămâne tot prin browser — inclusiv de acasă, prin canal securizat.
+             Pentru spitale și grupuri cu politici stricte de date.</p>
+        </div>
+        <div class="d-pane" data-pane="cloud" hidden>
+          <p class="d-where mono-trace">cloud · Uniunea Europeană</p>
+          <p>Zero hardware, zero mentenanță, găzduire în Uniunea Europeană. O instituție nouă pornește
+             în aceeași zi, iar scalarea e o decizie, nu un proiect de infrastructură.</p>
+        </div>
+        <table class="diff">
+          <thead><tr><th></th><th>On-premise</th><th>Cloud</th></tr></thead>
+          <tbody>
+            <tr><td>Unde stau datele</td><td>În instituția ta</td><td>În UE, în centre certificate</td></tr>
+            <tr><td>Cine administrează</td><td>Echipa ta IT, cu suportul nostru</td><td>Noi, cu SLA</td></tr>
+            <tr><td>Cum pornești</td><td>Instalare pe infrastructura existentă</td><td>Cont nou, în aceeași zi</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="close-line">Aceeași versiune. Aceleași funcții. Același browser.
+        Iar dacă te răzgândești pe drum, migrarea e un plan — nu o rescriere.
+        <a href="/arhitectura/">Vezi arhitectura în detaliu →</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="securitate">
+    <div class="wrap">
+      <p class="eyebrow">Securitate · conformitate</p>
+      <h2>Fiecare vizualizare, jurnalizată.<br />Fiecare acces, pe nume.</h2>
+      <p class="lead">În imagistica medicală, securitatea nu e un paragraf de marketing — e o listă de control.
+        A noastră e scurtă, concretă și verificabilă la demo.</p>
+
+      <div class="sec-grid">
+        <ul class="check-list">
+          <li><strong>Jurnal de audit complet</strong> — cine a văzut ce imagine și ce raport, când și de unde; exportabil pentru DPO și controale.</li>
+          <li><strong>Roluri granulare + autentificare în doi pași</strong> pentru toate conturile.</li>
+          <li><strong>SSO instituțional</strong> — Active Directory / LDAP / SAML/OIDC.</li>
+          <li><strong>Criptare în tranzit și în repaus</strong>, pe toate componentele.</li>
+          <li><strong>Backup automat și plan de recuperare</strong> testat, nu doar declarat.</li>
+          <li><strong>Izolare per instituție</strong> — arhitectura descrisă mai sus, nu o opțiune bifată.</li>
+          <li><strong>GDPR</strong> — temei legal, drepturile pacientului, jurnalul de acces la datele lui.</li>
+          <li><strong>Găzduire în UE/România</strong> pentru varianta cloud.</li>
+          <li><strong>Dispozitiv medical Clasa I</strong>, înregistrat la ANMDMR.</li>
+        </ul>
+        <figure class="audit card">
+          <figcaption class="mono-trace">extras din jurnalul de audit · date fictive</figcaption>
+          <pre>10:13  dr. Ionescu M.   a deschis    CT cerebral #2026-0412
+10:14  dr. Ionescu M.   a semnat     raport v2
+10:19  portal pacient   a descărcat  raport semnat
+       <span class="dim">(link expirat ulterior)</span></pre>
+        </figure>
+      </div>
+
+      <p class="close-line">Cere-ne la demo lista completă de controale.
+        Sau, și mai bine — adu-ți echipa de IT să ne-o ceară ea.</p>
+    </div>
+  </section>
+
+  <section class="section" id="module">
+    <div class="wrap">
+      <p class="eyebrow">Modulele platformei</p>
+      <h2>Zece module. Un singur sistem.<br />Zero integrări de făcut.</h2>
+      <div class="grid grid-3 mods">
+        {modules.map((m) => (
+          m.href
+            ? <a class="card mod" href={m.href}><h3>{m.name.split('Zen').map((part, i) => i === 0 ? part : <>Zen<span>{part}</span></>)}</h3><p>{m.text}</p><span class="go">Detalii →</span></a>
+            : <article class="card mod"><h3>{m.name.split('Zen').map((part, i) => i === 0 ? part : <>Zen<span>{part}</span></>)}</h3><p>{m.text}</p></article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section final">
+    <div class="wrap">
+      <h2>Vezi ZenRIS pe studiile tale.</h2>
+      <p class="lead">Programează un demo de 30 de minute — sau adu-ți propriile fișiere DICOM anonimizate
+        și urmărește-le cum traversează platforma: de la sosire, la raport, la portal.</p>
+      <div class="ctas">
+        <a class="btn btn-solid" href="/demo/">Programează un demo</a>
+        <a class="btn btn-ghost" href="/platforma/">Explorează platforma →</a>
+      </div>
+      <p class="mono-trace">Demo-ul rulează în browserul tău. Evident.</p>
+    </div>
+  </section>
+</Base>
+
+<script src="../scripts/home.js"></script>

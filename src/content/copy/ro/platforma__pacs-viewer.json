@@ -1,0 +1,62 @@
+{
+  "slug": "platforma/pacs-viewer",
+  "seo_title": "ZenView + ZenPACS — viewer DICOM în browser | ZenRIS",
+  "seo_description": "Viewer diagnostic în browser: MPR, redare volumetrică, fuziune PET-CT, mamografie. ZenPACS conectează orice echipament DICOM. Zero instalări pe stații.",
+  "hero": {
+    "eyebrow": "ZenView + ZenPACS",
+    "h1": "Viewerul diagnostic e un tab în browser.",
+    "lead": "MPR, redare volumetrică, fuziune PET-CT, mamografie — pe orice stație, fără nicio instalare. Deschizi studiul din worklist și prima imagine e deja pe ecran. Dedesubt, ZenPACS: arhiva la care se conectează direct orice echipament DICOM."
+  },
+  "sections": [
+    {
+      "heading": "Nu previzualizare. Diagnostic.",
+      "body": "ZenView e vizualizatorul diagnostic al platformei — dispozitiv medical Clasa I, înregistrat la ANMDMR. Tot ce faci azi pe o stație dedicată faci în browser: măsurători și adnotări care se salvează cu studiul, mod cine pentru seriile dinamice, multi-monitor nativ — worklist-ul pe un ecran, imaginile pe celelalte.\n\nInstrumentele grele nu cer hardware greu. Reconstrucțiile se calculează pe server; stația ta doar afișează.",
+      "bullets": [
+        "**MPR 2D/3D.** Reconstrucții multiplanare în orice plan, direct din serie, fără pași intermediari.",
+        "**Redare volumetrică și MIP.** Volumul se rotește fluid în browser; angiografiile se citesc în proiecție de intensitate maximă.",
+        "**Fuziune PET-CT.** Suprapunere cu opacitate și praguri ajustabile, în același tab, fără export.",
+        "**Comparare cu serii sincronizate.** Studiul curent și priorul derulează împreună, secțiune cu secțiune.",
+        "**Protocoale de afișare.** Layout-ul se aranjează singur: pe modalitate, pe secție, pe preferințele fiecărui radiolog.",
+        "**Mamografie.** Afișare dedicată, comparare stânga–dreapta, lupă și inversare — fluxul de screening, respectat."
+      ],
+      "visual_note": "Grilă de capturi reale din ZenView: MPR pe trei planuri, redare volumetrică, fuziune PET-CT, layout de mamografie."
+    },
+    {
+      "heading": "Prima imagine, înainte să te așezi.",
+      "body": "ZenView nu descarcă studiul — îl streamează. Imaginea apare întâi la rezoluție de lucru, apoi se rafinează la calitate diagnostică, iar seriile se încarcă pe măsură ce derulezi. Un CT cu mii de secțiuni se deschide la fel de repede ca o radiografie.\n\nZero footprint înseamnă exact asta: nicio instalare, niciun plugin, nicio cheie hardware. O stație nouă e gata de citit în timpul în care se deschide un browser.",
+      "visual_note": "Animație scurtă: click pe studiu în worklist → prima imagine apare instant, apoi se rafinează progresiv."
+    },
+    {
+      "heading": "ZenPACS. Arhiva care nu pune condiții.",
+      "body": "CT, RM, mamograf, ecograf, CR/DR — dacă vorbește DICOM, se conectează direct la ZenPACS. Fără gateway-uri intermediare, fără negocieri cu furnizorul echipamentului.\n\nIar dacă tenant-ul tău are mai multe instituții, fiecare are arhiva ei PACS proprie. Nu un filtru peste o arhivă comună — o arhivă separată. Izolarea nu se configurează; e felul în care e construită platforma.",
+      "bullets": [
+        "**Conectare directă.** Orice echipament DICOM trimite direct în arhivă, din prima zi.",
+        "**Prefetch priori.** Când pacientul apare în programări, studiile anterioare sunt deja aduse local. Le deschizi, nu le aștepți.",
+        "**Rutare.** Reguli pe modalitate, sursă și destinație: studiile ajung singure la teleradiologie, la backup, la instituția corectă."
+      ],
+      "visual_note": "Diagramă: echipamente (CT, RM, MG, US, CR/DR) → ZenPACS → arhive separate per instituție, cu ramuri de rutare către teleradiologie și backup."
+    },
+    {
+      "heading": "Desktop, pentru puriști.",
+      "body": "Preferi o aplicație nativă? ZenView Desktop există exact pentru asta — aceleași studii, aceeași arhivă, instalat local. E o opțiune, nu o condiție: platforma nu depinde niciodată de el.\n\nIar dacă ai ani de reflexe în RadiAnt, OsiriX sau Horos, le păstrezi. Un click în worklist și studiul se deschide în viewerul tău, cu priorii aduși deja de ZenPACS. Raportul îl scrii tot în ZenRIS.",
+      "visual_note": "Captură din worklist cu meniul de deschidere a studiului: ZenView, ZenView Desktop, RadiAnt, OsiriX, Horos."
+    },
+    {
+      "heading": "Partea pe care o citește IT-ul.",
+      "body": "Rulează pe serverele spitalului sau în cloud, în centre de date din UE — aceleași funcții, aceeași versiune, indiferent de variantă. Fără agenți pe stații, fără licențe de instalat, fără parc de aplicații de întreținut.",
+      "bullets": [
+        "**SSO și 2FA.** Autentificare prin AD, LDAP sau SAML, cu al doilea factor acolo unde politica o cere.",
+        "**Criptare.** În tranzit și în repaus, pentru imagini și date deopotrivă.",
+        "**Jurnal de audit complet.** Cine a deschis ce studiu, când și de unde — totul rămâne scris.",
+        "**Backup și DR.** Proceduri de restaurare definite și testabile, nu doar copii.",
+        "**GDPR.** Găzduire în UE/România, date sub jurisdicție europeană.",
+        "**DICOM standard.** Arhiva rămâne a voastră, în format standard. Plecarea e la fel de simplă ca venirea."
+      ],
+      "visual_note": "Listă tehnică sobră, pictograme mici monocrome; fără ilustrații decorative."
+    }
+  ],
+  "closing": {
+    "heading": "Lista completă e în PDF. Viewerul, în browser.",
+    "body": "Fișa tehnică ZenView + ZenPACS — cu lista completă de funcții, formate suportate și cerințe — se descarcă mai jos. Dar drumul cel mai scurt rămâne celălalt: deschide demo-ul și citește un studiu. Nu ai nimic de instalat, deci nu ai nimic de pregătit."
+  }
+}

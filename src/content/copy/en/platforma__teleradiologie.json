@@ -1,0 +1,47 @@
+{
+  "slug": "platforma/teleradiologie",
+  "seo_title": "ZenTelerad — teleradiology in the browser | ZenRIS",
+  "seo_description": "Work pools, rule-based auto-assignment, visible deadlines, escalation. Every clinic in its own archive. The radiologist reads from anywhere, in a browser.",
+  "hero": {
+    "eyebrow": "ZenTelerad · Teleradiology",
+    "h1": "The study finds its own radiologist.",
+    "lead": "ZenTelerad takes in studies from any number of clinics, sorts them into work pools, and assigns them by rule: modality, subspecialty, workload, on-call schedule. The radiologist opens a browser and reads. The rest is routing."
+  },
+  "sections": [
+    {
+      "heading": "Assignment is a rule, not a phone call.",
+      "body": "In a classic network, dispatching is a person: someone calls around, asks who's free, e-mails links. ZenTelerad replaces the phone with work pools. Studies come in, rules decide, radiologists receive.\n\nA rule is written once and runs on every study. The emergency head CT goes to the on-call neuroradiologist. The mammogram goes to whoever holds the competence. The next study goes to whoever has the shortest queue.",
+      "bullets": [
+        "**Modality.** CT, MRI, X-ray, mammography, ultrasound — each study type has its own route.",
+        "**Subspecialty.** The case reaches the radiologist with the right competence, not the first one available.",
+        "**Workload.** Assignment counts how many studies each reader has in progress. The queue balances itself.",
+        "**Priority.** Urgent cases jump the line. ZenFlow moves them to the top of the worklist automatically.",
+        "**Second opinion.** Any case can go to a second radiologist — images, report, and history in one place."
+      ]
+    },
+    {
+      "heading": "The deadline is visible. Escalation starts on its own.",
+      "body": "Every study enters the platform with its reporting deadline. The time remaining is visible in the worklist — to the radiologist, to the coordinator, to the sending clinic. There is no “I thought someone else had it”.\n\nWhen the deadline nears and the report isn't signed, ZenTelerad escalates: it notifies the radiologist, then the coordinator, then reassigns the study or opens the pool to more readers. You define the escalation rules. No study expires in silence."
+    },
+    {
+      "heading": "N clinics. N archives. No mixing.",
+      "body": "A teleradiology network takes studies from many institutions. In ZenRIS, every sending clinic has its own PACS archive, inside the same tenant. Isolation is architectural, not a checkbox in a permissions form.\n\nThe radiologist sees exactly the studies assigned to them — not the clinic's archive, not someone else's patients. The clinic sees only its own studies and reports. And every read stays accounted to the source institution: ZenBill invoices on real volume, not on a spreadsheet kept on the side."
+    },
+    {
+      "heading": "Whoever is on call receives. Automatically.",
+      "body": "On-call scheduling lives in ZenShift. Routing reads it from there. When a radiologist comes on call, studies from their pool start arriving; at handover, the flow moves to the next reader, with no intervention at all.\n\nThe 11 p.m. question disappears: “who's on call for CT?”. The answer is in the system — and the system has already sent the study."
+    },
+    {
+      "heading": "The reading room is anywhere with a browser.",
+      "body": "The radiologist opens the study in ZenView, the diagnostic viewer in the browser — no install, no hardware dongles, no VPN cobbled together by an obliging colleague. Those who prefer a desktop viewer have ZenView Desktop or the integration with RadiAnt, OsiriX, or Horos.\n\nThe report is written on the spot: voice dictation in Romanian with ZenVoice, structured on the department's template in ZenReport, signed and sent back to the source clinic. From assignment to signed report, everything happens in the same window."
+    },
+    {
+      "heading": "Every study opened leaves a trace.",
+      "body": "Teleradiology means medical data moving between institutions. That is why every access, assignment, and signature goes into the full audit log. Authentication is 2FA or the institution's SSO (AD/LDAP/SAML). Data is encrypted in transit and at rest.\n\nHosting is in the EU/Romania or on your own servers — the platform is the same either way. ZenRIS is a Class I medical device registered with ANMDMR (Romania), built for GDPR compliance, with backup and a disaster recovery plan included."
+    }
+  ],
+  "closing": {
+    "heading": "Routing is demonstrated, not narrated.",
+    "body": "Ask for a demo and we'll configure a pool with your rules: modalities, subspecialties, deadlines. You get a link, open a browser, read a test study, and sign the report. If the flow works in the demo, it works on call at three in the morning too."
+  }
+}

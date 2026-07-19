@@ -1,0 +1,67 @@
+{
+  "slug": "platforma",
+  "seo_title": "The ZenRIS platform: ten modules, one RIS+PACS system",
+  "seo_description": "Ten modules for the entire radiology workflow: scheduling, PACS, reporting with voice dictation in Romanian, teleradiology, patient portal, and automated claims to CNAS, Romania's national health insurance house.",
+  "hero": {
+    "eyebrow": "The ZenRIS platform",
+    "h1": "From booking to claims. One system.",
+    "lead": "Ten modules cover everything that happens in a radiology department: scheduling, acquisition, archiving, reading, reporting, teleradiology, patient portal, billing, and claims to CNAS (Romania's national health insurance house). They don't integrate with each other — they are the same product. This is the map."
+  },
+  "sections": [
+    {
+      "heading": "Everything starts with the booking",
+      "body": "ZenPlan holds the appointments for every machine, physician, and location in the institution — made at the front desk, over the phone, or online. Every slot knows which exam comes next, on which machine, and what preparation it requires.\n\nFrom here, patient data is never typed a second time. On arrival, the exam appears automatically in the machine's DICOM worklist, and the technologist selects it right on the console. Name, personal ID number, exam type — all come from the booking, not from retyping. The classic first source of errors disappears before the first image.",
+      "bullets": [
+        "**ZenPlan.** Scheduling across machines, physicians, and locations, with rules per exam type.",
+        "**DICOM worklist.** Patient data reaches the machine console without a single keystroke retyped."
+      ],
+      "visual_note": "Linear diagram: ZenPlan → DICOM worklist → machine console, labeled “zero retyping”."
+    },
+    {
+      "heading": "The images know where to go",
+      "body": "The machine sends, ZenPACS archives. Every institution on the platform has its own PACS archive — isolation is architectural, not a filter over a shared database. Encryption in transit and at rest, backup and disaster recovery, a complete audit trail.\n\nZenFlow decides what happens to every study from the moment it arrives. Routing rules, assisted worklist prioritization, notifications: the trauma case from the ER jumps to the top of the list, the routine follow-up waits its turn. Automations are configured in the interface, not programmed.",
+      "bullets": [
+        "**ZenPACS.** DICOM archive with real per-institution isolation, encryption, and backup/DR.",
+        "**ZenFlow.** Routing, triage, and worklist prioritization, on configurable rules."
+      ],
+      "visual_note": "Diagram: machines → separate PACS archives per institution → ZenFlow distributes to prioritized worklists."
+    },
+    {
+      "heading": "Reading and reporting, in the browser",
+      "body": "ZenView opens the study in the browser, with diagnostic tools: measurements, comparison with prior exams, multi-monitor work. Nothing to install on the workstation. Anyone who prefers a desktop viewer isn't forced to give it up: ZenRIS integrates with RadiAnt, OsiriX, and Horos, and ZenView Desktop exists as an option, not a requirement.\n\nThe report is written in ZenReport, on the department's own templates, with the patient's history one click away. With ZenVoice, the radiologist uses voice dictation in Romanian: the text lands structured into the report's sections, and at the end the system proposes a conclusion. The physician validates it or rewrites it — the signature stays the radiologist's.",
+      "bullets": [
+        "**ZenView.** Diagnostic viewer in the browser; ZenView Desktop, optional.",
+        "**ZenReport.** Reports on each department's own templates, with full history.",
+        "**ZenVoice.** Voice dictation in Romanian, auto-structured into the report's sections."
+      ],
+      "visual_note": "Mockup: ZenView in the browser next to a ZenReport report with ZenVoice dictation active."
+    },
+    {
+      "heading": "Distance doesn't show in the report",
+      "body": "ZenTelerad takes studies to radiologists in other cities or other institutions. They read in the same viewer, in the same browser, and the report comes back into the same system — not by email, not on a CD. For the hospital with no radiologist on call, the night report no longer waits for morning.\n\nZenPortal is the patient's end of the line. Results and images go online, through secure access: patients read their report in the browser and can show it to any other physician, no trips for a CD.",
+      "bullets": [
+        "**ZenTelerad.** Studies distributed to remote radiologists; reading and reporting in the same system.",
+        "**ZenPortal.** Results and images for the patient, online, through secure access."
+      ],
+      "visual_note": "Stylized map: the study leaves the hospital for a remote radiologist, the report reaches the patient in ZenPortal."
+    },
+    {
+      "heading": "CNAS claims file themselves",
+      "body": "ZenBill covers billing and service records, in the same flow as the exams — a service performed becomes a service billed with no extra step.\n\nThe part that usually hurts — reporting to CNAS — is taken over by ZenAgent, fully automatic, straight from the data already in the system. No SIUI (the legacy desktop reporting app) installed on any desktop, no manual exports, no retyping at month's end. The difference between a lost day and a process that runs on its own.",
+      "bullets": [
+        "**ZenBill.** Billing and service records, in the same flow as the exams.",
+        "**ZenAgent.** Fully automated CNAS reporting and claims, no SIUI on a desktop, no manual exports."
+      ],
+      "visual_note": "Two-column comparison: the manual flow with SIUI and exports vs. a single automated line through ZenAgent."
+    },
+    {
+      "heading": "ZenShift: the background of the entire workflow",
+      "body": "On-call shifts aren't a step in the workflow — they're its background. ZenShift plans the on-call roster and the team's schedule in the same system the team works in, and the plan is visible where it matters: in the platform, not in a spreadsheet kept on the side.\n\nOne calendar, the same accounts, the same audit trail. Shifts are planned ahead of time, not negotiated in group chats.",
+      "visual_note": "The on-call calendar overlaid discreetly on the full workflow diagram — a cross-cutting element, not a step."
+    }
+  ],
+  "closing": {
+    "heading": "One system. Zero vendor-to-vendor integrations.",
+    "body": "In a five-vendor architecture, every arrow in the flow above is an integration project: a contract, an interface to maintain, a culprit hard to find when something breaks. In ZenRIS there are no integrations between modules, because there are no vendors between modules. The same database, the same audit trail, the same authentication — 2FA, SSO via AD/LDAP or SAML — from the patient's first phone call to the CNAS claim.\n\nRuns on-premise or in the cloud, hosted in the EU — same product, same map. Class I medical device, registered with ANMDMR (Romania)."
+  }
+}

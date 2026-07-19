@@ -1,0 +1,41 @@
+{
+  "issues": [
+    {
+      "slug": "platforma/pacs-viewer",
+      "type": "cifră inventată / claim de performanță neverificabil",
+      "quote": "„Prima imagine, sub o secundă.\" (heading secțiunea 2)",
+      "fix": "Regula 8 interzice cifrele inventate — „sub o secundă\" e un claim de performanță măsurabil, nesusținut și dependent de rețea/infrastructură. Înlocuiește cu o formulare fără cifră: „Prima imagine, înainte să te așezi.\" sau „Prima imagine apare imediat. Restul vine din urmă.\" Fraza din corp „Un CT cu mii de secțiuni se deschide la fel de repede ca o radiografie\" poate rămâne — e comparativă, nu o cifră."
+    },
+    {
+      "slug": "solutii/teleradiologie",
+      "type": "claim temporal prezentat ca fapt (cronologie nemarcată ca ilustrativă)",
+      "quote": "seo_description: „Onboarding în aceeași zi.\" + closing: „onboarding-ul e o zi de lucru, nu un trimestru\"",
+      "fix": "Corpul secțiunii e corect formulat („Prima examinare POATE intra în worklist în aceeași zi\") și visual_note-ul marchează cronologia ca ilustrativă — dar SEO description și closing-ul transformă posibilitatea în promisiune fermă. Aliniază-le la formularea condițională: seo_description → „Onboarding posibil în aceeași zi.\"; closing → „onboarding-ul se măsoară în ore, nu în trimestre\" sau „onboarding-ul poate fi o zi de lucru, nu un trimestru\"."
+    },
+    {
+      "slug": "arhitectura",
+      "type": "claim în afara listei permise (rule 4)",
+      "quote": "„**SSO.** Integrare cu directorul existent: AD/LDAP, SAML, OIDC.\"",
+      "fix": "Lista permisă e explicit „SSO (AD/LDAP/SAML)\". OIDC nu apare nicăieri în specificația aprobată și nu poate fi afirmat fără confirmare de la produs. Șterge „OIDC\" — rămâne „AD/LDAP, SAML\" — sau obține confirmare scrisă înainte de publicare. Toate celelalte pagini spun corect AD/LDAP/SAML; asta e singura abatere."
+    },
+    {
+      "slug": "arhitectura",
+      "type": "structură ruptă (promisiune de listă neonorată)",
+      "quote": "„ZenRIS vorbește DICOM în ambele direcții, fără traducătoare intermediare. Concret:\\n\\nIntegrările cu RadiAnt, OsiriX și Horos sunt exact asta...\"",
+      "fix": "„Concret:\" anunță o enumerare, dar paragraful următor sare la integrările cu viewere desktop; bullet-urile (Worklist/Store/Query-Retrieve) vin abia după. Mută paragraful despre RadiAnt/OsiriX/Horos DUPĂ bullet-uri (unde se leagă natural de Query/Retrieve) și lasă „Concret:\" să introducă direct lista."
+    },
+    {
+      "slug": "platforma",
+      "type": "inconsistență de atribuire între module",
+      "quote": "platforma, bullet ZenVoice: „Dictare în română, structurare automată, propunere de concluzie.\" vs. ris-raportare: „ZenReport propune o concluzie pe baza textului raportului.\"",
+      "fix": "Propunerea de concluzie e atribuită lui ZenVoice pe pagina Platformă și lui ZenReport pe pagina RIS & raportare. Alege o singură atribuire pe tot site-ul (recomandat ZenReport, unde trăiește raportul) și corectează bullet-ul ZenVoice din „platforma\" în: „Dictare în română, cu structurare automată pe secțiunile raportului.\" Corpul de text din „platforma\" („sistemul propune o concluzie\") poate rămâne — e neutru."
+    },
+    {
+      "slug": "platforma/teleradiologie",
+      "type": "tipografie — ghilimele de închidere greșite (multiple pagini)",
+      "quote": "„credeam că e la altcineva\\\"\", „escaladat\\\"\", „cine e de gardă la CT?\\\"\", „în browser, fără instalare\\\"\"; și în arhitectura: „cine a văzut acest studiu\\\"\", „versiune cloud\\\"\", „versiune on-premise\\\"\", „identic: module, funcții, interfață\\\"\"",
+      "fix": "Ghilimeaua de deschidere e românească („), dar închiderea e ghilimea dreaptă (\") în loc de \". Pe restul paginilor perechea e corectă („…\"). Uniformizează peste tot la „…\" — apare sistematic pe platforma/teleradiologie și arhitectura, punctual în ris-raportare (hero: „neraportat\"/„semnat\" sunt corecte, dar verifică la implementare)."
+    }
+  ],
+  "overall": "Audit pe 9 pagini, contra celor 8 reguli dure. Verdictul scurt: copy-ul e curat pe regulile critice — zero mențiuni de componente terțe (Orthanc/OHIF/MedDream/Weasis/Cornerstone/Keycloak/Stone absente; RadiAnt/OsiriX/Horos folosite corect, doar ca integrări externe), zero claim-uri AI nepermise (dictarea, structurarea și propunerea de concluzie sunt mereu în perimetru, cu disclaimere explicite gen „Nu interpretează imagini și nu pune diagnostice\"), zero prețuri/ISO/CE, mențiunile ANMDMR Clasa I și GDPR sunt în forma permisă, CNAS/ZenAgent e folosit consecvent ca diferențiator, multi-tenancy și zero-footprint sunt descrise conform (izolare arhitecturală, ZenView Desktop mereu „opțiune, nu condiție\"). Diacriticele sunt complete. Tonul respectă vocea fără a copia mecanic sloganurile din mostre. Au rămas 6 probleme concrete: un claim de performanță cu cifră inventată („sub o secundă\", pacs-viewer), o promisiune de onboarding „în aceeași zi\" nemarcată ca ilustrativă în seo_description și closing (solutii/teleradiologie), „OIDC\" adăugat peste lista permisă de SSO (arhitectura), un „Concret:\" care promite o listă și livrează alt paragraf (arhitectura), atribuirea propunerii de concluzie ba lui ZenVoice, ba lui ZenReport (platforma vs. ris-raportare) și ghilimele de închidere drepte în loc de românești pe două pagini. Toate au corecturi punctuale propuse; niciuna nu cere rescriere de secțiune. Notă fără acțiune: „Zece module\" din hero-ul Platformă corespunde grupării oficiale (ZenBill+ZenAgent ca un item), dar pe pagină apar ca bullet-uri separate — dacă cineva numără, iese 11; de decis dacă se păstrează „zece\" sau se reformulează fără numeral."
+}

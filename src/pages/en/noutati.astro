@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import misc from '../../content/copy/en/misc.json';
+const n = misc.noutati;
+---
+<Base title={n.title} description={n.description} lang="en" altHref="/noutati/">
+  <section class="wrap page">
+    <p class="eyebrow">{n.eyebrow}</p>
+    <h1>{n.h1}</h1>
+    <p class="lead">{n.lead}</p>
+    <div class="log">
+      <article class="entry card">
+        <p class="mono-trace">{n.entry_date}</p>
+        <h2>{n.entry_title}</h2>
+        <p>{n.entry_body}</p>
+      </article>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page { padding: 72px 28px 40px; }
+  .lead { margin-top: 18px; }
+  .log { margin-top: 44px; display: flex; flex-direction: column; gap: 18px; max-width: 760px; }
+  .entry h2 { font-size: 22px; margin: 6px 0 10px; }
+  .entry p:last-child { margin: 0; color: var(--mut); }
+</style>

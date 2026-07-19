@@ -1,0 +1,67 @@
+{
+  "slug": "platforma",
+  "seo_title": "Platforma ZenRIS: zece module, un singur sistem RIS+PACS",
+  "seo_description": "Zece module pentru întregul flux radiologic: programări, PACS, raportare cu dictare în română, teleradiologie, portal pacient și decont CNAS automat.",
+  "hero": {
+    "eyebrow": "Platforma ZenRIS",
+    "h1": "De la programare la decont. Un singur sistem.",
+    "lead": "Zece module acoperă tot ce se întâmplă într-o secție de radiologie: programare, achiziție, arhivare, citire, raportare, teleradiologie, portal pacient, facturare și decont CNAS. Nu se integrează între ele — sunt același produs. Aceasta e harta."
+  },
+  "sections": [
+    {
+      "heading": "Totul pornește din programare",
+      "body": "ZenPlan ține programările pentru toate echipamentele, medicii și locațiile din instituție — făcute la recepție, la telefon sau online. Fiecare slot știe ce examinare urmează, pe ce aparat și ce pregătire cere.\n\nDe aici, datele pacientului nu se mai tastează a doua oară. La sosire, examinarea apare automat în lista de lucru DICOM a echipamentului, iar tehnicianul o selectează direct de pe consolă. Nume, CNP, tip de examinare — toate vin din programare, nu din retastare. Prima sursă clasică de erori dispare înainte de prima imagine.",
+      "bullets": [
+        "**ZenPlan.** Programări pe echipamente, medici și locații, cu reguli per tip de examinare.",
+        "**Worklist DICOM.** Datele pacientului ajung pe consola aparatului fără nicio retastare."
+      ],
+      "visual_note": "Diagramă liniară: ZenPlan → worklist DICOM → consola echipamentului, cu eticheta „zero retastare”."
+    },
+    {
+      "heading": "Imaginile știu unde să meargă",
+      "body": "Echipamentul trimite, ZenPACS arhivează. Fiecare instituție din platformă are propria arhivă PACS — izolarea e arhitecturală, nu un filtru peste o bază comună. Criptare în tranzit și în repaus, backup și recuperare în caz de dezastru, jurnal de audit complet.\n\nZenFlow decide ce se întâmplă cu fiecare studiu din momentul recepției. Reguli de rutare, prioritizare asistată a listei de lucru, notificări: traumatismul din UPU urcă în capul listei, controlul de rutină își așteaptă rândul. Automatizările se configurează din interfață, nu se programează.",
+      "bullets": [
+        "**ZenPACS.** Arhivă DICOM cu izolare reală per instituție, criptare și backup/DR.",
+        "**ZenFlow.** Rutare, triage și prioritizare a listei de lucru, pe reguli configurabile."
+      ],
+      "visual_note": "Schemă: echipamente → arhive PACS separate per instituție → ZenFlow distribuie către worklist-uri prioritizate."
+    },
+    {
+      "heading": "Citirea și raportul, în browser",
+      "body": "ZenView deschide studiul în browser, cu instrumente de diagnostic: măsurători, comparație cu examinările anterioare, lucru pe mai multe monitoare. Nicio instalare pe stație. Cine preferă un viewer desktop nu e forțat să renunțe: ZenRIS se integrează cu RadiAnt, OsiriX și Horos, iar ZenView Desktop există ca opțiune, nu ca cerință.\n\nRaportul se scrie în ZenReport, pe șabloanele secției, cu istoricul pacientului la un click distanță. Cu ZenVoice, medicul dictează în română: textul se așază structurat pe secțiunile raportului, iar la final sistemul propune o concluzie. Medicul o validează sau o rescrie — semnătura rămâne a radiologului.",
+      "bullets": [
+        "**ZenView.** Vizualizator diagnostic în browser; ZenView Desktop, opțional.",
+        "**ZenReport.** Rapoarte pe șabloanele fiecărei secții, cu istoric complet.",
+        "**ZenVoice.** Dictare în română, cu structurare automată pe secțiunile raportului."
+      ],
+      "visual_note": "Mockup: ZenView în browser alături de un raport ZenReport cu dictarea ZenVoice activă."
+    },
+    {
+      "heading": "Distanța nu se vede în raport",
+      "body": "ZenTelerad duce studiile la radiologi din alte orașe sau din alte instituții. Ei citesc în același viewer, în același browser, iar raportul se întoarce în același sistem — nu pe e-mail, nu pe CD. Pentru spitalul fără radiolog de gardă, raportul de noapte nu mai așteaptă dimineața.\n\nZenPortal e capătul dinspre pacient. Rezultatele și imaginile ajung online, prin acces securizat: pacientul își citește raportul din browser și îl poate arăta oricărui alt medic, fără drumuri pentru un CD.",
+      "bullets": [
+        "**ZenTelerad.** Studii distribuite către radiologi la distanță; citire și raportare în același sistem.",
+        "**ZenPortal.** Rezultate și imagini pentru pacient, online, prin acces securizat."
+      ],
+      "visual_note": "Hartă stilizată: studiul pleacă din spital către un radiolog la distanță, raportul ajunge la pacient în ZenPortal."
+    },
+    {
+      "heading": "Decontul CNAS se face singur",
+      "body": "ZenBill acoperă facturarea și evidența serviciilor, în același flux cu examinările — serviciul efectuat devine serviciu facturat fără nicio operațiune în plus.\n\nPartea care doare de obicei — raportarea către CNAS — o preia ZenAgent, complet automat, direct din datele deja existente în sistem. Fără aplicația SIUI instalată pe vreun desktop, fără exporturi manuale, fără retastări la final de lună. Diferența dintre o zi pierdută și un proces care rulează singur.",
+      "bullets": [
+        "**ZenBill.** Facturare și evidența serviciilor, în același flux cu examinările.",
+        "**ZenAgent.** Raportare și decont CNAS complet automate, fără SIUI pe desktop, fără exporturi manuale."
+      ],
+      "visual_note": "Comparație pe două coloane: fluxul manual cu SIUI și exporturi vs. o singură linie automată prin ZenAgent."
+    },
+    {
+      "heading": "ZenShift: fundalul întregului flux",
+      "body": "Gărzile nu sunt o etapă a fluxului — sunt fundalul lui. ZenShift planifică gărzile și programul echipei în același sistem în care echipa lucrează, iar planificarea e vizibilă acolo unde contează: în platformă, nu într-un tabel ținut separat.\n\nUn singur calendar, aceleași conturi, același jurnal. Schimburile se planifică din timp, nu se negociază pe grupuri de mesaje.",
+      "visual_note": "Calendarul de gărzi suprapus discret peste diagrama întregului flux — element transversal, nu o etapă."
+    }
+  ],
+  "closing": {
+    "heading": "Un singur sistem. Zero integrări între furnizori.",
+    "body": "Într-o arhitectură cu cinci furnizori, fiecare săgeată din fluxul de mai sus e un proiect de integrare: un contract, o interfață de întreținut, un vinovat greu de găsit când ceva se rupe. În ZenRIS nu există integrări între module, pentru că nu există furnizori între module. Aceeași bază de date, același jurnal de audit, aceeași autentificare — 2FA, SSO prin AD/LDAP sau SAML — de la primul telefon al pacientului până la decontul CNAS.\n\nRulează on-premise sau în cloud, cu găzduire în UE — același produs, aceeași hartă. Dispozitiv medical Clasa I, înregistrat la ANMDMR."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "solutii/teleradiologie",
+  "seo_title": "Teleradiology at Scale | ZenRIS RIS+PACS",
+  "seo_description": "One tenant, any number of client clinics, each with its own PACS. Automatic assignment, measured turnaround, radiologists in the browser. Same-day onboarding is possible.",
+  "hero": {
+    "eyebrow": "Solutions · Teleradiology",
+    "h1": "One tenant. Any number of clinics. Zero crossover.",
+    "lead": "You read for clinics that must never see each other. ZenRIS keeps each clinic in its own PACS archive, while your radiologists see them all: one worklist, in the browser, from anywhere."
+  },
+  "sections": [
+    {
+      "heading": "Every clinic, its own archive.",
+      "body": "Multi-tenancy in ZenRIS is not a filter over a shared database. Each client clinic is a separate institution inside your tenant, with its own PACS archive: its own storage, its own worklist, its own patients. A study from clinic A cannot reach clinic B, because their archives never touch.\n\nAt contract time, that is simple to state: the data stays separate by construction, not by promise. The audit log shows who opened it, at any time.",
+      "visual_note": "Diagram: one tenant with N institutions, each with its own archive; the radiologist pool above, no links between institutions."
+    },
+    {
+      "heading": "They can't see each other. You see them all.",
+      "body": "Above the isolated archives sits your pool. ZenTelerad gathers exams from every clinic into a single worklist, and ZenFlow distributes them on its own: subspecialty, modality, urgency, each radiologist's load. Nobody hands out cases by email anymore.\n\nEach client has its own deadlines. You define them once — per exam type, per urgency — and every case enters the worklist with the clock running. What nears its deadline moves up. What passes it escalates.",
+      "visual_note": "Unified worklist mockup: client badge on each row, deadline countdown, urgent cases on top."
+    },
+    {
+      "heading": "New client, same day.",
+      "body": "A new client is not an integration project. You create the institution in your tenant, configure the encrypted DICOM connection from the clinic's machines, define deadlines and rates. No installs on the clinic's workstations, no hardware keys. The first exam can hit the worklist the same day.\n\nClinic staff get accounts scoped strictly to their own archive: they send, track status, download the signed report.",
+      "visual_note": "Illustrative timeline of one onboarding day: morning — institution created; noon — DICOM connection live; afternoon — first exam in the worklist."
+    },
+    {
+      "heading": "A radiologist needs a browser. That's it.",
+      "body": "The ZenView diagnostic viewer runs in the browser, with everything reading requires. The report is written in ZenReport, and ZenVoice takes voice dictation in Romanian, on the template agreed with the client.\n\nNothing gets installed at the radiologist's home: an account, 2FA, a URL. Anyone who wants a desktop viewer has options — ZenView Desktop or the RadiAnt integration. Options, not requirements.",
+      "visual_note": "Photo/mockup: radiologist at home, laptop, ZenView open in the browser."
+    },
+    {
+      "heading": "Numbers per radiologist, invoice per client.",
+      "body": "Productivity reports answer exactly what clients and accounting ask: how many exams each radiologist read, in how much time, with what on-time rate — per client, per modality, per period. You pay contractors on numbers, not estimates. On-call and night coverage is planned in ZenShift, not in shared spreadsheets.\n\nZenBill keeps the books per client: volumes, exam types, the rates in each contract. Separate invoices, separate records. And if a client bills through CNAS (Romania's national health insurance house), that institution's reporting runs fully automatically through ZenAgent — no SIUI (the legacy desktop reporting app) on any desktop, no manual exports.",
+      "visual_note": "Two mockups side by side: radiologist productivity table and per-client invoice list."
+    },
+    {
+      "heading": "The data lives where you say.",
+      "body": "Your own servers or hosting in the EU/Romania — same platform, same features. Encryption in transit and at rest, full audit log, 2FA and SSO (AD/LDAP/SAML), backup and a recovery plan. Class I medical device, registered with ANMDMR (Romania). GDPR compliant.",
+      "visual_note": "Row of sober icons: encryption, audit, 2FA/SSO, backup, ANMDMR, GDPR."
+    }
+  ],
+  "closing": {
+    "heading": "Two clinics, one pool, zero crossover. In the demo.",
+    "body": "Ask for a demo and you'll see it in your own browser, on fictitious data: two isolated client clinics, one shared worklist, automatic assignment, a report dictated in Romanian. And when you sign your first real client, onboarding can be one working day, not a quarter."
+  }
+}

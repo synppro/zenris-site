@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Programează un demo — ZenRIS"
+  description="Vezi ZenRIS live, în browserul tău: 30 de minute, pe fluxul clinicii tale. Adu-ți propriile fișiere DICOM anonimizate."
+  lang="ro"
+  altHref="/en/demo/"
+>
+  <section class="wrap page">
+    <div class="cols">
+      <div>
+        <p class="eyebrow">Demo</p>
+        <h1>Vezi ZenRIS pe studiile tale.</h1>
+        <p class="lead">30 de minute, prin video, în browserul tău. Îți arătăm fluxul complet —
+          de la programare la raport semnat și decont CNAS — pe scenariile clinicii tale.</p>
+        <ul class="check-list">
+          <li><strong>Adu-ți studiile.</strong> Fișiere DICOM anonimizate de la tine — le urmărim împreună prin platformă.</li>
+          <li><strong>Adu-ți echipa de IT.</strong> Răspundem la întrebările de arhitectură și securitate pe loc.</li>
+          <li><strong>Fără instalări.</strong> Primești un link. Atât.</li>
+        </ul>
+        <p class="mono-trace">Demo-ul rulează în browserul tău. Evident.</p>
+      </div>
+      <form class="card form" method="post" action="mailto:contact@zenris.ro" data-form>
+        <label>Nume și prenume
+          <input type="text" name="nume" autocomplete="name" required />
+        </label>
+        <label>Email
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <label>Telefon
+          <input type="tel" name="telefon" autocomplete="tel" />
+        </label>
+        <label>Instituția
+          <input type="text" name="institutie" autocomplete="organization" required />
+        </label>
+        <label>Ce vrei să vezi în demo?
+          <textarea name="mesaj" rows="4" placeholder="ex. teleradiologie cu pool-uri, decont CNAS, portal pacient"></textarea>
+        </label>
+        <button class="btn btn-solid" type="submit">Trimite cererea</button>
+        <p class="note">Îți răspundem în aceeași zi lucrătoare. Datele din formular sunt folosite doar pentru programarea demo-ului.</p>
+      </form>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page { padding: 72px 28px 40px; }
+  .cols { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; }
+  @media (max-width: 880px) { .cols { grid-template-columns: 1fr; } }
+  .lead { margin: 18px 0 26px; }
+  .check-list { grid-template-columns: 1fr; margin-bottom: 26px; }
+  .form { display: flex; flex-direction: column; gap: 16px; }
+  label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: var(--mut); font-weight: 650; }
+  input, textarea {
+    background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px;
+    color: var(--hi); font-family: inherit; font-size: 15px; padding: 11px 14px;
+  }
+  input:focus-visible, textarea:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; border-color: transparent; }
+  .note { font-size: 12.5px; color: var(--mut); margin: 0; }
+</style>

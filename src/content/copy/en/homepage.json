@@ -1,0 +1,207 @@
+{
+  "title": "ZenRIS — All of radiology. In one browser.",
+  "description": "Complete RIS + PACS platform: scheduling, diagnostic viewer, voice dictation in Romanian, teleradiology, patient portal, billing and automatic claims to CNAS (Romania's national health insurance house). On-premise or cloud, zero workstation installs.",
+  "hero": {
+    "eyebrow": "RIS · PACS · AI — on-premise or cloud",
+    "h1_html": "All of radiology.<br />In one browser.",
+    "lead_html": "From scheduling to <strong>reimbursement by CNAS</strong> (Romania's national health insurance house): worklist, diagnostic viewer, AI-assisted voice dictation in Romanian, teleradiology, patient portal and billing — one platform, <strong>not a single install</strong> on any workstation.",
+    "cta_demo": "Book a demo",
+    "cta_how": "See how it works →",
+    "chips_html": [
+      "<b>0</b> workstation installs",
+      "<b>Automatic</b> CNAS claims — no SIUI desktop",
+      "AI: dictation · triage · report assist",
+      "PACS <b>isolated</b> per institution"
+    ],
+    "credit": "A real CT study (anonymized), rendered straight from the ZenPACS archive — exactly what it looks like in the browser.",
+    "viewer_title": "ZenView — non-contrast head CT",
+    "viewer_meta": "3 series · 435 images",
+    "overlay_patient": "IONESCU M. · 58Y · fictitious data"
+  },
+  "manifest": {
+    "pre": "A classic RIS comes with installs on every workstation, hardware dongles, counted licenses and five vendors who don't talk to each other.",
+    "quote_html": "ZenRIS comes with <b>one URL</b>."
+  },
+  "story": {
+    "eyebrow": "The life of a study",
+    "h2_html": "The phone rings at 08:52.<br />By 10:13 the report is signed and the claim is ready.",
+    "lead": "Follow a head CT through ZenRIS — from booking to payment. Every step, one module. All of it, one system.",
+    "steps": [
+      {
+        "time": "08:52",
+        "title": "Booking",
+        "mod": "ZenPlan",
+        "body": "The front desk sees every location, scanner and physician in real time. The patient gets confirmation and prep instructions by SMS — and if an earlier slot opens up, the waiting list offers it on its own."
+      },
+      {
+        "time": "09:41",
+        "title": "Acquisition",
+        "mod": "Modality integration",
+        "body": "By appointment time, the patient's details are already on the scanner console, via DICOM worklist. Nobody retypes anything: zero identity errors, zero lost studies."
+      },
+      {
+        "time": "09:44",
+        "title": "Arrival and triage",
+        "mod": "ZenPACS + ZenFlow",
+        "body": "Images land in the institution's archive within seconds. Routing does its job on its own: prior studies attach themselves for comparison, and AI moves urgent cases to the top of the list — before anyone even has to ask."
+      },
+      {
+        "time": "09:52",
+        "title": "Reading",
+        "mod": "ZenView",
+        "body": "The radiologist opens the study in a tab: MPR, 3D, comparison with prior exams, hanging protocols that arrange the series exactly the way they like. In the browser — at the hospital, or from home, on call."
+      },
+      {
+        "time": "10:05",
+        "title": "Reporting",
+        "mod": "ZenReport + ZenVoice",
+        "body": "They speak. The report writes itself, in Romanian, on the department's template. AI structures the text and suggests the conclusion; signing takes one click, and every version stays in the history."
+      },
+      {
+        "time": "10:13",
+        "title": "Delivery and reimbursement",
+        "mod": "ZenPortal + ZenBill · ZenAgent",
+        "body": "The patient and the referring physician get a secure link with the images and the report — no CDs, no trips back to the clinic. In the background, the services are already priced, and the CNAS claim goes out automatically: no SIUI (the legacy desktop reporting app), no exports."
+      }
+    ],
+    "end_quote_html": "Six steps. 81 minutes.<br /><b>One system.</b>",
+    "end_after": "And not one program installed on any workstation.",
+    "end_note": "illustrative timeline"
+  },
+  "iso": {
+    "eyebrow": "Multi-institution · isolation",
+    "h2_html": "One platform. Any number of institutions.<br />Zero data mixing.",
+    "lead": "ZenRIS is built for clinic chains, hospitals and teleradiology networks. Each institution lives in its own PACS archive, with its own users, templates and billing — not “logically separated” by a filter on a shared database, but separated at the level of architecture.",
+    "quote_html": "“Isolation isn't a setting.<br /><b>It's the architecture.</b>”",
+    "points_html": [
+      "<strong>Its own PACS, per institution.</strong> One clinic's data has no way to end up in another — they are separate archives, not filtered rows.",
+      "<strong>Pools across boundaries.</strong> A radiologist sees exactly the studies assigned to them, from any number of clinics. The clinics never see each other. Ever.",
+      "<strong>A new institution, the same day.</strong> Its own archive, users, report letterhead, price list — without touching the rest of the platform."
+    ],
+    "note_default": "Click an institution: only its path lights up. Between institutions there is no path at all — the ✕ isn't decoration.",
+    "notes_abc": [
+      "Clinic A sees only its own archive. The lit path is the only one that exists.",
+      "Hospital B — same rule: its archive, its users, its billing.",
+      "Center C is isolated from the other two. Not “hidden” — isolated."
+    ],
+    "note_radiolog": "The pool radiologist receives studies assigned from all three — but the clinics never see each other.",
+    "btn_radiolog": "The radiologist's view",
+    "pool_label": "radiologist pool",
+    "pool_active": "3 studies assigned ✓",
+    "own_archive": "own PACS archive",
+    "inst_a": "Clinic A",
+    "inst_b": "Hospital B",
+    "inst_c": "Center C",
+    "hub_sub": "one platform, one tenant"
+  },
+  "deploy": {
+    "eyebrow": "On-premise · cloud",
+    "h2_html": "Your servers or ours.<br />The product is the same.",
+    "lead": "There is no “cloud version” and “on-premise version” — there is one ZenRIS. The choice is about where the data lives and who runs the hardware, not about what the platform can do.",
+    "onprem_where": "your institution's perimeter",
+    "onprem_body": "Data never leaves the institution. Modalities connect directly on the local network, control is total, and access is still through the browser — including from home, over a secured channel. For hospitals and groups with strict data policies.",
+    "cloud_where": "cloud · European Union",
+    "cloud_body": "Zero hardware, zero maintenance, hosting in the European Union. A new institution goes live the same day, and scaling is a decision, not an infrastructure project.",
+    "table": [
+      [
+        "",
+        "On-premise",
+        "Cloud"
+      ],
+      [
+        "Where the data lives",
+        "Inside your institution",
+        "In the EU, in certified data centers"
+      ],
+      [
+        "Who runs it",
+        "Your IT team, with our support",
+        "We do, with an SLA"
+      ],
+      [
+        "How you start",
+        "Install on your existing infrastructure",
+        "New account, same day"
+      ]
+    ],
+    "close_html": "Same version. Same features. Same browser. And if you change your mind along the way, migration is a plan — not a rewrite. <a href=\"/arhitectura/\">See the architecture in detail →</a>"
+  },
+  "security": {
+    "eyebrow": "Security · compliance",
+    "h2_html": "Every view, logged.<br />Every access, by name.",
+    "lead": "In medical imaging, security isn't a marketing paragraph — it's a checklist. Ours is short, concrete, and verifiable at the demo.",
+    "items_html": [
+      "<strong>Complete audit trail</strong> — who viewed which image and which report, when and from where; exportable for your DPO and for inspections.",
+      "<strong>Granular roles + two-factor authentication</strong> for every account.",
+      "<strong>Institutional SSO</strong> — Active Directory / LDAP / SAML/OIDC.",
+      "<strong>Encryption in transit and at rest</strong>, across every component.",
+      "<strong>Automatic backup and a recovery plan</strong> that is tested, not just declared.",
+      "<strong>Per-institution isolation</strong> — the architecture described above, not a checkbox.",
+      "<strong>GDPR</strong> — legal basis, patient rights, and an access log for each patient's data.",
+      "<strong>EU/Romania hosting</strong> for the cloud option.",
+      "<strong>Class I medical device</strong>, registered with ANMDMR (Romania)."
+    ],
+    "audit_caption": "excerpt from the audit log · fictitious data",
+    "audit_lines": [
+      "10:13  Dr. Ionescu M.  opened      head CT #2026-0412",
+      "10:14  Dr. Ionescu M.  signed      report v2",
+      "10:19  patient portal  downloaded  signed report",
+      "       (link has since expired)"
+    ],
+    "close": "Ask us for the full list of controls at the demo. Or better yet — bring your IT team and let them ask."
+  },
+  "modules": {
+    "eyebrow": "Platform modules",
+    "h2_html": "Ten modules. One system.<br />Zero integrations to build.",
+    "cards": [
+      {
+        "name": "ZenView",
+        "text": "Diagnostic viewer in the browser: MPR, 3D, comparisons, mammography. For purists, there's also ZenView Desktop — an option, not an obligation."
+      },
+      {
+        "name": "ZenPACS",
+        "text": "Each institution's own DICOM archive: any modality connects directly, prior studies attach themselves."
+      },
+      {
+        "name": "ZenReport",
+        "text": "Structured reports on the department's templates, electronic signing, full version history."
+      },
+      {
+        "name": "ZenTelerad",
+        "text": "Teleradiology with pools, automatic assignment and visible deadlines — your radiology, at scale."
+      },
+      {
+        "name": "ZenVoice",
+        "text": "Voice dictation in Romanian: you speak, the report writes itself."
+      },
+      {
+        "name": "ZenFlow",
+        "text": "Automation and AI triage: rule-based routing, escalations, notifications. Urgent cases don't wait."
+      },
+      {
+        "name": "ZenPlan",
+        "text": "Multi-site scheduling: calendars per scanner and physician, SMS, waiting list."
+      },
+      {
+        "name": "ZenShift",
+        "text": "The on-call scheduler — study routing knows who's on duty, automatically."
+      },
+      {
+        "name": "ZenPortal",
+        "text": "Results reach the patient and the referrer through a secure link. CDs: zero."
+      },
+      {
+        "name": "ZenBill · ZenAgent",
+        "text": "Fully automatic billing and CNAS claims — no SIUI desktop, no exports."
+      }
+    ],
+    "details": "Details →"
+  },
+  "final": {
+    "h2": "See ZenRIS on your own studies.",
+    "lead": "Book a 30-minute demo — or bring your own anonymized DICOM files and watch them cross the platform: from arrival, to report, to portal.",
+    "cta_demo": "Book a demo",
+    "cta_platform": "Explore the platform →",
+    "mono": "The demo runs in your browser. Obviously."
+  }
+}

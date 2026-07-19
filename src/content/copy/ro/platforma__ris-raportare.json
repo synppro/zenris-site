@@ -1,0 +1,53 @@
+{
+  "slug": "platforma/ris-raportare",
+  "seo_title": "RIS & raportare — worklist, dictare, semnare | ZenRIS",
+  "seo_description": "Worklist cu priorități și STAT, dictare în română cu ZenVoice, șabloane structurate și semnare la un click cu ZenReport. Totul în browser.",
+  "hero": {
+    "eyebrow": "RIS & raportare",
+    "h1": "Vezi. Dictezi. Semnezi.",
+    "lead": "Worklist-ul îți arată ce urmează. ZenVoice scrie ce spui, în română, în timp real. ZenReport pune totul pe șablonul secției; tu semnezi la un click. De la „neraportat” la „semnat”, fără să pleci din browser."
+  },
+  "sections": [
+    {
+      "heading": "Worklist-ul știe ce urmează.",
+      "body": "Fiecare examinare are o stare clară — neraportat, în lucru, de verificat, semnat — și un singur loc în listă. Vezi dintr-o privire ce e de făcut, cine lucrează la ce și ce așteaptă verificare.\n\nDeschizi cazul cu un click: imaginile în ZenView, editorul de raport alături, în același tab. Când semnezi, cazul iese din listă singur.",
+      "bullets": [
+        "**Stări explicite.** Neraportat, în lucru, de verificat, semnat. Fără zone gri.",
+        "**STAT deasupra.** Urgențele urcă primele și rămân marcate până la semnare.",
+        "**Filtre pe orice.** Modalitate, tip de examinare, medic, stare, perioadă, instituție.",
+        "**Alocare directă.** Șeful de secție distribuie cazurile pe radiologi din listă, nu pe hârtie.",
+        "**Triage automat.** ZenFlow prioritizează worklist-ul după regulile definite de secție."
+      ],
+      "visual_note": "Captură de worklist cu un caz STAT evidențiat în capul listei, coloane de stare colorate și panoul de filtre deschis."
+    },
+    {
+      "heading": "Dictezi. Textul ține pasul.",
+      "body": "ZenVoice transcrie în timp real, în română, cu vocabular radiologic. Vorbești în ritmul tău; textul apare în raport pe măsură ce dictezi, nu la sfârșit, dintr-un fișier audio.\n\nMâinile rămân pe imagini. Navighezi seriile, măsori, derulezi — raportul se scrie în paralel. Corectezi din voce sau din tastatură, unde e mai rapid.",
+      "visual_note": "Animație scurtă: imaginile derulate în stânga, textul dictat apare cuvânt cu cuvânt în editorul din dreapta."
+    },
+    {
+      "heading": "Șablonul secției, nu al furnizorului.",
+      "body": "Fiecare secție și fiecare tip de examinare își are șablonul în ZenReport: secțiuni fixe, câmpuri structurate, formulări standard acolo unde au sens. Un CT de torace arată la fel indiferent cine îl semnează — și diferit de o ecografie abdominală, exact cum trebuie.\n\nȘabloanele se administrează din platformă, de către secție. Le modifici azi, se aplică azi. Fără tichet la furnizor, fără versiuni de Word plimbate pe e-mail.",
+      "visual_note": "Două rapoarte pe șabloane diferite (CT vs. ecografie), unul lângă altul, cu secțiunile structurate evidențiate."
+    },
+    {
+      "heading": "Concluzia se propune. Semnătura e a ta.",
+      "body": "După constatări, ZenReport propune o concluzie pe baza textului raportului. O accepți, o ajustezi sau o rescrii de la zero — propunerea e un punct de plecare, nu o decizie.\n\nAI-ul din ZenRIS structurează și formulează text. Nu interpretează imagini și nu pune diagnostice. Raportul rămâne, de la prima literă la semnătură, actul medicului.",
+      "visual_note": "Editorul de raport cu blocul de concluzie marcat vizibil drept propunere, cu acțiunile Acceptă / Modifică."
+    },
+    {
+      "heading": "Un click: semnat, versionat, arhivat.",
+      "body": "Semnezi direct din editor. Cazul trece pe „semnat”, iese din worklist, iar raportul devine disponibil în ZenPortal pentru pacient și pentru medicul trimițător.\n\nFiecare modificare rămâne în istoric: cine, ce, când. Orice versiune se poate deschide și compara cu cea semnată, iar jurnalul de audit acoperă tot fluxul, nu doar semnarea.\n\nPDF-ul se generează automat, cu antetul instituției. Într-un tenant cu mai multe instituții, fiecare își păstrează antetul și formatul propriu — fără configurări la fiecare raport.",
+      "visual_note": "Secvență în trei cadre: butonul de semnare, istoricul de versiuni cu diferențe, PDF-ul final cu antetul instituției."
+    },
+    {
+      "heading": "Șeful de secție vede tot. Live.",
+      "body": "Câte examinări sunt neraportate, pe cine stau și de cât timp — direct în worklist, nu într-un raport la sfârșit de lună. Realoci un caz cu două clickuri, iar un STAT nesemnat nu are unde să se ascundă.\n\nTot fluxul rulează în browser: worklist, imagini, dictare, semnare. Nicio instalare pe stații, niciun client de dictare, nicio aplicație separată de semnat. Un tab nou e tot ce-i trebuie unui radiolog nou.",
+      "visual_note": "Worklist filtrat pe secție, cu contoare de stare (neraportate / în lucru / semnate azi) în antet."
+    }
+  ],
+  "closing": {
+    "heading": "Cronometrează un raport.",
+    "body": "Cere un demo și parcurge fluxul cap-coadă: deschizi examinarea, dictezi constatările, accepți concluzia, semnezi. Rulează în browserul tău, fără nicio instalare — ca produsul, de altfel. Vino cu șabloanele secției: le configurăm împreună și vezi raportul tău, nu al nostru."
+  }
+}

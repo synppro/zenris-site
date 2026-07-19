@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+
+const entries = [
+  {
+    date: '2026',
+    title: 'zenris.ro se relansează',
+    body: 'Site-ul pe care îl citești acum: o singură promisiune — toată radiologia, într-un singur browser — și un demo care o dovedește. De aici înainte, fiecare versiune ZenRIS notabilă apare pe această pagină.',
+  },
+];
+---
+<Base
+  title="Noutăți — ZenRIS"
+  description="Ce e nou în platforma ZenRIS: versiuni, funcții, îmbunătățiri. Un jurnal public al dezvoltării."
+  lang="ro"
+  altHref="/en/noutati/"
+>
+  <section class="wrap page">
+    <p class="eyebrow">Noutăți</p>
+    <h1>Un produs viu lasă urme.</h1>
+    <p class="lead">Aici publicăm ce se schimbă în ZenRIS — versiuni, funcții noi, îmbunătățiri.
+      Fără comunicate de presă, doar jurnalul dezvoltării.</p>
+    <div class="log">
+      {entries.map((e) => (
+        <article class="entry card">
+          <p class="mono-trace">{e.date}</p>
+          <h2>{e.title}</h2>
+          <p>{e.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page { padding: 72px 28px 40px; }
+  .lead { margin-top: 18px; }
+  .log { margin-top: 44px; display: flex; flex-direction: column; gap: 18px; max-width: 760px; }
+  .entry h2 { font-size: 22px; margin: 6px 0 10px; }
+  .entry p:last-child { margin: 0; color: var(--mut); }
+</style>

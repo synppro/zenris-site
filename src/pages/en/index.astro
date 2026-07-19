@@ -1,0 +1,276 @@
+---
+import Base from '../../layouts/Base.astro';
+import '../../styles/home.css';
+import h from '../../content/copy/en/homepage.json';
+import brain0 from '../../assets/ct/brain_0.png';
+import brain1 from '../../assets/ct/brain_1.png';
+import brain2 from '../../assets/ct/brain_2.png';
+import os1 from '../../assets/ct/os_1.png';
+
+const modHref = {
+  ZenView: '/en/platforma/pacs-viewer/',
+  ZenPACS: '/en/platforma/pacs-viewer/',
+  ZenReport: '/en/platforma/ris-raportare/',
+  ZenTelerad: '/en/platforma/teleradiologie/',
+  ZenPortal: '/en/platforma/portal-pacient/',
+};
+---
+<Base title={h.title} description={h.description} lang="en" altHref="/">
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">{h.hero.eyebrow}</p>
+      <h1 set:html={h.hero.h1_html} />
+      <p class="lead" set:html={h.hero.lead_html} />
+      <div class="ctas">
+        <a class="btn btn-solid" href="/en/demo/">{h.hero.cta_demo}</a>
+        <a class="btn btn-ghost" href="#studiu">{h.hero.cta_how} →</a>
+      </div>
+      <div class="chips">
+        {h.hero.chips_html.map((c) => <span class="chip" set:html={c} />)}
+      </div>
+    </div>
+    <div class="stage-glow">
+      <figure class="viewer">
+        <figcaption class="vbar">
+          <span class="t" set:html={(h.hero.viewer_title ?? 'ZenView — native head CT').replace('ZenView', 'Zen<i>View</i>')} />
+          <span>{h.hero.viewer_meta ?? '3 series · 435 images'}</span>
+        </figcaption>
+        <div class="vbody">
+          <div class="vport">
+            <img class="poster" src={brain0.src} width="512" height="512" alt="" aria-hidden="true" loading="eager" />
+            <img class="f1" src={brain0.src} width="512" height="512" alt="Brain CT slice, brain window" loading="eager" />
+            <img class="f2" src={brain1.src} width="512" height="512" alt="" loading="eager" />
+            <img class="f3" src={brain2.src} width="512" height="512" alt="" loading="eager" />
+            <span class="ov tl">{h.hero.overlay_patient ?? 'IONESCU M. · 58Y · fictitious data'}</span>
+            <span class="ov br">W 80 · L 40 · IM 82/144</span>
+            <div class="scrub"><i></i></div>
+          </div>
+          <div class="rail">
+            <img class="on" src={brain1.src} width="70" height="70" alt="" loading="eager" />
+            <img src={os1.src} width="70" height="70" alt="" loading="eager" />
+            <img src={brain2.src} width="70" height="70" alt="" loading="eager" />
+            <span class="more">+12 series</span>
+          </div>
+        </div>
+      </figure>
+      <p class="credit">{h.hero.credit}</p>
+    </div>
+  </section>
+
+  <section class="manifest">
+    <div class="wrap">
+      <p class="pre">{h.manifest.pre}</p>
+      <p class="pull-quote" set:html={h.manifest.quote_html} />
+    </div>
+  </section>
+
+  <section class="section" id="studiu">
+    <div class="wrap">
+      <p class="eyebrow">{h.story.eyebrow}</p>
+      <h2 set:html={h.story.h2_html} />
+      <p class="lead">{h.story.lead}</p>
+    </div>
+    <div class="wrap story">
+      <div class="steps">
+        {h.story.steps.map((s, i) => (
+          <article class="step" data-step={i}>
+            <p class="stamp"><span class="time">{s.time}</span><span class="mod">{s.mod}</span></p>
+            <h3>{s.title}</h3>
+            <p>{s.body}</p>
+          </article>
+        ))}
+        <aside class="story-end">
+          <p class="pull-quote" set:html={h.story.end_quote_html} />
+          <p class="after">{h.story.end_after} <span class="mono-trace">{h.story.end_note}</span></p>
+        </aside>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="screen" data-visual="0">
+          <p class="s-head">ZenPlan · scheduling</p>
+          <div class="cal">
+            {['09:00', '09:20', '09:40', '10:00', '10:20', '10:40'].map((hh, i) => (
+              <div class={'slot' + (i === 2 ? ' fill' : '') + (i < 2 ? ' busy' : '')}>{hh}{i === 2 && <b> Head CT — confirmed by SMS</b>}</div>
+            ))}
+          </div>
+        </div>
+        <div class="screen" data-visual="1">
+          <p class="s-head">Modality console · DICOM worklist</p>
+          <div class="rows">
+            <div class="row dim">MODALITY: CT · WORKLIST</div>
+            <div class="row appear"><b>IONESCU M.</b> · Native head CT · 09:40</div>
+            <div class="row dim">— the data arrived on its own from ZenRIS —</div>
+          </div>
+        </div>
+        <div class="screen" data-visual="2">
+          <p class="s-head">Worklist · ZenFlow</p>
+          <div class="rows">
+            <div class="row stat rise"><b>Head CT · IONESCU M.</b><span class="badge b-warn">URGENT ↑</span></div>
+            <div class="row">Lumbar MRI · POP S.<span class="badge">routine</span></div>
+            <div class="row">Chest X-ray · DINU V.<span class="badge">routine</span></div>
+            <div class="row dim">+ prior studies, attached automatically</div>
+          </div>
+        </div>
+        <div class="screen shot" data-visual="3">
+          <img src={brain1.src} width="512" height="512" alt="" loading="lazy" />
+          <span class="ov tl">ZenView · MPR · comparison 2024</span>
+          <span class="ov br">W 80 · L 40</span>
+        </div>
+        <div class="screen" data-visual="4">
+          <p class="s-head">ZenReport · ZenVoice</p>
+          <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <p class="typed">Native head CT. No focal lesions identified…<span class="caret"></span></p>
+          <div class="row sign"><b>Sign the report</b><span class="badge b-ok">v2 · full history</span></div>
+        </div>
+        <div class="screen" data-visual="5">
+          <p class="s-head">ZenPortal · ZenBill</p>
+          <div class="phone">
+            <p><b>Your results are ready.</b></p>
+            <p class="dim">Report + images · secure link</p>
+          </div>
+          <div class="row"><span>CNAS claim</span><span class="badge b-ok">submitted automatically ✓</span></div>
+          <div class="row dim">no SIUI desktop · no exports</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="izolare">
+    <div class="wrap">
+      <p class="eyebrow">{h.iso.eyebrow}</p>
+      <h2 set:html={h.iso.h2_html} />
+      <p class="lead">{h.iso.lead}</p>
+      <div class="iso card">
+        <svg viewBox="0 0 960 400" id="iso-svg" role="img" data-pool-label={h.iso.pool_label} data-pool-active={h.iso.pool_active} aria-label="Diagram: three isolated institutions, each with its own archive, connected to the platform and the radiologist pool">
+          <g class="links">
+            <path class="lnk l-a" d="M262 90 C 340 90, 340 160, 402 175" />
+            <path class="lnk l-b" d="M262 200 C 330 200, 340 200, 402 200" />
+            <path class="lnk l-c" d="M262 310 C 340 310, 340 240, 402 225" />
+            <path class="lnk l-p" d="M622 200 C 690 200, 690 200, 738 200" />
+            <g class="nolink">
+              <path d="M150 122 L 150 158" /><path d="M150 232 L 150 268" />
+              <text x="168" y="145">✕</text><text x="168" y="255">✕</text>
+            </g>
+          </g>
+          <g class="inst i-a" data-inst="a" tabindex="0" role="button" aria-label={h.iso.inst_a ?? 'Clinic A'}>
+            <rect x="42" y="52" width="220" height="76" rx="14" />
+            <circle cx="80" cy="90" r="15" class="db" />
+            <text x="106" y="84" class="t1">{h.iso.inst_a ?? 'Clinic A'}</text>
+            <text x="106" y="106" class="t2">{h.iso.own_archive}</text>
+          </g>
+          <g class="inst i-b" data-inst="b" tabindex="0" role="button" aria-label={h.iso.inst_b ?? 'Hospital B'}>
+            <rect x="42" y="162" width="220" height="76" rx="14" />
+            <circle cx="80" cy="200" r="15" class="db" />
+            <text x="106" y="194" class="t1">{h.iso.inst_b ?? 'Hospital B'}</text>
+            <text x="106" y="216" class="t2">{h.iso.own_archive}</text>
+          </g>
+          <g class="inst i-c" data-inst="c" tabindex="0" role="button" aria-label={h.iso.inst_c ?? 'Center C'}>
+            <rect x="42" y="272" width="220" height="76" rx="14" />
+            <circle cx="80" cy="310" r="15" class="db" />
+            <text x="106" y="304" class="t1">{h.iso.inst_c ?? 'Center C'}</text>
+            <text x="106" y="326" class="t2">{h.iso.own_archive}</text>
+          </g>
+          <g class="hub">
+            <rect x="402" y="130" width="220" height="140" rx="16" />
+            <text x="512" y="188" class="t1" text-anchor="middle">ZenRIS</text>
+            <text x="512" y="212" class="t2" text-anchor="middle">{h.iso.hub_sub ?? 'one platform, one tenant'}</text>
+          </g>
+          <g class="pool">
+            <rect x="738" y="140" width="182" height="120" rx="14" />
+            <circle cx="778" cy="184" r="13" class="av" /><circle cx="806" cy="184" r="13" class="av" /><circle cx="834" cy="184" r="13" class="av" />
+            <text x="829" y="230" class="t2" text-anchor="middle" id="pool-label">{h.iso.pool_label}</text>
+          </g>
+        </svg>
+        <div class="iso-ui">
+          <div class="iso-btns" role="group">
+            <button type="button" class="btn btn-ghost btn-xs" data-sel="a" data-note={h.iso.notes_abc[0]}>{h.iso.inst_a ?? 'Clinic A'}</button>
+            <button type="button" class="btn btn-ghost btn-xs" data-sel="b" data-note={h.iso.notes_abc[1]}>{h.iso.inst_b ?? 'Hospital B'}</button>
+            <button type="button" class="btn btn-ghost btn-xs" data-sel="c" data-note={h.iso.notes_abc[2]}>{h.iso.inst_c ?? 'Center C'}</button>
+            <button type="button" class="btn btn-ghost btn-xs" data-sel="radiolog" data-note={h.iso.note_radiolog}>{h.iso.btn_radiolog}</button>
+          </div>
+          <p class="iso-note" id="iso-note">{h.iso.note_default}</p>
+        </div>
+      </div>
+      <p class="pull-quote iso-quote" set:html={h.iso.quote_html} />
+      <ul class="check-list iso-points">
+        {h.iso.points_html.map((p) => <li set:html={p} />)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="deployment">
+    <div class="wrap">
+      <p class="eyebrow">{h.deploy.eyebrow}</p>
+      <h2 set:html={h.deploy.h2_html} />
+      <p class="lead">{h.deploy.lead}</p>
+      <div class="deploy card" data-deploy="onprem">
+        <div class="seg" role="tablist">
+          <button type="button" role="tab" aria-selected="true" data-d="onprem">On-premise</button>
+          <button type="button" role="tab" aria-selected="false" data-d="cloud">Cloud</button>
+        </div>
+        <div class="d-pane" data-pane="onprem">
+          <p class="d-where mono-trace">{h.deploy.onprem_where}</p>
+          <p>{h.deploy.onprem_body}</p>
+        </div>
+        <div class="d-pane" data-pane="cloud" hidden>
+          <p class="d-where mono-trace">{h.deploy.cloud_where}</p>
+          <p>{h.deploy.cloud_body}</p>
+        </div>
+        <table class="diff">
+          <thead><tr>{h.deploy.table[0].map((c) => <th>{c}</th>)}</tr></thead>
+          <tbody>
+            {h.deploy.table.slice(1).map((row) => <tr>{row.map((c, i) => i === 0 ? <td>{c}</td> : <td>{c}</td>)}</tr>)}
+          </tbody>
+        </table>
+      </div>
+      <p class="close-line" set:html={h.deploy.close_html.replace('/arhitectura/', '/en/arhitectura/')} />
+    </div>
+  </section>
+
+  <section class="section" id="securitate">
+    <div class="wrap">
+      <p class="eyebrow">{h.security.eyebrow}</p>
+      <h2 set:html={h.security.h2_html} />
+      <p class="lead">{h.security.lead}</p>
+      <div class="sec-grid">
+        <ul class="check-list">
+          {h.security.items_html.map((it) => <li set:html={it} />)}
+        </ul>
+        <figure class="audit card">
+          <figcaption class="mono-trace">{h.security.audit_caption}</figcaption>
+          <pre>{h.security.audit_lines.join('\n')}</pre>
+        </figure>
+      </div>
+      <p class="close-line">{h.security.close}</p>
+    </div>
+  </section>
+
+  <section class="section" id="module">
+    <div class="wrap">
+      <p class="eyebrow">{h.modules.eyebrow}</p>
+      <h2 set:html={h.modules.h2_html} />
+      <div class="grid grid-3 mods">
+        {h.modules.cards.map((m) => {
+          const href = modHref[m.name.split(' ')[0]];
+          const parts = m.name.split('Zen').map((part, i) => i === 0 ? part : <>Zen<span>{part}</span></>);
+          return href
+            ? <a class="card mod" href={href}><h3>{parts}</h3><p>{m.text}</p><span class="go">{h.modules.details} →</span></a>
+            : <article class="card mod"><h3>{parts}</h3><p>{m.text}</p></article>;
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section final">
+    <div class="wrap">
+      <h2>{h.final.h2}</h2>
+      <p class="lead">{h.final.lead}</p>
+      <div class="ctas">
+        <a class="btn btn-solid" href="/en/demo/">{h.final.cta_demo}</a>
+        <a class="btn btn-ghost" href="/en/platforma/">{h.final.cta_platform} →</a>
+      </div>
+      <p class="mono-trace">{h.final.mono}</p>
+    </div>
+  </section>
+</Base>
+
+<script src="../../scripts/home.js"></script>

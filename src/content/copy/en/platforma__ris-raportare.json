@@ -1,0 +1,53 @@
+{
+  "slug": "platforma/ris-raportare",
+  "seo_title": "RIS & reporting — worklist, dictation, signing | ZenRIS",
+  "seo_description": "Worklist with priorities and STAT, voice dictation in Romanian with ZenVoice, structured templates and one-click signing with ZenReport. All in the browser.",
+  "hero": {
+    "eyebrow": "RIS & reporting",
+    "h1": "See. Dictate. Sign.",
+    "lead": "The worklist shows you what's next. ZenVoice writes what you say, in Romanian, in real time. ZenReport drops it all onto your department's template; you sign with one click. From “unreported” to “signed” without leaving the browser."
+  },
+  "sections": [
+    {
+      "heading": "The worklist knows what's next.",
+      "body": "Every exam has a clear state — unreported, in progress, pending review, signed — and exactly one place in the list. One glance tells you what needs doing, who is working on what, and what is waiting for review.\n\nOne click opens the case: images in ZenView, the report editor beside them, in the same tab. When you sign, the case leaves the list on its own.",
+      "bullets": [
+        "**Explicit states.** Unreported, in progress, pending review, signed. No gray zones.",
+        "**STAT on top.** Urgent cases rise first and stay flagged until they are signed.",
+        "**Filter on anything.** Modality, exam type, physician, state, date range, institution.",
+        "**Direct assignment.** The department head assigns cases to radiologists from the list, not on paper.",
+        "**Automatic triage.** ZenFlow prioritizes the worklist by the rules your department defines."
+      ],
+      "visual_note": "Worklist screenshot with a STAT case highlighted at the top of the list, color-coded state columns, and the filter panel open."
+    },
+    {
+      "heading": "You dictate. The text keeps up.",
+      "body": "ZenVoice transcribes in real time, in Romanian, with a radiology vocabulary. Speak at your own pace; the text lands in the report as you dictate — not at the end, from an audio file.\n\nYour hands stay on the images. Scroll through series, measure, navigate — the report takes shape in parallel. Correct by voice or by keyboard, whichever is faster.",
+      "visual_note": "Short animation: images scrolling on the left, dictated text appearing word by word in the editor on the right."
+    },
+    {
+      "heading": "Your department's template, not the vendor's.",
+      "body": "Every department and every exam type has its own template in ZenReport: fixed sections, structured fields, standard phrasing where it makes sense. A chest CT looks the same no matter who signs it — and different from an abdominal ultrasound, exactly as it should.\n\nTemplates are managed in the platform, by the department. Change one today, it applies today. No vendor ticket, no Word versions passed around by email.",
+      "visual_note": "Two reports on different templates (CT vs. ultrasound), side by side, with the structured sections highlighted."
+    },
+    {
+      "heading": "The conclusion is proposed. The signature is yours.",
+      "body": "After the findings, ZenReport proposes a conclusion based on the report's text. Accept it, adjust it, or rewrite it from scratch — the proposal is a starting point, not a decision.\n\nThe AI in ZenRIS structures and phrases text. It does not interpret images and it does not make diagnoses. From the first letter to the signature, the report remains the physician's act.",
+      "visual_note": "The report editor with the conclusion block visibly marked as a proposal, with Accept / Edit actions."
+    },
+    {
+      "heading": "One click: signed, versioned, archived.",
+      "body": "You sign straight from the editor. The case switches to “signed”, leaves the worklist, and the report becomes available in ZenPortal for the patient and the referring physician.\n\nEvery change stays in the history: who, what, when. Any version can be opened and compared with the signed one, and the audit log covers the whole flow, not just the signature.\n\nThe PDF is generated automatically, with the institution's letterhead. In a tenant with several institutions, each keeps its own letterhead and format — no per-report configuration.",
+      "visual_note": "Three-frame sequence: the sign button, the version history with diffs, the final PDF with the institution's letterhead."
+    },
+    {
+      "heading": "The department head sees everything. Live.",
+      "body": "How many exams are unreported, who they are waiting on and for how long — right in the worklist, not in an end-of-month report. Reassign a case in two clicks; an unsigned STAT has nowhere to hide.\n\nThe whole flow runs in the browser: worklist, images, dictation, signing. No workstation installs, no dictation client, no separate signing app. A new radiologist needs a new tab, nothing more.",
+      "visual_note": "Worklist filtered by department, with state counters (unreported / in progress / signed today) in the header."
+    }
+  ],
+  "closing": {
+    "heading": "Time a report.",
+    "body": "Request a demo and run the flow end to end: open the exam, dictate the findings, accept the conclusion, sign. It runs in your browser, with nothing to install — like the product itself. Bring your department's templates: we set them up together, and you see your report, not ours."
+  }
+}

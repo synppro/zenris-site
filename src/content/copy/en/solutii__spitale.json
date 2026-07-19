@@ -1,0 +1,55 @@
+{
+  "slug": "solutii/spitale",
+  "seo_title": "ZenRIS for hospitals — RIS + PACS on-premise",
+  "seo_description": "RIS+PACS on-premise: data stays inside the hospital. SSO with Active Directory, DICOM worklist with no retyping, a complete audit log. Class I medical device.",
+  "hero": {
+    "eyebrow": "Solutions · Hospitals",
+    "h1": "Your hospital's imaging. On your hospital's servers.",
+    "lead": "ZenRIS installs on-premise, in the hospital's data center, under your security policies. Authentication goes through Active Directory. Modalities receive the patient via DICOM worklist, with no retyping. And every access to an image stays in the audit log."
+  },
+  "sections": [
+    {
+      "heading": "The data never leaves the hospital",
+      "body": "On-premise is not a stripped-down edition. It is the same product, installed on your infrastructure. Images, reports and patient data stay inside the hospital network, under your control.\n\nIf the hospital prefers cloud, hosting is in the European Union and the product does not change at all. The choice is yours, and it stays reversible.",
+      "bullets": [
+        "**Your servers.** Installed in the hospital's data center, under your network and access policies.",
+        "**A separate archive per institution.** Hospital, outpatient clinic, affiliated centers — in the same system, each with its own PACS archive. The separation is in the architecture, not in a filter.",
+        "**Encryption everywhere.** In transit and at rest, no exceptions.",
+        "**Backup and DR.** Backups and a disaster recovery plan, configured from day one and verifiable at any time."
+      ]
+    },
+    {
+      "heading": "The patient shows up on the console by itself",
+      "body": "The booking made in ZenPlan lands directly in the modality's DICOM worklist. The technologist selects the patient on the console — name, patient ID, examination, all pre-filled. Zero retyping.\n\nNo retyping means no retyping errors: names spelled differently, mixed-up IDs, images attached to the wrong patient. Every acquisition links automatically to the correct examination and appears in the radiologist's worklist the second it exists.\n\nIt works with any equipment that speaks DICOM: CT, MRI, conventional radiography, mammography, ultrasound. No per-vendor modules."
+    },
+    {
+      "heading": "Accounts are managed by the hospital",
+      "body": "ZenRIS does not come with yet another row of passwords. It connects to what you already have: people sign in with their hospital account, and when an employee leaves, IT deactivates them in one place — and their access to imaging closes with it.",
+      "bullets": [
+        "**SSO with AD / LDAP / SAML.** Centralized authentication, through the hospital's existing infrastructure.",
+        "**Granular roles.** Radiologist, technologist, front desk, manager — each sees exactly what they need, per department and per institution.",
+        "**2FA.** A second authentication factor, for all users or only for sensitive roles."
+      ]
+    },
+    {
+      "heading": "Ready for the audit before the audit",
+      "body": "Every access leaves a trace: who opened the image, who read the report, when, and from which account. The audit log is complete, from login to export.\n\nWhen an internal audit, a GDPR inspection or a request from your DPO comes in, the answer is not reconstructed from memory. It is pulled from the log.\n\nZenRIS is a Class I medical device, registered with ANMDMR (Romania's medical device authority). Data processing complies with GDPR, with hosting in Romania or the EU when you choose the cloud option."
+    },
+    {
+      "heading": "Nighttime is not an exception",
+      "body": "ZenShift keeps on-call scheduling in one place: who covers, which hours, which modality. The schedule is visible to the whole department, not buried in a spreadsheet sent by email.\n\nWhen the emergency arrives at three in the morning, ZenTelerad takes it to the on-call radiologist, wherever they are. A diagnostic viewer in the browser, a report dictated with voice dictation in Romanian via ZenVoice, signed and returned to the system along the same path. No improvised VPN, no CDs.\n\nZenFlow orders the worklist by priority: emergencies move up, routine examinations wait their turn."
+    },
+    {
+      "heading": "No installation. On no workstation.",
+      "body": "ZenRIS runs in the browser: worklist, diagnostic viewer, reports, scheduling. A new workstation means a URL, not an IT ticket.\n\nUpdates happen on the server, once, for everyone. For those who prefer a desktop viewer, ZenView Desktop remains an option — not a requirement. And opening studies in your existing desktop viewer is one click away."
+    },
+    {
+      "heading": "CNAS claims leave on their own",
+      "body": "ZenBill invoices, ZenAgent reports. Reimbursable services reach CNAS (Romania's national health insurance house) automatically, straight from the system — without SIUI, the legacy desktop reporting app, on a dedicated PC, without manual exports, without a day lost every month on validations.\n\nEvery reimbursable examination travels from booking to reporting inside the same system, visible end to end."
+    }
+  ],
+  "closing": {
+    "heading": "Bring IT to the demo too",
+    "body": "Book a session with the whole team: radiologists, IT, your DPO. Together we walk through the on-premise installation, the Active Directory integration, connecting modalities via DICOM worklist, and the audit log — driven by your questions, not a demo script. The demo runs in the browser, with no installation. Like the rest of the product."
+  }
+}

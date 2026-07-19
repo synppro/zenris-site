@@ -1,0 +1,64 @@
+{
+  "slug": "arhitectura",
+  "seo_title": "Arhitectura ZenRIS — 100% web, on-premise sau cloud",
+  "seo_description": "ZenRIS rulează integral în browser: zero instalări pe stații, arhivă PACS separată per instituție, on-premise și cloud echivalente. DICOM, 2FA, SSO, GDPR.",
+  "hero": {
+    "eyebrow": "Arhitectură",
+    "h1": "Construit ca să fie verificat.",
+    "lead": "Fără marketing pe pagina asta. Ce rulează, unde rulează, cum se separă datele și ce standarde respectă. Scrisă pentru CTO și administratori de sistem."
+  },
+  "sections": [
+    {
+      "heading": "Totul în browser. Nimic pe stații.",
+      "body": "ZenRIS rulează integral în browser: programări, worklist, raportare, dictare și vizualizatorul diagnostic. O stație nouă înseamnă un browser și un URL — fără client de instalat, fără cheie hardware, fără licență numărată pe stație.\n\nActualizările se aplică o singură dată, pe server. A doua zi, toate stațiile rulează aceeași versiune, pentru că nu există versiuni locale de sincronizat. Nici raportarea CNAS nu cere desktop: ZenAgent trimite decontul automat, de pe server, fără aplicația SIUI instalată pe vreo stație și fără exporturi manuale.\n\nPentru medicii care preferă un vizualizator instalat local există ZenView Desktop. E o opțiune, nu o condiție de funcționare.",
+      "visual_note": "Schemă simplă: mai multe stații (doar pictograma de browser) conectate la un singur server ZenRIS; pe stații nu apare nimic instalat."
+    },
+    {
+      "heading": "Fiecare instituție, arhiva ei.",
+      "body": "Un tenant ZenRIS poate conține mai multe instituții — un spital, două clinici, un punct de lucru. Fiecare instituție are propria arhivă PACS: studiile ei stau în arhiva ei, cu utilizatorii și permisiunile ei.\n\nNu vorbim de filtre pe o bază de date comună. Un filtru e o interogare care poate fi scrisă greșit; o arhivă separată nu are ce să scurgă. Separarea e la nivel de arhitectură, deci o eroare de configurare într-o instituție nu expune studiile alteia.\n\nJurnalul de audit consemnează accesul per instituție. La întrebarea „cine a văzut acest studiu” răspunzi cu un export, nu cu o presupunere.",
+      "visual_note": "Diagramă: un tenant care conține trei instituții, fiecare cu propriul cilindru de arhivă PACS; fără săgeți între arhive."
+    },
+    {
+      "heading": "On-premise sau cloud. Același produs.",
+      "body": "Aceeași bază de cod, aceleași module, aceleași funcții. Alegerea între on-premise și cloud e o decizie de operare, nu una de produs: nu există o „versiune cloud” cu funcții în plus, nici o „versiune on-premise” rămasă în urmă.\n\nDiferențele reale sunt trei, toate operaționale:",
+      "bullets": [
+        "**Unde stau datele.** On-premise: pe serverele tale, în rețeaua ta. Cloud: în centre de date din Uniunea Europeană, cu opțiune de găzduire în România.",
+        "**Cine administrează infrastructura.** On-premise: echipa ta de IT, cu suportul nostru la instalare și actualizări. Cloud: noi — servere, monitorizare, backup.",
+        "**Cum pornești.** On-premise: dimensionăm împreună și instalăm pe serverele tale. Cloud: primești tenantul și URL-ul, apoi configurezi instituțiile și utilizatorii.",
+        "**Ce nu diferă.** Modulele, interfața, ritmul versiunilor noi. Datele rămân în formate standard, deci nu ești blocat în niciuna dintre variante."
+      ],
+      "visual_note": "Tabel cu două coloane (On-premise / Cloud) și trei rânduri: unde stau datele, cine administrează, cum pornești. Sub tabel, un rând pe toată lățimea: „identic: module, funcții, interfață”."
+    },
+    {
+      "heading": "Securitatea se bifează, nu se declară.",
+      "body": "Lista de mai jos nu e o promisiune de broșură. E lista pe care echipa ta o poate verifica punct cu punct la demo, cu conturi de test.",
+      "bullets": [
+        "**2FA.** Al doilea factor la autentificare, pentru orice cont.",
+        "**SSO.** Integrare cu directorul existent: AD/LDAP, SAML/OIDC. Conturile se administrează acolo unde le administrezi deja.",
+        "**Criptare.** În tranzit și în repaus.",
+        "**Backup și DR.** Copii de rezervă programate și o procedură de restaurare pe care o poți testa, nu doar citi.",
+        "**Jurnal de audit.** Complet și exportabil: cine, ce, când — fiecare acces la date, disponibil pentru auditul intern sau extern."
+      ],
+      "visual_note": "Listă de tip checklist, cu bife; fără iconografie de „scut” sau „lacăt” generică."
+    },
+    {
+      "heading": "DICOM nativ, pe românește.",
+      "body": "ZenRIS vorbește DICOM în ambele direcții, fără traducătoare intermediare. Integrările cu RadiAnt, OsiriX și Horos sunt exact asta: viewere desktop externe care se conectează la arhivă pe DICOM standard. Medicii își păstrează uneltele. Arhiva rămâne una singură.\n\nConcret:",
+      "bullets": [
+        "**Worklist.** Aparatul primește lista de lucru direct din programări. Operatorul nu retastează numele pacientului la consolă — datele vin din ZenPlan, fără erori de tastare.",
+        "**Store.** Imaginile achiziționate intră automat în arhiva instituției, atașate studiului corect, în momentul achiziției.",
+        "**Query/Retrieve.** Orice stație sau aplicație compatibilă DICOM poate căuta în arhivă și poate descărca studii — inclusiv viewerele desktop pe care medicii le folosesc deja."
+      ],
+      "visual_note": "Diagramă de flux: aparat ↔ ZenRIS (worklist în jos, imagini în sus), plus o săgeată separată către viewere desktop externe (RadiAnt / OsiriX / Horos) prin Query/Retrieve."
+    },
+    {
+      "heading": "Conformitate cu acte, nu cu adjective.",
+      "body": "ZenRIS este dispozitiv medical Clasa I, înregistrat la ANMDMR. Pentru un software folosit în actul medical din România, asta nu e un detaliu de subsol — e punctul de plecare.\n\nDatele pacienților se prelucrează conform GDPR, cu găzduire în Uniunea Europeană sau în România — ori pe serverele tale, dacă alegi on-premise. Jurnalul de audit complet susține obligația de responsabilitate: cine a accesat ce se demonstrează cu un export, nu se afirmă într-un e-mail.",
+      "visual_note": "Trei carduri sobre: Clasa I ANMDMR, GDPR, găzduire UE/România. Text, fără sigle inventate."
+    }
+  ],
+  "closing": {
+    "heading": "Adu-ți echipa de IT la demo.",
+    "body": "Demo-ul rulează în browser, ca tot restul produsului. Vino cu administratorul de rețea, cu responsabilul de securitate și cu lista de întrebări incomode. Preferăm să răspundem la ele înainte de contract, nu după."
+  }
+}

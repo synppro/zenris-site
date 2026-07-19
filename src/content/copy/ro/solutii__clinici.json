@@ -1,0 +1,51 @@
+{
+  "slug": "solutii/clinici",
+  "seo_title": "ZenRIS pentru clinici private — RIS+PACS într-un URL",
+  "seo_description": "RIS+PACS în browser pentru clinici și lanțuri de imagistică: decont CNAS automat, rezultate online, programări cu SMS, date izolate per clinică.",
+  "hero": {
+    "eyebrow": "Soluții · Clinici și lanțuri de imagistică",
+    "h1": "Toată clinica, într-un singur URL.",
+    "lead": "ZenRIS scoate din clinică licențele per stație, exporturile SIUI și CD-urile cu imagini. Rămân agenda plină, rapoartele semnate și decontul CNAS trimis automat. În cloud sau pe serverele clinicii — alegerea nu schimbă produsul."
+  },
+  "sections": [
+    {
+      "heading": "Licența per stație e o relicvă.",
+      "body": "Modelul clasic se cunoaște: licențe numărate, chei hardware, instalare pe fiecare stație și o intervenție de câte ori se schimbă un calculator. Fiecare post de lucru nou e un cost și un ticket la furnizor.\n\nZenRIS rulează în browser. Deschizi URL-ul, te autentifici, lucrezi — la recepție, în cabinet, la consola echipamentului. O stație nouă înseamnă un calculator cu browser, nimic de instalat. ZenView Desktop există pentru cine îl preferă, dar e o opțiune, nu o condiție.",
+      "visual_note": "Comparativ pe două coloane: «RIS clasic» (chei hardware, instalări, licențe numărate) vs. «ZenRIS» (o bară de adresă de browser cu un singur URL)."
+    },
+    {
+      "heading": "Decontul CNAS pleacă singur.",
+      "body": "Azi, raportarea înseamnă aplicația SIUI pe un desktop dedicat, exporturi manuale și fișiere plimbate între programe. E muncă administrativă făcută de oameni plătiți să facă imagistică.\n\nZenBill validează serviciile la înregistrare, iar ZenAgent trimite decontul către CNAS complet automat: fără aplicația SIUI pe desktop, fără niciun export manual. Fiecare raportare rămâne în jurnalul de audit — ce a plecat, când și cu ce răspuns.",
+      "visual_note": "Diagramă de flux: serviciu înregistrat → validare ZenBill → transmitere ZenAgent → confirmare CNAS; un X discret peste pictograma «desktop SIUI + export manual»."
+    },
+    {
+      "heading": "Rezultatul e un link, nu un CD.",
+      "body": "CD-urile se pierd, se zgârie și nu mai au unde să se citească — laptopurile de azi nici nu mai au unitate optică. Iar fiecare disc inscripționat înseamnă timp la recepție și un pacient care așteaptă.\n\nZenPortal trimite pacientului un link securizat: raportul și imaginile se deschid în browser, la calitate diagnostică, prin ZenView. Medicul trimițător vede același studiu, fără să instaleze nimic. Telefoanele cu «e gata rezultatul?» dispar odată cu discurile.",
+      "visual_note": "Mockup de telefon cu mesajul ZenPortal (link securizat), alături de raport și o imagine deschise în browser pe laptop."
+    },
+    {
+      "heading": "Agenda se umple singură.",
+      "body": "Un loc gol pe RMN nu se recuperează. ZenPlan ține agenda pe echipamente și pe medici, confirmă programările prin SMS și trimite memento-uri înainte de vizită. Când cineva anulează, locul se oferă automat următorului pacient din lista de așteptare.",
+      "bullets": [
+        "**Agendă pe echipament.** Fiecare aparat are calendarul lui; suprapunerile nu au unde să apară.",
+        "**SMS de confirmare și memento.** Pacientul răspunde la un mesaj, nu la trei telefoane.",
+        "**Listă de așteptare.** O anulare devine o programare, nu un gol în ziua de lucru."
+      ],
+      "visual_note": "Captură stilizată de calendar ZenPlan: coloane per echipament; un slot anulat se recolorează cu pacientul preluat din lista de așteptare."
+    },
+    {
+      "heading": "Un lanț. Date separate. Cifre împreună.",
+      "body": "În ZenRIS, un lanț de clinici e un singur tenant cu instituții multiple. Fiecare clinică are arhiva ei PACS proprie — izolarea e arhitecturală, nu un filtru bifat într-un meniu. Datele pacienților rămân la clinica unde au fost generate.\n\nManagementul vede în schimb tot: volume, servicii, deconturi, pe fiecare locație și pe toată rețeaua. Iar o locație nouă e o instituție adăugată în tenant, nu un proiect de implementare de la zero.",
+      "visual_note": "Schemă: un tenant care conține trei clinici, fiecare cu propriul cilindru de arhivă PACS; deasupra, un panou de raportare agregată."
+    },
+    {
+      "heading": "Cloud sau serverele tale. Fără compromis.",
+      "body": "Pornești în cloud, în găzduire UE, fără hardware de cumpărat și fără proiect de infrastructură. Sau instalezi on-premise, pe serverele clinicii, dacă așa cere politica ta de date. Modulele, actualizările și funcțiile sunt identice în ambele variante — poți începe într-un fel și trece în celălalt.\n\nÎn oricare dintre ele: criptare în tranzit și în repaus, backup și plan de recuperare, 2FA și SSO (AD/LDAP/SAML), jurnal de audit complet. ZenRIS este dispozitiv medical Clasa I, înregistrat la ANMDMR, și operează conform GDPR.",
+      "visual_note": "Două carduri cu conținut identic — «Cloud (găzduire UE)» și «On-premise» — aceeași listă de module, sugerând echivalența; sub ele, un rând de pictograme de securitate (criptare, 2FA, SSO, audit)."
+    }
+  ],
+  "closing": {
+    "heading": "Demo-ul e la un URL distanță.",
+    "body": "Se deschide în browser, ca tot restul produsului. Programează o sesiune și vino cu întrebările incomode: decontul, migrarea de la sistemul actual, a doua locație. Răspundem cu produsul pornit, nu cu prezentări."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "issues": [
+    {
+      "where": "pages[platforma/teleradiologie] > section \"The reading room is anywhere with a browser.\" > body",
+      "quote": "no VPN configured by a patient colleague",
+      "fix": "Mistranslation trap: in a medical product, \"patient colleague\" reads as \"a colleague who is a patient\". Change to \"no VPN cobbled together by a long-suffering colleague\" (or \"an obliging colleague\")."
+    },
+    {
+      "where": "homepage > security.items_html[3]",
+      "quote": "Institutional SSO</strong> — Active Directory / LDAP / SAML–OIDC",
+      "fix": "Introduces OIDC, which is not in the approved factual list (SSO AD/LDAP/SAML). Change to \"Active Directory / LDAP / SAML\" unless the Romanian source explicitly lists OIDC."
+    },
+    {
+      "where": "homepage > deploy.table row \"Where the data lives\" > Cloud cell",
+      "quote": "In the EU, in certified data centers",
+      "fix": "\"certified\" is an unverifiable certification claim, and the rules forbid adding ISO/CE-style claims. Change to \"In the EU, in European data centers\" or simply \"In EU data centers\"."
+    },
+    {
+      "where": "homepage > description (meta)",
+      "quote": "diagnostic viewer, AI voice dictation, teleradiology",
+      "fix": "The rule says the feature stays \"voice dictation in Romanian\". Dropping the language generalizes the claim. Change to \"voice dictation in Romanian\" (e.g. \"diagnostic viewer, voice dictation in Romanian, teleradiology\")."
+    },
+    {
+      "where": "homepage > hero.lead_html",
+      "quote": "voice dictation with AI",
+      "fix": "Same rule as above: restore the language fact — \"voice dictation in Romanian\" (e.g. \"AI-assisted voice dictation in Romanian\" if you want to keep the AI angle)."
+    },
+    {
+      "where": "pages[solutii/clinici] > seo_description",
+      "quote": "automatic CNAS claims, online results",
+      "fix": "First CNAS mention on this page's metadata has no gloss (the platforma page glosses it in its seo_description). Change to \"automatic claims to CNAS, Romania's national health insurance house\" — or, if length is tight, keep the gloss requirement satisfied by the hero lead only and document that meta text is exempt; currently the pages are inconsistent."
+    },
+    {
+      "where": "pages[solutii/clinici] > hero.lead",
+      "quote": "takes per-workstation licenses, SIUI exports and image CDs out of the clinic",
+      "fix": "Minor: SIUI's first mention on the page is unglossed; the gloss (\"the legacy desktop reporting app\") only appears in the second section. Either add a short gloss here (\"SIUI exports (Romania's legacy desktop claims app)\") or accept as-is since the SIUI gloss is optional — but be consistent with the other pages, which gloss at first mention."
+    }
+  ],
+  "overall": "Translation quality is high: no leftover Romanian words or diacritics found in any visible text, all Zen* module names are intact and exactly spelled (ZenView, ZenView Desktop, ZenPACS, ZenReport, ZenVoice, ZenPlan, ZenShift, ZenTelerad, ZenPortal, ZenBill, ZenAgent, ZenFlow, ZenRIS), typographic quotes are used consistently, markdown bullets and HTML fragments (bold/strong/br/a) are well-formed, and no banned filler words (seamless, leverage, cutting-edge, solution-as-filler) appear — the \\\"Solutions\\\" eyebrow is a navigational section label, which I treated as acceptable. AI claims are correctly bounded (the ris-raportare page explicitly states the AI does not interpret images or make diagnoses), ANMDMR/Class I, GDPR, EU/Romania hosting and 2FA/SSO facts are preserved, and no third-party components were introduced beyond the already-present RadiAnt/OsiriX/Horos viewer integrations. The seven issues above are the only concrete problems: one genuine mistranslation (\\\"patient colleague\\\"), two factual-drift items on the homepage (OIDC added to the SSO list; \\\"certified data centers\\\"), two spots where \\\"voice dictation in Romanian\\\" lost its language qualifier, and two gloss-consistency gaps on solutii/clinici. Two style notes, no action required: (1) \\\"e-mail\\\" vs \\\"email\\\" is used inconsistently across pages (arhitectura/teleradiologie use \\\"e-mail\\\", MISC form label uses \\\"Email\\\") — pick one; (2) on arhitectura, \\\"The real differences are three\\\" is followed by four bullets, the fourth being \\\"What doesn't differ\\\" — this reads as intentional rhetoric but may trip careful readers."
+}

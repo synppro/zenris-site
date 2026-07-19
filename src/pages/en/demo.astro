@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+import misc from '../../content/copy/en/misc.json';
+const d = misc.demo;
+---
+<Base title={d.title} description={d.description} lang="en" altHref="/demo/">
+  <section class="wrap page">
+    <div class="cols">
+      <div>
+        <p class="eyebrow">{d.eyebrow}</p>
+        <h1>{d.h1}</h1>
+        <p class="lead">{d.lead}</p>
+        <ul class="check-list">
+          {d.points_html.map((p) => <li set:html={p} />)}
+        </ul>
+        <p class="mono-trace">{d.mono}</p>
+      </div>
+      <form class="card form" method="post" action="mailto:contact@zenris.ro" data-form>
+        <label>{d.f_name}
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label>{d.f_email}
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <label>{d.f_phone}
+          <input type="tel" name="phone" autocomplete="tel" />
+        </label>
+        <label>{d.f_inst}
+          <input type="text" name="institution" autocomplete="organization" required />
+        </label>
+        <label>{d.f_msg}
+          <textarea name="message" rows="4" placeholder={d.f_msg_placeholder}></textarea>
+        </label>
+        <button class="btn btn-solid" type="submit">{d.f_submit}</button>
+        <p class="note">{d.f_note}</p>
+      </form>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page { padding: 72px 28px 40px; }
+  .cols { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; }
+  @media (max-width: 880px) { .cols { grid-template-columns: 1fr; } }
+  .lead { margin: 18px 0 26px; }
+  .check-list { grid-template-columns: 1fr; margin-bottom: 26px; }
+  .form { display: flex; flex-direction: column; gap: 16px; }
+  label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: var(--mut); font-weight: 650; }
+  input, textarea {
+    background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px;
+    color: var(--hi); font-family: inherit; font-size: 15px; padding: 11px 14px;
+  }
+  input:focus-visible, textarea:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; border-color: transparent; }
+  .note { font-size: 12.5px; color: var(--mut); margin: 0; }
+</style>

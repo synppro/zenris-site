@@ -1,0 +1,53 @@
+{
+  "slug": "platforma/teleradiologie",
+  "seo_title": "ZenTelerad — teleradiologie în browser | ZenRIS",
+  "seo_description": "Pool-uri de lucru, alocare automată pe reguli, termene vizibile, escaladare. Fiecare clinică în arhiva ei. Radiologul citește de oriunde, din browser.",
+  "hero": {
+    "eyebrow": "ZenTelerad · Teleradiologie",
+    "h1": "Studiul își găsește singur radiologul.",
+    "lead": "ZenTelerad primește studii din oricâte clinici, le așază în pool-uri de lucru și le alocă după reguli: modalitate, subspecialitate, încărcare, gardă. Radiologul deschide un browser și citește. Restul e rutare."
+  },
+  "sections": [
+    {
+      "heading": "Alocarea e o regulă, nu un telefon.",
+      "body": "Într-o rețea clasică, dispecerizarea e o persoană: sună, întreabă cine e liber, trimite linkuri pe e-mail. ZenTelerad înlocuiește telefonul cu pool-uri de lucru. Studiile intră, regulile decid, radiologii primesc.\n\nO regulă se scrie o dată și rulează la fiecare studiu. CT-ul cranian de urgență ajunge la neuroradiologul de gardă. Mamografia ajunge la cine are competența. Studiul următor ajunge la cine are coada cea mai scurtă.",
+      "bullets": [
+        "**Modalitate.** CT, RM, RX, mamografie, ecografie — fiecare tip de studiu are traseul lui.",
+        "**Subspecialitate.** Cazul ajunge la radiologul cu competența potrivită, nu la primul disponibil.",
+        "**Încărcare.** Alocarea ține cont de câte studii are fiecare în lucru. Coada se echilibrează singură.",
+        "**Prioritate.** Urgențele sar în față. ZenFlow le urcă automat în capul worklistului.",
+        "**Second opinion.** Orice caz poate fi trimis unui al doilea radiolog, cu imagini, raport și istoric la un loc."
+      ],
+      "visual_note": "Diagramă de rutare: studiu → pool → reguli (modalitate / subspecialitate / încărcare) → radiolog. Statică sau animată discret."
+    },
+    {
+      "heading": "Termenul se vede. Escaladarea pornește singură.",
+      "body": "Fiecare studiu intră în platformă cu termenul lui de raportare. Timpul rămas e vizibil în worklist — pentru radiolog, pentru coordonator, pentru clinica trimițătoare. Nu există „credeam că e la altcineva”.\n\nCând termenul se apropie și raportul nu e semnat, ZenTelerad escaladează: notifică radiologul, apoi coordonatorul, apoi realocă studiul sau deschide pool-ul către mai mulți cititori. Regulile de escaladare le definești tu. Niciun studiu nu expiră în tăcere.",
+      "visual_note": "Mockup de worklist cu coloană de countdown pe termen și un studiu marcat „escaladat”."
+    },
+    {
+      "heading": "N clinici. N arhive. Niciun amestec.",
+      "body": "O rețea de teleradiologie primește studii din multe instituții. În ZenRIS, fiecare clinică trimițătoare are arhiva ei PACS proprie, în același tenant. Izolarea e arhitecturală, nu un filtru bifat într-un formular de drepturi.\n\nRadiologul vede exact studiile care i-au fost alocate — nu arhiva clinicii, nu pacienții altcuiva. Clinica își vede doar studiile și rapoartele ei. Iar fiecare citire rămâne contabilizată pe instituția sursă: ZenBill facturează pe volumul real, nu pe un tabel ținut separat.",
+      "visual_note": "Schemă: un tenant, N instituții cu arhive PACS separate; către radiolog pleacă doar studiile alocate din fiecare."
+    },
+    {
+      "heading": "Cine e de gardă primește. Automat.",
+      "body": "Planificarea gărzilor stă în ZenShift. Rutarea o citește de acolo. Când radiologul intră în gardă, studiile din pool-ul lui încep să-i sosească; la predarea turei, fluxul se mută la următorul, fără nicio intervenție.\n\nDispare întrebarea de la ora 23: „cine e de gardă la CT?”. Răspunsul e în sistem — iar sistemul a și trimis deja studiul.",
+      "visual_note": "Calendar de gărzi ZenShift alături de worklist; la schimbul de tură, o săgeată arată comutarea rutării."
+    },
+    {
+      "heading": "Sala de citire e oriunde există un browser.",
+      "body": "Radiologul deschide studiul în ZenView, vizualizatorul diagnostic din browser — fără instalare, fără chei hardware, fără VPN configurat de un coleg răbdător. Cine preferă un viewer desktop are ZenView Desktop sau integrarea cu RadiAnt, OsiriX ori Horos.\n\nRaportul se scrie pe loc: dictare în română cu ZenVoice, structurare pe șablonul secției în ZenReport, semnare și trimitere înapoi către clinica sursă. De la alocare până la raportul semnat, totul se întâmplă în aceeași fereastră.",
+      "visual_note": "Captură sau mockup ZenView cu un studiu deschis și panoul de raport alături; badge „în browser, fără instalare”."
+    },
+    {
+      "heading": "Fiecare deschidere de studiu lasă urmă.",
+      "body": "Teleradiologia înseamnă date medicale care circulă între instituții. De aceea fiecare acces, alocare și semnătură intră în jurnalul de audit complet. Autentificarea se face cu 2FA sau prin SSO-ul instituției (AD/LDAP/SAML). Datele sunt criptate în tranzit și în repaus.\n\nGăzduirea e în UE/România sau pe serverele tale — platforma e aceeași în ambele variante. ZenRIS este dispozitiv medical Clasa I, înregistrat la ANMDMR, construit pentru conformitate GDPR, cu backup și plan de disaster recovery incluse.",
+      "visual_note": "Rând de garanții cu pictograme sobre: jurnal de audit, 2FA/SSO, criptare, găzduire UE sau on-premise, backup/DR."
+    }
+  ],
+  "closing": {
+    "heading": "Rutarea se demonstrează, nu se povestește.",
+    "body": "Cere un demo și îți configurăm un pool cu regulile tale: modalități, subspecialități, termene. Primești un link, deschizi browserul, citești un studiu de test și semnezi raportul. Dacă fluxul merge la demo, merge și în garda de la ora trei."
+  }
+}

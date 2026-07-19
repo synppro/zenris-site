@@ -1,0 +1,61 @@
+---
+const { lang = 'ro' } = Astro.props;
+const t = lang === 'ro'
+  ? {
+      tag: 'Toată radiologia. Într-un singur browser.',
+      platform: 'Platformă', solutions: 'Soluții', company: 'Resurse',
+      p: [['Ansamblu', '/platforma/'], ['ZenView · ZenPACS', '/platforma/pacs-viewer/'], ['RIS & raportare', '/platforma/ris-raportare/'], ['Teleradiologie', '/platforma/teleradiologie/'], ['Portal pacient', '/platforma/portal-pacient/']],
+      s: [['Clinici & lanțuri', '/solutii/clinici/'], ['Spitale', '/solutii/spitale/'], ['Rețele de teleradiologie', '/solutii/teleradiologie/']],
+      c: [['Arhitectură & securitate', '/arhitectura/'], ['Noutăți', '/noutati/'], ['Programează un demo', '/demo/']],
+      trust: 'Dispozitiv medical Clasa I · Înregistrat la ANMDMR · GDPR · Găzduire UE/România',
+      base: '',
+    }
+  : {
+      tag: 'All of radiology. In a single browser.',
+      platform: 'Platform', solutions: 'Solutions', company: 'Resources',
+      p: [['Overview', '/en/platforma/'], ['ZenView · ZenPACS', '/en/platforma/pacs-viewer/'], ['RIS & reporting', '/en/platforma/ris-raportare/'], ['Teleradiology', '/en/platforma/teleradiologie/'], ['Patient portal', '/en/platforma/portal-pacient/']],
+      s: [['Clinics & chains', '/en/solutii/clinici/'], ['Hospitals', '/en/solutii/spitale/'], ['Teleradiology networks', '/en/solutii/teleradiologie/']],
+      c: [['Architecture & security', '/en/arhitectura/'], ['Updates', '/en/noutati/'], ['Book a demo', '/en/demo/']],
+      trust: 'Class I medical device · Registered with ANMDMR (Romania) · GDPR · EU/Romania hosting',
+      base: '/en',
+    };
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap cols">
+    <div class="brand">
+      <p class="logo">Zen<b>RIS</b></p>
+      <p class="tag">{t.tag}</p>
+      <p class="mono-trace">contact@zenris.ro</p>
+    </div>
+    <nav aria-label={t.platform}>
+      <p class="head">{t.platform}</p>
+      {t.p.map(([label, href]) => <a href={lang === 'ro' ? href : href}>{label}</a>)}
+    </nav>
+    <nav aria-label={t.solutions}>
+      <p class="head">{t.solutions}</p>
+      {t.s.map(([label, href]) => <a href={href}>{label}</a>)}
+    </nav>
+    <nav aria-label={t.company}>
+      <p class="head">{t.company}</p>
+      {t.c.map(([label, href]) => <a href={href}>{label}</a>)}
+    </nav>
+  </div>
+  <div class="wrap base">
+    <span>{t.trust}</span>
+    <span>© {year} ZenRIS</span>
+  </div>
+</footer>
+
+<style>
+  .site-footer { border-top: 1px solid var(--line); padding: 56px 0 34px; margin-top: 40px; }
+  .cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; }
+  @media (max-width: 800px) { .cols { grid-template-columns: 1fr 1fr; } }
+  .logo { font-size: 20px; font-weight: 800; color: var(--hi); margin: 0 0 8px; }
+  .logo b { color: var(--blue-soft); }
+  .tag { margin: 0 0 12px; font-size: 14.5px; color: var(--mut); }
+  .head { font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mut); font-weight: 700; margin: 0 0 12px; }
+  nav a { display: block; font-size: 14.5px; padding: 5px 0; color: var(--pale); }
+  nav a:hover { color: var(--hi); }
+  .base { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); margin-top: 40px; padding-top: 22px; font-size: 13px; color: var(--mut); }
+</style>

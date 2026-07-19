@@ -1,0 +1,64 @@
+{
+  "slug": "arhitectura",
+  "seo_title": "ZenRIS Architecture — 100% web, on-premise or cloud",
+  "seo_description": "ZenRIS runs entirely in the browser: zero workstation installs, a separate PACS archive per institution, on-premise and cloud fully equivalent. DICOM, 2FA, SSO, GDPR.",
+  "hero": {
+    "eyebrow": "Architecture",
+    "h1": "Built to be verified.",
+    "lead": "No marketing on this page. What runs, where it runs, how data is separated, and which standards it meets. Written for CTOs and system administrators."
+  },
+  "sections": [
+    {
+      "heading": "Everything in the browser. Nothing on workstations.",
+      "body": "ZenRIS runs entirely in the browser: scheduling, worklist, reporting, dictation and the diagnostic viewer. A new workstation means a browser and a URL — no client to install, no hardware dongle, no per-workstation licensing.\n\nUpdates are applied once, on the server. The next morning, every workstation runs the same version, because there are no local versions to synchronize. Even reporting to CNAS (Romania's national health insurance house) needs no desktop: ZenAgent submits the claim automatically, from the server — no SIUI (the legacy desktop reporting app) installed on any workstation, no manual exports.\n\nFor physicians who prefer a locally installed viewer, there is ZenView Desktop. It's an option, not a requirement.",
+      "visual_note": "Simple diagram: several workstations (browser icon only) connected to a single ZenRIS server; nothing installed shown on the workstations."
+    },
+    {
+      "heading": "Every institution gets its own archive.",
+      "body": "A ZenRIS tenant can hold several institutions — a hospital, two clinics, a satellite site. Each institution has its own PACS archive: its studies live in its archive, with its users and its permissions.\n\nThis is not filtering on a shared database. A filter is a query that can be written wrong; a separate archive has nothing to leak. The separation is architectural, so a configuration mistake in one institution cannot expose another's studies.\n\nThe audit log records access per institution. When someone asks “who saw this study”, you answer with an export, not a guess.",
+      "visual_note": "Diagram: one tenant containing three institutions, each with its own PACS archive cylinder; no arrows between archives."
+    },
+    {
+      "heading": "On-premise or cloud. The same product.",
+      "body": "Same codebase, same modules, same features. Choosing between on-premise and cloud is an operating decision, not a product decision: there is no “cloud version” with extra features, and no “on-premise version” lagging behind.\n\nThe real differences are three, all operational:",
+      "bullets": [
+        "**Where the data lives.** On-premise: on your servers, in your network. Cloud: in data centers in the European Union, with a Romania hosting option.",
+        "**Who runs the infrastructure.** On-premise: your IT team, with our support for installation and updates. Cloud: us — servers, monitoring, backups.",
+        "**How you start.** On-premise: we size it together and install on your servers. Cloud: you get your tenant and URL, then set up institutions and users.",
+        "**What doesn't differ.** The modules, the interface, the release cadence. Data stays in standard formats, so neither option locks you in."
+      ],
+      "visual_note": "Two-column table (On-premise / Cloud) with three rows: where the data lives, who runs it, how you start. Below the table, one full-width row: “identical: modules, features, interface”."
+    },
+    {
+      "heading": "Security is a checklist, not a claim.",
+      "body": "The list below is not brochure copy. It's the list your team can verify point by point at the demo, with test accounts.",
+      "bullets": [
+        "**2FA.** A second factor at login, for any account.",
+        "**SSO.** Integration with your existing directory: AD/LDAP, SAML/OIDC. Accounts are managed where you already manage them.",
+        "**Encryption.** In transit and at rest.",
+        "**Backup and DR.** Scheduled backups and a restore procedure you can test, not just read.",
+        "**Audit log.** Complete and exportable: who, what, when — every data access, available for internal or external audit."
+      ],
+      "visual_note": "Checklist-style list with check marks; no generic “shield” or “padlock” iconography."
+    },
+    {
+      "heading": "Native DICOM, spoken plainly.",
+      "body": "ZenRIS speaks DICOM in both directions, with no translators in between. The RadiAnt, OsiriX and Horos integrations are exactly that: external desktop viewers connecting to the archive over standard DICOM. Physicians keep their tools. The archive stays one.\n\nConcretely:",
+      "bullets": [
+        "**Worklist.** The modality gets its worklist straight from the schedule. The operator doesn't retype the patient's name at the console — the data comes from ZenPlan, with no typing errors.",
+        "**Store.** Acquired images enter the institution's archive automatically, attached to the correct study, at the moment of acquisition.",
+        "**Query/Retrieve.** Any DICOM-compatible workstation or application can search the archive and pull studies — including the desktop viewers physicians already use."
+      ],
+      "visual_note": "Flow diagram: modality ↔ ZenRIS (worklist down, images up), plus a separate arrow to external desktop viewers (RadiAnt / OsiriX / Horos) via Query/Retrieve."
+    },
+    {
+      "heading": "Compliance with documents, not adjectives.",
+      "body": "ZenRIS is a Class I medical device, registered with ANMDMR, Romania's medical device authority. For software used in medical care in Romania, that's not a footnote — it's the starting point.\n\nPatient data is processed under GDPR, hosted in the European Union or in Romania — or on your own servers, if you choose on-premise. The complete audit log backs the accountability obligation: who accessed what is demonstrated with an export, not asserted in an email.",
+      "visual_note": "Three sober cards: Class I ANMDMR, GDPR, EU/Romania hosting. Text only, no invented logos."
+    }
+  ],
+  "closing": {
+    "heading": "Bring your IT team to the demo.",
+    "body": "The demo runs in the browser, like the rest of the product. Come with your network administrator, your security officer and your list of uncomfortable questions. We'd rather answer them before the contract than after."
+  }
+}

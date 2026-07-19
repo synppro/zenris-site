@@ -1,0 +1,81 @@
+---
+import Base from '../layouts/Base.astro';
+
+const { data, lang = 'ro', altHref, heroImage = null, heroImageAlt = '' } = Astro.props;
+
+const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const inline = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+const paras = (s) => s.split(/\n\n+/).map((p) => `<p>${inline(p.trim())}</p>`).join('');
+
+const demoHref = lang === 'ro' ? '/demo/' : '/en/demo/';
+const demoLabel = lang === 'ro' ? 'Programează un demo' : 'Book a demo';
+---
+<Base title={data.seo_title} description={data.seo_description} lang={lang} altHref={altHref}>
+  <section class="page-hero wrap" class:list={[{ 'has-img': !!heroImage }]}>
+    <div>
+      <p class="eyebrow">{data.hero.eyebrow}</p>
+      <h1>{data.hero.h1}</h1>
+      <p class="lead" set:html={inline(data.hero.lead)} />
+      <div class="ctas">
+        <a class="btn btn-solid" href={demoHref}>{demoLabel}</a>
+      </div>
+    </div>
+    {heroImage && (
+      <figure class="hero-img">
+        <img src={heroImage} width="512" height="512" alt={heroImageAlt} loading="eager" />
+        <figcaption class="mono-trace">{lang === 'ro' ? 'CT real anonimizat, randat în ZenView' : 'Real anonymized CT, rendered in ZenView'}</figcaption>
+      </figure>
+    )}
+  </section>
+
+  {data.sections.map((s, i) => (
+    <section class={'section c-sec' + (i % 2 ? ' alt' : '')}>
+      <div class="wrap c-grid">
+        <div class="c-main">
+          <h2>{s.heading}</h2>
+          <div class="c-body" set:html={paras(s.body)} />
+        </div>
+        {s.bullets && s.bullets.length > 0 && (
+          <ul class="c-bullets">
+            {s.bullets.map((b) => <li set:html={inline(b)} />)}
+          </ul>
+        )}
+      </div>
+    </section>
+  ))}
+
+  <section class="section closing">
+    <div class="wrap">
+      <h2>{data.closing.heading}</h2>
+      <div class="lead" set:html={paras(data.closing.body)} />
+      <div class="ctas">
+        <a class="btn btn-solid" href={demoHref}>{demoLabel}</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-hero { padding: 72px 28px 64px; }
+  .page-hero.has-img { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; }
+  @media (max-width: 880px) { .page-hero.has-img { grid-template-columns: 1fr; } }
+  .page-hero .lead { margin-top: 18px; }
+  .ctas { margin-top: 28px; display: flex; gap: 14px; }
+  .hero-img { margin: 0; position: relative; }
+  .hero-img::before { content: ''; position: absolute; inset: -12% -16%; border-radius: 50%; background: radial-gradient(closest-side, var(--glow), transparent 75%); pointer-events: none; }
+  .hero-img img { position: relative; border-radius: 16px; border: 1px solid var(--line); background: #000; }
+  .hero-img figcaption { margin-top: 10px; }
+  .c-sec.alt { background: color-mix(in srgb, var(--panel) 45%, transparent); }
+  .c-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: start; }
+  .c-grid:not(:has(.c-bullets)) { grid-template-columns: 1fr; }
+  @media (max-width: 880px) { .c-grid { grid-template-columns: 1fr; } }
+  .c-main h2 { font-size: clamp(24px, 2.6vw, 32px); margin-bottom: 16px; }
+  .c-body :global(p) { max-width: 38em; }
+  .c-body :global(strong) { color: var(--hi); }
+  .c-bullets { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .c-bullets li { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; font-size: 14.5px; color: var(--mut); }
+  .c-bullets li :global(strong) { color: var(--hi); display: block; margin-bottom: 2px; }
+  .closing { text-align: center; }
+  .closing .lead { margin: 18px auto 0; }
+  .closing .ctas { justify-content: center; margin-top: 30px; }
+</style>

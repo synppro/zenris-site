@@ -1,0 +1,62 @@
+{
+  "slug": "solutii/spitale",
+  "seo_title": "ZenRIS pentru spitale — RIS + PACS on-premise",
+  "seo_description": "RIS+PACS on-premise: datele rămân în spital. SSO cu Active Directory, worklist DICOM fără retastare, jurnal de audit complet. Dispozitiv medical Clasa I.",
+  "hero": {
+    "eyebrow": "Soluții · Spitale",
+    "h1": "Imagistica spitalului. Pe serverele spitalului.",
+    "lead": "ZenRIS se instalează on-premise, în centrul de date al spitalului, sub politicile tale de securitate. Autentificarea trece prin Active Directory. Echipamentele primesc pacientul prin worklist DICOM, fără retastare. Iar fiecare acces la o imagine rămâne în jurnalul de audit."
+  },
+  "sections": [
+    {
+      "heading": "Datele nu pleacă din spital",
+      "body": "On-premise nu e o versiune redusă. E același produs, instalat pe infrastructura ta. Imaginile, rapoartele și datele pacienților rămân în rețeaua spitalului, sub controlul tău.\n\nDacă spitalul preferă cloud, găzduirea e în Uniunea Europeană și produsul nu se schimbă cu nimic. Alegerea e a ta și rămâne reversibilă.",
+      "bullets": [
+        "**Serverele tale.** Instalare în centrul de date al spitalului, sub politicile tale de rețea și de acces.",
+        "**Arhivă separată pe instituție.** Spital, ambulatoriu, centre afiliate — în același sistem, fiecare cu arhiva PACS proprie. Separarea e în arhitectură, nu într-un filtru.",
+        "**Criptare peste tot.** În tranzit și în repaus, fără excepții.",
+        "**Backup și DR.** Copii de siguranță și plan de recuperare, configurate de la instalare și verificabile oricând."
+      ],
+      "visual_note": "Diagramă simplă: clădirea spitalului cu serverul înăuntru; instituții multiple în același tenant, fiecare cu arhiva ei; săgeți criptate către stații și echipamente."
+    },
+    {
+      "heading": "Pacientul apare singur pe consolă",
+      "body": "Programarea din ZenPlan ajunge direct în worklist-ul DICOM al echipamentului. Tehnicianul selectează pacientul de pe consolă — nume, CNP, examinare, toate deja completate. Zero retastare.\n\nFără retastare dispar și greșelile de retastare: nume scrise diferit, ID-uri încurcate, imagini atașate la pacientul greșit. Fiecare achiziție se leagă automat de examinarea corectă și apare în worklist-ul radiologului în secunda în care există.\n\nFuncționează cu orice echipament care vorbește DICOM: CT, RMN, radiologie convențională, mamografie, ecografie. Fără module per producător.",
+      "visual_note": "Flux în trei pași: ZenPlan → consola echipamentului (worklist populat) → worklist-ul radiologului. Accent pe câmpurile precompletate."
+    },
+    {
+      "heading": "Conturile le administrează spitalul",
+      "body": "ZenRIS nu vine cu încă un rând de parole. Se leagă la ce ai deja: oamenii intră cu contul de spital, iar când un angajat pleacă, IT-ul îl dezactivează într-un singur loc — și accesul la imagistică se închide odată cu el.",
+      "bullets": [
+        "**SSO cu AD / LDAP / SAML.** Autentificare centralizată, prin infrastructura existentă a spitalului.",
+        "**Roluri granulare.** Radiolog, tehnician, recepție, manager — fiecare vede exact ce îi trebuie, per secție și per instituție.",
+        "**2FA.** Al doilea factor de autentificare, pentru toți utilizatorii sau doar pentru rolurile sensibile."
+      ],
+      "visual_note": "Schemă: Active Directory al spitalului → ZenRIS → matrice de roluri pe secții/instituții."
+    },
+    {
+      "heading": "Pregătit de control înainte de control",
+      "body": "Fiecare acces lasă urmă: cine a deschis imaginea, cine a citit raportul, când și de pe ce cont. Jurnalul de audit e complet, de la autentificare până la export.\n\nCând vine un audit intern, un control GDPR sau o solicitare a DPO-ului, răspunsul nu se reconstruiește din amintiri. Se extrage din jurnal.\n\nZenRIS este dispozitiv medical Clasa I, înregistrat la ANMDMR. Prelucrarea datelor respectă GDPR, cu găzduire în România sau în UE atunci când alegi varianta cloud.",
+      "visual_note": "Mock de jurnal de audit: listă de evenimente cu utilizator, acțiune, oră; un buton de export vizibil."
+    },
+    {
+      "heading": "Noaptea nu e o excepție",
+      "body": "ZenShift ține planificarea gărzilor într-un singur loc: cine acoperă, pe ce interval, pe ce modalitate. Programul e vizibil pentru toată secția, nu îngropat într-un tabel trimis pe e-mail.\n\nCând urgența vine la trei dimineața, ZenTelerad o duce la radiologul de gardă, oriunde ar fi. Vizualizator diagnostic în browser, raport dictat în română cu ZenVoice, semnat și întors în sistem pe același drum. Fără VPN improvizat, fără CD-uri.\n\nZenFlow ordonează worklist-ul după prioritate: urgențele urcă, examinările de rutină își așteaptă rândul.",
+      "visual_note": "Două panouri: calendarul de gărzi ZenShift și fluxul de teleradiologie (spital → radiolog acasă → raport semnat înapoi)."
+    },
+    {
+      "heading": "Nicio instalare. Pe nicio stație.",
+      "body": "ZenRIS rulează în browser: worklist, vizualizator diagnostic, rapoarte, programări. O stație nouă înseamnă un URL, nu un tichet la IT.\n\nActualizările se fac pe server, o singură dată, pentru toată lumea. Pentru cine preferă un viewer desktop, ZenView Desktop rămâne o opțiune — nu o condiție. Iar deschiderea studiilor în RadiAnt, OsiriX sau Horos e la un clic.",
+      "visual_note": "Contrast vizual: o stație cu browser deschis versus o listă tăiată de instalări, chei hardware și licențe per stație."
+    },
+    {
+      "heading": "Decontul CNAS pleacă singur",
+      "body": "ZenBill facturează, ZenAgent raportează. Serviciile decontabile ajung la CNAS automat, direct din sistem — fără aplicația SIUI pe un desktop dedicat, fără exporturi manuale, fără o zi pe lună pierdută cu validările.\n\nFiecare examinare decontabilă își parcurge drumul de la programare la raportare în același sistem, vizibil de la un capăt la altul.",
+      "visual_note": "Flux liniar: examinare → factură ZenBill → raportare automată ZenAgent → CNAS. Un X discret peste pașii manuali eliminați."
+    }
+  ],
+  "closing": {
+    "heading": "Adu și IT-ul la demo",
+    "body": "Programează o sesiune cu toată echipa: radiologi, IT, DPO. Parcurgem împreună instalarea on-premise, legătura cu Active Directory, conectarea echipamentelor prin worklist DICOM și jurnalul de audit — pe întrebările voastre, nu pe un scenariu de prezentare. Demo-ul rulează în browser, fără nicio instalare. Ca tot restul produsului."
+  }
+}

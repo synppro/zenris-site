@@ -1,0 +1,51 @@
+{
+  "slug": "solutii/clinici",
+  "seo_title": "ZenRIS for private clinics — RIS+PACS in one URL",
+  "seo_description": "Browser-based RIS+PACS for clinics and imaging chains: automatic claims to CNAS, Romania’s national health insurance house, online results, SMS appointment confirmations, isolated data per clinic.",
+  "hero": {
+    "eyebrow": "Solutions · Clinics and imaging chains",
+    "h1": "The whole clinic, in one URL.",
+    "lead": "ZenRIS takes per-workstation licenses, SIUI exports (the legacy desktop claims app) and image CDs out of the clinic. What stays: a full schedule, signed reports, and claims sent automatically to CNAS (Romania's national health insurance house). In the cloud or on the clinic's own servers — the choice doesn't change the product."
+  },
+  "sections": [
+    {
+      "heading": "The per-workstation license is a relic.",
+      "body": "The classic model is familiar: counted licenses, hardware dongles, an install on every workstation, and a vendor visit every time a computer gets replaced. Every new workstation is a cost and a support ticket.\n\nZenRIS runs in the browser. Open the URL, log in, work — at the front desk, in the consulting room, at the scanner console. A new workstation is a computer with a browser, nothing to install. ZenView Desktop exists for those who prefer it, but it's an option, not a requirement.",
+      "visual_note": "Two-column comparison: “classic RIS” (hardware dongles, installs, counted licenses) vs. “ZenRIS” (a browser address bar with a single URL)."
+    },
+    {
+      "heading": "The CNAS claim sends itself.",
+      "body": "Today, claims reporting means SIUI — the legacy desktop reporting app — on a dedicated PC, manual exports, and files carried between programs. It's administrative work done by people paid to do imaging.\n\nZenBill validates services at registration, and ZenAgent submits the claim to CNAS fully automatically: no SIUI app on a desktop, no manual export of any kind. Every submission stays in the audit log — what went out, when, and with what response.",
+      "visual_note": "Flow diagram: service registered → ZenBill validation → ZenAgent submission → CNAS confirmation; a discreet X over the “SIUI desktop + manual export” icon."
+    },
+    {
+      "heading": "The result is a link, not a CD.",
+      "body": "CDs get lost, get scratched, and have nowhere left to be read — today's laptops don't even ship with optical drives. And every burned disc is time at the front desk and a patient kept waiting.\n\nZenPortal sends the patient a secure link: the report and images open in the browser, at diagnostic quality, through ZenView. The referring physician sees the same study without installing anything. The “is my result ready?” phone calls disappear along with the discs.",
+      "visual_note": "Phone mockup showing the ZenPortal message (secure link), next to a report and an image open in a browser on a laptop."
+    },
+    {
+      "heading": "The schedule fills itself.",
+      "body": "An empty MRI slot never comes back. ZenPlan keeps the schedule per machine and per physician, confirms appointments by SMS and sends reminders before the visit. When someone cancels, the slot is offered automatically to the next patient on the waiting list.",
+      "bullets": [
+        "**A calendar per machine.** Each scanner has its own schedule; double-bookings have nowhere to happen.",
+        "**Confirmation and reminder SMS.** The patient replies to one message instead of taking three phone calls.",
+        "**Waiting list.** A cancellation becomes an appointment, not a hole in the workday."
+      ],
+      "visual_note": "Stylized ZenPlan calendar view: one column per machine; a cancelled slot recolors as the patient from the waiting list takes it."
+    },
+    {
+      "heading": "One chain. Separate data. Numbers together.",
+      "body": "In ZenRIS, a clinic chain is a single tenant with multiple institutions. Each clinic has its own PACS archive — the isolation is architectural, not a filter ticked in a menu. Patient data stays at the clinic where it was generated.\n\nManagement, meanwhile, sees everything: volumes, services, claims — per location and across the whole network. And a new location is an institution added to the tenant, not an implementation project from scratch.",
+      "visual_note": "Diagram: one tenant containing three clinics, each with its own PACS archive cylinder; above them, an aggregated reporting panel."
+    },
+    {
+      "heading": "Cloud or your own servers. No compromise.",
+      "body": "Start in the cloud, hosted in the EU, with no hardware to buy and no infrastructure project. Or install on-premise, on the clinic's servers, if that's what your data policy requires. Modules, updates and features are identical either way — you can start with one and move to the other.\n\nIn both: encryption in transit and at rest, backup and a recovery plan, 2FA and SSO (AD/LDAP/SAML), a complete audit log. ZenRIS is a Class I medical device registered with ANMDMR (Romania) and operates in compliance with GDPR.",
+      "visual_note": "Two cards with identical content — “Cloud (EU hosting)” and “On-premise” — the same module list, suggesting equivalence; below them, a row of security icons (encryption, 2FA, SSO, audit)."
+    }
+  ],
+  "closing": {
+    "heading": "The demo is one URL away.",
+    "body": "It opens in the browser, like the rest of the product. Book a session and bring the uncomfortable questions: claims, migration from your current system, the second location. We answer with the product running, not with slide decks."
+  }
+}
