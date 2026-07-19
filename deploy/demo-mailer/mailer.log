@@ -1,0 +1,22 @@
+[config] încărcat din (defaults) — smtp=DRY:587 to=contact@zenris.ro
+demo-mailer v2 pe :8901 (config: defaults/DRY)
+[DRY]
+Cerere de demo — zenris.ro (ro)
+Nume: Test Popescu
+Email: test@clinica.ro
+Telefon: —
+Instituție: Clinica Test
+
+vreau demo
+
+— IP: ::1 · 2026-07-19T16:02:54.684Z
+[DRY]
+Cerere de demo — zenris.ro (ro)
+Nume: R
+Email: r@r.ro
+Telefon: —
+Instituție: z
+
+(fără mesaj)
+
+— IP: ::1 · 2026-07-19T16:02:54.801Z

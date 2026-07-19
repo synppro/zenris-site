@@ -1,0 +1,22 @@
+{
+  "smtp": {
+    "host": "mail.exemplu.ro",
+    "port": 587,
+    "secure": false,
+    "requireTLS": true,
+    "user": "site@zenris.ro",
+    "pass": "PAROLA-AICI",
+    "from": "site@zenris.ro"
+  },
+  "to": "contact@zenris.ro",
+  "allowedOrigins": ["https://zenris.ro", "https://www.zenris.ro"],
+  "limits": {
+    "perIpWindow": 5,
+    "windowMinutes": 10,
+    "perIpDaily": 10,
+    "globalDaily": 150,
+    "minElapsedMs": 3000,
+    "maxField": 300,
+    "maxMessage": 2000
+  }
+}

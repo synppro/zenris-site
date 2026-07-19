@@ -1,0 +1,8 @@
+{
+  "name": "zenris-demo-mailer",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "start": "node server.mjs" },
+  "dependencies": { "nodemailer": "^6.9.16" }
+}

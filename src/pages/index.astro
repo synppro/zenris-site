@@ -76,23 +76,28 @@ const modules = [
       <figure class="viewer">
         <figcaption class="vbar">
           <span class="t">Zen<i>View</i> — CT cerebral nativ</span>
-          <span>3 serii · 435 imagini</span>
+          <span>3 serii · 84 imagini</span>
         </figcaption>
         <div class="vbody">
-          <div class="vport">
-            <img class="poster" src={brain0.src} width="512" height="512" alt="" aria-hidden="true" loading="eager" />
-            <img class="f1" src={brain0.src} width="512" height="512" alt="Felie CT cerebral, fereastră de creier" loading="eager" />
-            <img class="f2" src={brain1.src} width="512" height="512" alt="" loading="eager" />
-            <img class="f3" src={brain2.src} width="512" height="512" alt="" loading="eager" />
+          <div class="vport" id="ct-vport" tabindex="0" role="application"
+            aria-label="Viewer CT interactiv: derulează pentru felii, trage orizontal pentru contrast, click pe serii">
+            <img id="ct-img" src="/ct/a/14.jpg" width="420" height="420" alt="Felie CT cerebral, fereastră de creier" loading="eager" fetchpriority="high" />
             <span class="ov tl">IONESCU&nbsp;M. · 58A · date fictive</span>
-            <span class="ov br">W 80 · L 40 · IM 82/144</span>
-            <div class="scrub"><i></i></div>
+            <span class="ov br" id="ct-ov">W 80 · L 40 · IM 15/28</span>
+            <span class="hint" id="ct-hint">scroll — imagini · trage — contrast · click pe serii</span>
+            <div class="scrub"><i id="ct-scrub"></i></div>
           </div>
           <div class="rail">
-            <img class="on" src={brain1.src} width="70" height="70" alt="" loading="eager" />
-            <img src={os1.src} width="70" height="70" alt="" loading="eager" />
-            <img src={brain2.src} width="70" height="70" alt="" loading="eager" />
-            <span class="more">+12 serii</span>
+            <button type="button" class="on" data-series="a" data-count="28" data-wl="W 80 · L 40" aria-label="Seria cerebral 1,25 mm">
+              <img src="/ct/a/14.jpg" width="70" height="70" alt="" loading="eager" /><span>Cerebral 1.25</span>
+            </button>
+            <button type="button" data-series="b" data-count="28" data-wl="W 2800 · L 600" aria-label="Seria os 0,625 mm">
+              <img src="/ct/b/14.jpg" width="70" height="70" alt="" loading="eager" /><span>Os 0.625</span>
+            </button>
+            <button type="button" data-series="c" data-count="28" data-wl="W 160 · L 40" aria-label="Seria cerebral, fereastră largă">
+              <img src="/ct/c/14.jpg" width="70" height="70" alt="" loading="eager" /><span>Cerebral larg</span>
+            </button>
+            <span class="more">serii reale</span>
           </div>
         </div>
       </figure>
@@ -351,3 +356,4 @@ const modules = [
 </Base>
 
 <script src="../scripts/home.js"></script>
+<script src="../scripts/viewer.js"></script>

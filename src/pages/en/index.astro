@@ -33,23 +33,28 @@ const modHref = {
       <figure class="viewer">
         <figcaption class="vbar">
           <span class="t" set:html={(h.hero.viewer_title ?? 'ZenView — native head CT').replace('ZenView', 'Zen<i>View</i>')} />
-          <span>{h.hero.viewer_meta ?? '3 series · 435 images'}</span>
+          <span>3 series · 84 images</span>
         </figcaption>
         <div class="vbody">
-          <div class="vport">
-            <img class="poster" src={brain0.src} width="512" height="512" alt="" aria-hidden="true" loading="eager" />
-            <img class="f1" src={brain0.src} width="512" height="512" alt="Brain CT slice, brain window" loading="eager" />
-            <img class="f2" src={brain1.src} width="512" height="512" alt="" loading="eager" />
-            <img class="f3" src={brain2.src} width="512" height="512" alt="" loading="eager" />
+          <div class="vport" id="ct-vport" tabindex="0" role="application"
+            aria-label="Interactive CT viewer: scroll for slices, drag horizontally for contrast, click the series">
+            <img id="ct-img" src="/ct/a/14.jpg" width="420" height="420" alt="Brain CT slice, brain window" loading="eager" fetchpriority="high" />
             <span class="ov tl">{h.hero.overlay_patient ?? 'IONESCU M. · 58Y · fictitious data'}</span>
-            <span class="ov br">W 80 · L 40 · IM 82/144</span>
-            <div class="scrub"><i></i></div>
+            <span class="ov br" id="ct-ov">W 80 · L 40 · IM 15/28</span>
+            <span class="hint" id="ct-hint">scroll — slices · drag — contrast · click the series</span>
+            <div class="scrub"><i id="ct-scrub"></i></div>
           </div>
           <div class="rail">
-            <img class="on" src={brain1.src} width="70" height="70" alt="" loading="eager" />
-            <img src={os1.src} width="70" height="70" alt="" loading="eager" />
-            <img src={brain2.src} width="70" height="70" alt="" loading="eager" />
-            <span class="more">+12 series</span>
+            <button type="button" class="on" data-series="a" data-count="28" data-wl="W 80 · L 40" aria-label="Brain series, 1.25 mm">
+              <img src="/ct/a/14.jpg" width="70" height="70" alt="" loading="eager" /><span>Brain 1.25</span>
+            </button>
+            <button type="button" data-series="b" data-count="28" data-wl="W 2800 · L 600" aria-label="Bone series, 0.625 mm">
+              <img src="/ct/b/14.jpg" width="70" height="70" alt="" loading="eager" /><span>Bone 0.625</span>
+            </button>
+            <button type="button" data-series="c" data-count="28" data-wl="W 160 · L 40" aria-label="Brain series, wide window">
+              <img src="/ct/c/14.jpg" width="70" height="70" alt="" loading="eager" /><span>Brain wide</span>
+            </button>
+            <span class="more">live series</span>
           </div>
         </div>
       </figure>
@@ -274,3 +279,4 @@ const modHref = {
 </Base>
 
 <script src="../../scripts/home.js"></script>
+<script src="../../scripts/viewer.js"></script>

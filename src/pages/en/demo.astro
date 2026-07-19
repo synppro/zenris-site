@@ -15,23 +15,28 @@ const d = misc.demo;
         </ul>
         <p class="mono-trace">{d.mono}</p>
       </div>
-      <form class="card form" method="post" action="mailto:contact@zenris.ro" data-form>
+      <form class="card form" method="post" action="/api/demo-request" data-form
+        data-ok="Request sent. We reply within the same business day."
+        data-err="Automatic sending failed — your email client will open with the request pre-filled."
+        data-limit="Too many attempts from this address. Try again in a few minutes.">
         <label>{d.f_name}
-          <input type="text" name="name" autocomplete="name" required />
+          <input type="text" name="name" autocomplete="name" maxlength="200" required />
         </label>
         <label>{d.f_email}
-          <input type="email" name="email" autocomplete="email" required />
+          <input type="email" name="email" autocomplete="email" maxlength="200" required />
         </label>
         <label>{d.f_phone}
-          <input type="tel" name="phone" autocomplete="tel" />
+          <input type="tel" name="phone" autocomplete="tel" maxlength="50" />
         </label>
         <label>{d.f_inst}
-          <input type="text" name="institution" autocomplete="organization" required />
+          <input type="text" name="institution" autocomplete="organization" maxlength="200" required />
         </label>
         <label>{d.f_msg}
-          <textarea name="message" rows="4" placeholder={d.f_msg_placeholder}></textarea>
+          <textarea name="message" rows="4" maxlength="2000" placeholder={d.f_msg_placeholder}></textarea>
         </label>
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <button class="btn btn-solid" type="submit">{d.f_submit}</button>
+        <p class="form-status" role="status" hidden></p>
         <p class="note">{d.f_note}</p>
       </form>
     </div>
@@ -52,4 +57,9 @@ const d = misc.demo;
   }
   input:focus-visible, textarea:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; border-color: transparent; }
   .note { font-size: 12.5px; color: var(--mut); margin: 0; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .form-status { margin: 0; font-size: 14px; color: var(--warn); }
+  .form-status.ok { color: var(--ok); }
 </style>
+
+<script src="../../scripts/demo-form.js"></script>

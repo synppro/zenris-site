@@ -27,8 +27,9 @@ node scripts/verify.mjs   # verificare headless: screenshots + crawl linkuri (ne
 2. **Prețuri / filozofia de licențiere** — secțiune nescrisă încă; și subtitlul „Nu cumperi module —
    primești platforma” din grid ține de aceeași decizie.
 3. **ISO 9001 / 13485** — NU sunt menționate pe site până nu se confirmă certificatele cu documente.
-4. **Formularul de demo** — momentan `mailto:`; de legat la un backend/endpoint sau înlocuit cu
-   calendarul de programări (recomandare existentă: Zoho Bookings embed).
+4. **Formularul de demo** — funcțional: POST la `/api/demo-request`, servit de `deploy/demo-mailer`
+   (config SMTP din fișier pe server, protecții anti-abuz — vezi `deploy/README.md`); fallback
+   `mailto:` dacă endpoint-ul nu răspunde. Alternativa cu calendar (Zoho Bookings) rămâne opțiune.
 5. **Cifre publice** („pulsul sistemului”), Ctrl+K command palette — faza 2.
 
 ## Reguli de conținut (nu se încalcă)
