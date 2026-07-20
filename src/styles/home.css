@@ -114,6 +114,7 @@
 .iso-points { margin-top: 8px; }
 
 .deploy { margin-top: 44px; padding: 26px; }
+@media (max-width: 640px) { .deploy { padding: 18px; } .seg button { padding: 10px 16px; font-size: 14px; } table.diff th, table.diff td { padding: 10px 10px; font-size: 13.5px; } }
 .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 20px; }
 .seg button { background: none; border: 0; color: var(--mut); font-size: 15px; font-weight: 650; padding: 11px 22px; cursor: pointer; }
 .seg button[aria-selected='true'] { background: var(--blue); color: #fff; }
