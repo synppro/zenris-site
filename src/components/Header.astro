@@ -4,14 +4,14 @@ const t = lang === 'ro'
   ? {
       platform: 'Platformă', solutions: 'Soluții', architecture: 'Arhitectură', news: 'Noutăți',
       demo: 'Programează un demo', langLabel: 'EN', theme: 'Comută tema',
-      p1: 'Ansamblu', p2: 'ZenView · ZenPACS', p3: 'RIS & raportare', p4: 'Teleradiologie', p5: 'Portal pacient',
+      p1: 'Ansamblu', p2: 'ZenView · ZenPACS', p3: 'RIS & raportare', p4: 'Teleradiologie', p5: 'Portal pacient', p6: 'Decont CNAS automat',
       s1: 'Clinici & lanțuri', s2: 'Spitale', s3: 'Rețele de teleradiologie',
       base: '',
     }
   : {
       platform: 'Platform', solutions: 'Solutions', architecture: 'Architecture', news: 'Updates',
       demo: 'Book a demo', langLabel: 'RO', theme: 'Toggle theme',
-      p1: 'Overview', p2: 'ZenView · ZenPACS', p3: 'RIS & reporting', p4: 'Teleradiology', p5: 'Patient portal',
+      p1: 'Overview', p2: 'ZenView · ZenPACS', p3: 'RIS & reporting', p4: 'Teleradiology', p5: 'Patient portal', p6: 'Automatic CNAS claims',
       s1: 'Clinics & chains', s2: 'Hospitals', s3: 'Teleradiology networks',
       base: '/en',
     };
@@ -29,6 +29,7 @@ const b = t.base;
           <a href={b + '/platforma/ris-raportare/'}>{t.p3}</a>
           <a href={b + '/platforma/teleradiologie/'}>{t.p4}</a>
           <a href={b + '/platforma/portal-pacient/'}>{t.p5}</a>
+          <a href={b + '/platforma/zenagent/'}>{t.p6}</a>
         </div>
       </div>
       <div class="drop">

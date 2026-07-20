@@ -1,0 +1,167 @@
+---
+import Base from '../../layouts/Base.astro';
+import '../../styles/zenagent.css';
+---
+<Base
+  title="ZenAgent — un singur token CNAS, toată clinica raportează | ZenRIS"
+  description="ZenAgent conectează tokenul CNAS și cititorul de card o singură dată, pe o stație. Restul clinicii raportează la CNAS din browser — sistemul rutează automat. Fără token mutat, fără SIUI pe fiecare calculator."
+  lang="ro"
+  altHref="/en/platforma/zenagent/"
+>
+  <!-- HERO -->
+  <section class="wrap za-hero">
+    <p class="eyebrow">ZenAgent · decont CNAS automat</p>
+    <h1>Un singur token CNAS.<br />Toată clinica raportează.</h1>
+    <p class="lead">Tokenul CNAS și cititorul de card stau pe o stație, conectate o singură dată.
+      De acolo, orice calculator din clinică raportează la CNAS direct din browser —
+      <strong>ZenAgent rutează fiecare operațiune către stația potrivită, automat</strong>.
+      Fără token mutat de la un birou la altul, fără SIUI instalat pe fiecare mașină.</p>
+    <div class="za-ctas">
+      <a class="btn btn-solid" href="/demo/">Programează un demo</a>
+      <a class="btn btn-ghost" href="#cum">Cum funcționează →</a>
+    </div>
+  </section>
+
+  <!-- DIAGRAMA DE RUTARE -->
+  <section class="wrap section" id="cum">
+    <div class="flow" aria-hidden="true">
+      <div class="node stations">
+        <span class="n-tag">stații RIS · browser</span>
+        <span class="n-row">Recepție</span>
+        <span class="n-row">Medic</span>
+        <span class="n-row hot">Facturare</span>
+      </div>
+      <div class="arrow"><span class="a-lbl">cerere</span></div>
+      <div class="node hub">
+        <span class="n-title">ZenRIS</span>
+        <span class="n-sub">control-plane · rutare</span>
+      </div>
+      <div class="arrow"><span class="a-lbl">comandă tipizată</span></div>
+      <div class="node agent">
+        <span class="n-title">Stația ZenAgent</span>
+        <span class="n-sub">token CNAS · cititor card</span>
+        <span class="n-chip">PIN rămâne local</span>
+      </div>
+      <div class="arrow"><span class="a-lbl">raportare</span></div>
+      <div class="node cnas">
+        <span class="n-title">CNAS</span>
+        <span class="n-sub">PIAS</span>
+      </div>
+    </div>
+    <p class="flow-cap">Cererea pleacă din orice stație. ZenRIS o rutează către stația care are tokenul eligibil.
+      PIN-ul se introduce doar acolo. Nimeni nu mută nimic.</p>
+  </section>
+
+  <!-- CENTRALIZAT -->
+  <section class="section alt">
+    <div class="wrap za-grid">
+      <div>
+        <h2>Centralizat în RIS, nu împrăștiat pe stații</h2>
+        <p>RIS-ul e creierul. El decide ce operațiune CNAS trebuie făcută, pentru ce contract și cu ce certificat,
+          apoi trimite agenților comenzi tipizate pe un canal securizat. Agentul local nu deține nicio autoritate —
+          ce tenant, ce stație și ce drepturi se stabilesc de server, din înrolare și identitate.</p>
+        <p>Fiecare comandă are termen-limită, identificator de corelare și e legată de un dispozitiv anume.
+          Nimic nu se execută „pe încredere" dinspre stație.</p>
+      </div>
+      <ul class="check-list single">
+        <li><strong>Comenzi tipizate</strong> — nu scripturi libere; fiecare operațiune are un contract clar.</li>
+        <li><strong>Autoritate derivată de server</strong> — stația nu-și declară singură drepturile.</li>
+        <li><strong>Audit complet</strong> — fiecare operațiune CNAS e jurnalizată, cu cine, ce și când.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AGENTUL LOCAL -->
+  <section class="section">
+    <div class="wrap za-grid">
+      <div>
+        <h2>Agentul se instalează o dată, unde e hardware-ul</h2>
+        <p>ZenAgent rulează în fundal, ca serviciu, pe stația care are tokenul CNAS și/sau cititorul de card.
+          Se instalează per-mașină, pornește inert și se activează abia după înrolare. Actualizările sunt semnate,
+          verificate, cu revenire automată dacă ceva nu e sănătos.</p>
+        <p>Operatorul nu deschide și nu configurează zilnic nicio aplicație de agent. Lucrează doar din RIS —
+          agentul e invizibil până când e nevoie de el.</p>
+      </div>
+      <ul class="check-list single">
+        <li><strong>Instalare per-mașină</strong>, pornire inertă până la înrolarea stației.</li>
+        <li><strong>Actualizări semnate</strong>, verificate prin manifest și hash, cu rollback health-gated.</li>
+        <li><strong>Zero configurare zilnică</strong> pentru operator — totul din RIS.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RUTAREA — miezul -->
+  <section class="section alt">
+    <div class="wrap">
+      <p class="eyebrow">Aici e diferența</p>
+      <h2 class="za-h2c">Tokenul lucrează pentru toată clinica — fără să-l miște nimeni.</h2>
+      <div class="za-grid center">
+        <div>
+          <p>Când o stație fără token cere o operațiune CNAS, RIS o rutează automat către stația care are tokenul
+            eligibil pentru acel operator, CUI și contract. Determinist, fără fallback între certificate:
+            dacă tokenul lipsește, a expirat sau e ambiguu, sistemul se oprește sigur (<strong>fail-closed</strong>) —
+            nu ghicește niciodată.</p>
+          <p>Cititorul de card e mereu local stației din care lucrezi. Tokenul poate executa pentru altă stație,
+            dar numai printr-o rută autorizată explicit — și PIN-ul rămâne pe stația tokenului.</p>
+        </div>
+        <ul class="check-list single">
+          <li><strong>Rutare după capabilitate</strong>, nu după cine s-a nimerit să aibă tokenul în priză.</li>
+          <li><strong>Fail-closed</strong> — la orice incertitudine, se oprește, nu inventează o semnătură.</li>
+          <li><strong>Fluxul clinic continuă</strong> chiar dacă tokenul sau CNAS sunt momentan indisponibile.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECURITATE -->
+  <section class="section">
+    <div class="wrap">
+      <h2>Cheile rămân pe token. Mereu.</h2>
+      <p class="lead">ZenRIS nu stochează niciodată certificate P12/PFX, PIN-uri sau chei private.
+        Securitatea nu e o promisiune — e o consecință a arhitecturii.</p>
+      <ul class="check-list">
+        <li><strong>Cheia privată rămâne pe tokenul hardware</strong> — ZenRIS nu o vede și nu o copiază.</li>
+        <li><strong>PIN-ul e strict local</strong>, pe stația tokenului, chiar dacă cererea a plecat din alt birou.</li>
+        <li><strong>Identitate de stație neexportabilă</strong>, cu legătură criptografică browser–stație.</li>
+        <li><strong>Certificat legat de operator–CUI–contract</strong>, cu audit complet al fiecărei operațiuni.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PAYOFF -->
+  <section class="section alt">
+    <div class="wrap za-payoff">
+      <p class="pull-quote">Un token. O stație.<br /><b>Toată clinica raportează.</b></p>
+      <div class="grid grid-3 za-before-after">
+        <article class="card bad">
+          <span class="ba-tag">Fără ZenAgent</span>
+          <p>Muți tokenul de la recepție la medic la contabilitate. Instalezi SIUI pe fiecare calculator.
+            Ții minte „pe ce mașină e certificatul azi".</p>
+        </article>
+        <article class="card good">
+          <span class="ba-tag ok">Cu ZenAgent</span>
+          <p>Tokenul stă pe o stație, conectat o dată. Orice calculator raportează din browser.
+            Rutarea e automată, PIN-ul rămâne local, totul e auditat.</p>
+        </article>
+        <article class="card soon">
+          <span class="ba-tag pending">În dezvoltare</span>
+          <p>Aceeași arhitectură de agenți se extinde către case de marcat (fiscalizare) — prin adaptor dedicat,
+            verificat pe casă reală. Marcat clar ca roadmap, nu ca funcție de azi.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section za-cta">
+    <div class="wrap">
+      <h2>Decontul CNAS devine un non-eveniment.</h2>
+      <p class="lead">Adu-ți la demo tokenul, contractul și întrebările de conformitate. Îți arătăm cum o singură
+        stație cu ZenAgent acoperă toată clinica — și cum rămâne totul auditat, fail-closed și cu cheile pe hardware.</p>
+      <div class="za-ctas">
+        <a class="btn btn-solid" href="/demo/">Programează un demo</a>
+        <a class="btn btn-ghost" href="/platforma/">Vezi toată platforma →</a>
+      </div>
+    </div>
+  </section>
+</Base>

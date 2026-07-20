@@ -1,0 +1,160 @@
+---
+import Base from '../../../layouts/Base.astro';
+import '../../../styles/zenagent.css';
+---
+<Base
+  title="ZenAgent — one CNAS token, the whole clinic reports | ZenRIS"
+  description="ZenAgent connects the CNAS token and the card reader once, on a single station. The rest of the clinic reports to CNAS from the browser — the system routes automatically. No token shuffling, no legacy desktop app on every computer."
+  lang="en"
+  altHref="/platforma/zenagent/"
+>
+  <section class="wrap za-hero">
+    <p class="eyebrow">ZenAgent · automatic CNAS claims</p>
+    <h1>One CNAS token.<br />The whole clinic reports.</h1>
+    <p class="lead">The token for CNAS (Romania's national health insurance house) and the card reader sit on one
+      station, connected once. From there, every computer in the clinic reports to CNAS straight from the browser —
+      <strong>ZenAgent routes each operation to the right station, automatically</strong>. No token carried from
+      desk to desk, no SIUI (the legacy desktop reporting app) installed on every machine.</p>
+    <div class="za-ctas">
+      <a class="btn btn-solid" href="/en/demo/">Book a demo</a>
+      <a class="btn btn-ghost" href="#cum">How it works →</a>
+    </div>
+  </section>
+
+  <section class="wrap section" id="cum">
+    <div class="flow" aria-hidden="true">
+      <div class="node stations">
+        <span class="n-tag">RIS stations · browser</span>
+        <span class="n-row">Front desk</span>
+        <span class="n-row">Physician</span>
+        <span class="n-row hot">Billing</span>
+      </div>
+      <div class="arrow"><span class="a-lbl">request</span></div>
+      <div class="node hub">
+        <span class="n-title">ZenRIS</span>
+        <span class="n-sub">control plane · routing</span>
+      </div>
+      <div class="arrow"><span class="a-lbl">typed command</span></div>
+      <div class="node agent">
+        <span class="n-title">ZenAgent station</span>
+        <span class="n-sub">CNAS token · card reader</span>
+        <span class="n-chip">PIN stays local</span>
+      </div>
+      <div class="arrow"><span class="a-lbl">reporting</span></div>
+      <div class="node cnas">
+        <span class="n-title">CNAS</span>
+        <span class="n-sub">PIAS</span>
+      </div>
+    </div>
+    <p class="flow-cap">The request starts from any station. ZenRIS routes it to the station that holds the eligible
+      token. The PIN is entered only there. Nobody moves anything.</p>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap za-grid">
+      <div>
+        <h2>Centralized in the RIS, not scattered across stations</h2>
+        <p>The RIS is the brain. It decides which CNAS operation is needed, for which contract and with which
+          certificate, then sends agents typed commands over a secure channel. The local agent holds no authority —
+          which tenant, which station and which permissions are all set by the server, from enrollment and identity.</p>
+        <p>Every command has a deadline, a correlation ID and is bound to a specific device. Nothing runs on
+          trust coming from the station.</p>
+      </div>
+      <ul class="check-list single">
+        <li><strong>Typed commands</strong> — not free-form scripts; every operation has a clear contract.</li>
+        <li><strong>Server-derived authority</strong> — the station doesn't declare its own permissions.</li>
+        <li><strong>Complete audit</strong> — every CNAS operation is logged: who, what, when.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap za-grid">
+      <div>
+        <h2>The agent installs once, where the hardware is</h2>
+        <p>ZenAgent runs in the background, as a service, on the station that holds the CNAS token and/or the card
+          reader. It installs per-machine, starts inert and activates only after enrollment. Updates are signed,
+          verified, with automatic rollback if anything is unhealthy.</p>
+        <p>The operator never opens or configures an agent application day to day. They work only from the RIS —
+          the agent stays invisible until it's needed.</p>
+      </div>
+      <ul class="check-list single">
+        <li><strong>Per-machine install</strong>, inert until the station is enrolled.</li>
+        <li><strong>Signed updates</strong>, verified by manifest and hash, with health-gated rollback.</li>
+        <li><strong>Zero daily setup</strong> for the operator — everything from the RIS.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <p class="eyebrow">This is the difference</p>
+      <h2 class="za-h2c">The token works for the whole clinic — without anyone moving it.</h2>
+      <div class="za-grid center">
+        <div>
+          <p>When a station without a token requests a CNAS operation, the RIS routes it automatically to the station
+            that holds the eligible token for that operator, tax ID and contract. Deterministic, with no fallback
+            between certificates: if the token is missing, expired or ambiguous, the system stops safely
+            (<strong>fail-closed</strong>) — it never guesses.</p>
+          <p>The card reader is always local to the station you work from. The token can execute for another station,
+            but only through an explicitly authorized route — and the PIN stays on the token's station.</p>
+        </div>
+        <ul class="check-list single">
+          <li><strong>Routing by capability</strong>, not by whoever happens to have the token plugged in.</li>
+          <li><strong>Fail-closed</strong> — on any uncertainty it stops, it doesn't invent a signature.</li>
+          <li><strong>The clinical flow continues</strong> even if the token or CNAS is momentarily unavailable.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>The keys stay on the token. Always.</h2>
+      <p class="lead">ZenRIS never stores P12/PFX certificates, PINs or private keys. Security isn't a promise —
+        it's a consequence of the architecture.</p>
+      <ul class="check-list">
+        <li><strong>The private key stays on the hardware token</strong> — ZenRIS neither sees it nor copies it.</li>
+        <li><strong>The PIN is strictly local</strong>, on the token's station, even if the request came from another desk.</li>
+        <li><strong>Non-exportable station identity</strong>, with a cryptographic browser–station binding.</li>
+        <li><strong>Certificate bound to operator–tax ID–contract</strong>, with a full audit of every operation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap za-payoff">
+      <p class="pull-quote">One token. One station.<br /><b>The whole clinic reports.</b></p>
+      <div class="grid grid-3 za-before-after">
+        <article class="card bad">
+          <span class="ba-tag">Without ZenAgent</span>
+          <p>You carry the token from the front desk to the physician to accounting. You install SIUI on every
+            computer. You keep track of "which machine has the certificate today".</p>
+        </article>
+        <article class="card good">
+          <span class="ba-tag ok">With ZenAgent</span>
+          <p>The token sits on one station, connected once. Any computer reports from the browser. Routing is
+            automatic, the PIN stays local, everything is audited.</p>
+        </article>
+        <article class="card soon">
+          <span class="ba-tag pending">On the roadmap</span>
+          <p>The same agent architecture extends to fiscal devices (cash registers) — through a dedicated adapter,
+            verified on a real device. Clearly marked as roadmap, not a feature of today.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section za-cta">
+    <div class="wrap">
+      <h2>CNAS claims become a non-event.</h2>
+      <p class="lead">Bring your token, your contract and your compliance questions to the demo. We'll show you how a
+        single ZenAgent station covers the whole clinic — and how everything stays audited, fail-closed and with the
+        keys on hardware.</p>
+      <div class="za-ctas">
+        <a class="btn btn-solid" href="/en/demo/">Book a demo</a>
+        <a class="btn btn-ghost" href="/en/platforma/">See the whole platform →</a>
+      </div>
+    </div>
+  </section>
+</Base>
