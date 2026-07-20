@@ -8,6 +8,7 @@
 .chip b { color: var(--blue-soft); }
 .stage-glow { position: relative; }
 .stage-glow::before { content: ''; position: absolute; inset: -14% -18%; border-radius: 50%; background: radial-gradient(closest-side, var(--glow), transparent 75%); filter: blur(6px); pointer-events: none; }
+@media (max-width: 640px) { .stage-glow::before { left: 0; right: 0; } }
 .viewer { position: relative; margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5); }
 .vbar { display: flex; justify-content: space-between; align-items: center; background: var(--panel-2); padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--mut); }
 .vbar .t { color: var(--hi); font-weight: 650; }

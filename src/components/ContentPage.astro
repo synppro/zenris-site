@@ -63,6 +63,7 @@ const demoLabel = lang === 'ro' ? 'Programează un demo' : 'Book a demo';
   .ctas { margin-top: 28px; display: flex; gap: 14px; }
   .hero-img { margin: 0; position: relative; }
   .hero-img::before { content: ''; position: absolute; inset: -12% -16%; border-radius: 50%; background: radial-gradient(closest-side, var(--glow), transparent 75%); pointer-events: none; }
+  @media (max-width: 640px) { .hero-img::before { left: 0; right: 0; } }
   .hero-img img { position: relative; border-radius: 16px; border: 1px solid var(--line); background: #000; }
   .hero-img figcaption { margin-top: 10px; }
   .c-sec.alt { background: color-mix(in srgb, var(--panel) 45%, transparent); }
