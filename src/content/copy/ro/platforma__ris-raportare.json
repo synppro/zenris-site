@@ -22,7 +22,7 @@
     },
     {
       "heading": "Dictezi. Textul ține pasul.",
-      "body": "ZenVoice transcrie în timp real, în română, cu vocabular radiologic. Vorbești în ritmul tău; textul apare în raport pe măsură ce dictezi, nu la sfârșit, dintr-un fișier audio.\n\nMâinile rămân pe imagini. Navighezi seriile, măsori, derulezi — raportul se scrie în paralel. Corectezi din voce sau din tastatură, unde e mai rapid.",
+      "body": "ZenVoice transcrie în timp real, în română, cu vocabular radiologic. Vorbești în ritmul tău; textul apare în raport pe măsură ce dictezi, nu la sfârșit, dintr-un fișier audio.\n\nMâinile rămân pe imagini. Navighezi seriile, măsori, derulezi — raportul se scrie în paralel. Corectezi din voce sau din tastatură, unde e mai rapid.\n\nDictarea e nativă în RIS — nu o aplicație separată, nu o licență bolt-on. Deschizi raportul, vorbești, textul e acolo.",
       "visual_note": "Animație scurtă: imaginile derulate în stânga, textul dictat apare cuvânt cu cuvânt în editorul din dreapta."
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "heading": "Șeful de secție vede tot. Live.",
-      "body": "Câte examinări sunt neraportate, pe cine stau și de cât timp — direct în worklist, nu într-un raport la sfârșit de lună. Realoci un caz cu două clickuri, iar un STAT nesemnat nu are unde să se ascundă.\n\nTot fluxul rulează în browser: worklist, imagini, dictare, semnare. Nicio instalare pe stații, niciun client de dictare, nicio aplicație separată de semnat. Un tab nou e tot ce-i trebuie unui radiolog nou.",
+      "body": "Câte examinări sunt neraportate, pe cine stau și de cât timp — direct în worklist, nu într-un raport la sfârșit de lună. Realoci un caz cu două clickuri, iar un STAT nesemnat nu are unde să se ascundă.\n\nTot fluxul rulează în browser: worklist, imagini, dictare, semnare. Nicio instalare pe stații, niciun client de dictare, nicio aplicație separată de semnat. Un tab nou e tot ce-i trebuie unui radiolog nou.\n\nTot aici trăiesc fluxurile de calitate: cosemnare pentru medicii în supervizare, peer review cu scoring și discrepanțe, second opinion — în worklist, nu într-o aplicație paralelă.",
       "visual_note": "Worklist filtrat pe secție, cu contoare de stare (neraportate / în lucru / semnate azi) în antet."
     }
   ],

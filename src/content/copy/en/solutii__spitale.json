@@ -33,7 +33,12 @@
     },
     {
       "heading": "Ready for the audit before the audit",
-      "body": "Every access leaves a trace: who opened the image, who read the report, when, and from which account. The audit log is complete, from login to export.\n\nWhen an internal audit, a GDPR inspection or a request from your DPO comes in, the answer is not reconstructed from memory. It is pulled from the log.\n\nZenRIS is a Class I medical device, registered with ANMDMR (Romania's medical device authority). Data processing complies with GDPR, with hosting in Romania or the EU when you choose the cloud option."
+      "body": "Every access leaves a trace: who opened the image, who read the report, when, and from which account. The audit log is complete, from login to export.\n\nWhen an internal audit, a GDPR inspection or a request from your DPO comes in, the answer is not reconstructed from memory. It is pulled from the log.\n\nZenRIS is a Class I medical device, registered with ANMDMR (Romania's medical device authority). Data processing complies with GDPR, with hosting in Romania or the EU when you choose the cloud option.",
+      "bullets": [
+        "**Dose registry with DRL alerts.** Exposure records per study and cumulative per patient — the radiation-protection requirement, covered natively, with no separate product.",
+        "**Peer review with scoring.** An integrated quality program: discrepancies, co-signing, per-radiologist statistics.",
+        "**Digital MRI safety screening.** A structured questionnaire, completed before the exam, archived with the study."
+      ]
     },
     {
       "heading": "Nighttime is not an exception",

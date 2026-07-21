@@ -22,7 +22,7 @@
     },
     {
       "heading": "You dictate. The text keeps up.",
-      "body": "ZenVoice transcribes in real time, in Romanian, with a radiology vocabulary. Speak at your own pace; the text lands in the report as you dictate — not at the end, from an audio file.\n\nYour hands stay on the images. Scroll through series, measure, navigate — the report takes shape in parallel. Correct by voice or by keyboard, whichever is faster.",
+      "body": "ZenVoice transcribes in real time, in Romanian, with a radiology vocabulary. Speak at your own pace; the text lands in the report as you dictate — not at the end, from an audio file.\n\nYour hands stay on the images. Scroll through series, measure, navigate — the report takes shape in parallel. Correct by voice or by keyboard, whichever is faster.\n\nDictation is native to the RIS — not a separate application, not a bolt-on license. You open the report, you speak, the text is there.",
       "visual_note": "Short animation: images scrolling on the left, dictated text appearing word by word in the editor on the right."
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "heading": "The department head sees everything. Live.",
-      "body": "How many exams are unreported, who they are waiting on and for how long — right in the worklist, not in an end-of-month report. Reassign a case in two clicks; an unsigned STAT has nowhere to hide.\n\nThe whole flow runs in the browser: worklist, images, dictation, signing. No workstation installs, no dictation client, no separate signing app. A new radiologist needs a new tab, nothing more.",
+      "body": "How many exams are unreported, who they are waiting on and for how long — right in the worklist, not in an end-of-month report. Reassign a case in two clicks; an unsigned STAT has nowhere to hide.\n\nThe whole flow runs in the browser: worklist, images, dictation, signing. No workstation installs, no dictation client, no separate signing app. A new radiologist needs a new tab, nothing more.\n\nThe quality workflows live here too: co-signing for supervised physicians, peer review with scoring and discrepancies, second opinions — in the worklist, not in a parallel application.",
       "visual_note": "Worklist filtered by department, with state counters (unreported / in progress / signed today) in the header."
     }
   ],

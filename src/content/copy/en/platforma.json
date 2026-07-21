@@ -37,6 +37,17 @@
       "visual_note": "Mockup: ZenView in the browser next to a ZenReport report with ZenVoice dictation active."
     },
     {
+      "heading": "Quality is included, not sold separately",
+      "body": "The capabilities the market sells as dedicated products are part of the platform here. The dose registry tracks every exposure and the cumulative dose per patient, with alerts when reference levels are exceeded. Peer review with scoring, co-signing and second opinions run in the same worklist, not in a parallel application.\n\nThe MRI safety questionnaire is digital, inside the scheduling flow — not a sheet of paper lost at the front desk. And every radiologist’s activity is measured continuously, with report-ready metrics.",
+      "bullets": [
+        "**Dose registry + DRL alerts.** Per-study and cumulative per-patient dose, with alerts when reference levels are exceeded.",
+        "**Peer review with scoring.** Discrepancies, co-signing, second opinions — built into everyday reading.",
+        "**Digital MRI safety screening.** A structured questionnaire, completed before the exam, archived with the study.",
+        "**Per-radiologist metrics.** Volume, turnaround, quality — visible live."
+      ],
+      "visual_note": "four sober cards, no clichéd medical iconography"
+    },
+    {
       "heading": "Distance doesn't show in the report",
       "body": "ZenTelerad takes studies to radiologists in other cities or other institutions. They read in the same viewer, in the same browser, and the report comes back into the same system — not by email, not on a CD. For the hospital with no radiologist on call, the night report no longer waits for morning.\n\nZenPortal is the patient's end of the line. Results and images go online, through secure access: patients read their report in the browser and can show it to any other physician, no trips for a CD.",
       "bullets": [

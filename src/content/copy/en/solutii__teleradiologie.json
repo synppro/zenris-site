@@ -30,7 +30,7 @@
     },
     {
       "heading": "Numbers per radiologist, invoice per client.",
-      "body": "Productivity reports answer exactly what clients and accounting ask: how many exams each radiologist read, in how much time, with what on-time rate — per client, per modality, per period. You pay contractors on numbers, not estimates. On-call and night coverage is planned in ZenShift, not in shared spreadsheets.\n\nZenBill keeps the books per client: volumes, exam types, the rates in each contract. Separate invoices, separate records. And if a client bills through CNAS (Romania's national health insurance house), that institution's reporting runs fully automatically through ZenAgent — no SIUI (the legacy desktop reporting app) on any desktop, no manual exports.",
+      "body": "Productivity reports answer exactly what clients and accounting ask: how many exams each radiologist read, in how much time, with what on-time rate — per client, per modality, per period. You pay contractors on numbers, not estimates. On-call and night coverage is planned in ZenShift, not in shared spreadsheets.\n\nZenBill keeps the books per client: volumes, exam types, the rates in each contract. Separate invoices, separate records. And if a client bills through CNAS (Romania's national health insurance house), that institution's reporting runs fully automatically through ZenAgent — no SIUI (the legacy desktop reporting app) on any desktop, no manual exports.\n\nAnd quality is just as measurable: peer review with scoring and discrepancies for every member of the pool — the proof you put on the table when a client asks about quality.",
       "visual_note": "Two mockups side by side: radiologist productivity table and per-client invoice list."
     },
     {

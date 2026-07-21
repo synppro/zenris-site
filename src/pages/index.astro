@@ -38,7 +38,7 @@ const modules = [
   { name: 'ZenPACS', href: '/platforma/pacs-viewer/', text: 'Arhiva DICOM a fiecărei instituții: orice echipament se conectează direct, studiile anterioare se atașează singure.' },
   { name: 'ZenReport', href: '/platforma/ris-raportare/', text: 'Rapoarte structurate pe șabloanele secției, semnare electronică, istoric complet de versiuni.' },
   { name: 'ZenTelerad', href: '/platforma/teleradiologie/', text: 'Teleradiologie cu pool-uri, alocare automată și termene vizibile — radiologia ta, extinsă la scară.' },
-  { name: 'ZenVoice', href: null, text: 'Dictare vocală în română: vorbești, raportul se scrie.' },
+  { name: 'ZenVoice', href: null, text: 'Dictare vocală în română, nativă în RIS: vorbești, raportul se scrie. Fără aplicații separate.' },
   { name: 'ZenFlow', href: null, text: 'Automatizări și triage AI: rutare pe reguli, escaladări, notificări. Urgențele nu așteaptă.' },
   { name: 'ZenPlan', href: null, text: 'Programări multi-locație: calendar pe echipamente și medici, SMS-uri, listă de așteptare.' },
   { name: 'ZenShift', href: null, text: 'Programatorul de gărzi — cine e de gardă știe și rutarea studiilor, automat.' },
@@ -337,6 +337,18 @@ const modules = [
             ? <a class="card mod" href={m.href}><h3>{m.name.split('Zen').map((part, i) => i === 0 ? part : <>Zen<span>{part}</span></>)}</h3><p>{m.text}</p><span class="go">Detalii →</span></a>
             : <article class="card mod"><h3>{m.name.split('Zen').map((part, i) => i === 0 ? part : <>Zen<span>{part}</span></>)}</h3><p>{m.text}</p></article>
         ))}
+      </div>
+      <div class="included">
+        <p class="inc-head">Și incluse — capabilități pe care alții le vând ca produse separate:</p>
+        <div class="chips">
+          <span class="chip">Registru de <b>doze</b> + alerte DRL</span>
+          <span class="chip">Doză <b>cumulativă</b> per pacient</span>
+          <span class="chip"><b>Peer review</b> cu scoring</span>
+          <span class="chip">Cosemnare & <b>second opinion</b></span>
+          <span class="chip">Screening de siguranță <b>RMN</b>, digital</span>
+          <span class="chip"><b>Metrici</b> de productivitate per radiolog</span>
+          <span class="chip"><b>Reconciliere</b> extrase bancare</span>
+        </div>
       </div>
     </div>
   </section>

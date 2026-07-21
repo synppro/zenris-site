@@ -37,7 +37,12 @@
     {
       "heading": "Pregătit de control înainte de control",
       "body": "Fiecare acces lasă urmă: cine a deschis imaginea, cine a citit raportul, când și de pe ce cont. Jurnalul de audit e complet, de la autentificare până la export.\n\nCând vine un audit intern, un control GDPR sau o solicitare a DPO-ului, răspunsul nu se reconstruiește din amintiri. Se extrage din jurnal.\n\nZenRIS este dispozitiv medical Clasa I, înregistrat la ANMDMR. Prelucrarea datelor respectă GDPR, cu găzduire în România sau în UE atunci când alegi varianta cloud.",
-      "visual_note": "Mock de jurnal de audit: listă de evenimente cu utilizator, acțiune, oră; un buton de export vizibil."
+      "visual_note": "Mock de jurnal de audit: listă de evenimente cu utilizator, acțiune, oră; un buton de export vizibil.",
+      "bullets": [
+        "**Registru de doze cu alerte DRL.** Evidența expunerilor per studiu și cumulativ per pacient — cerința de radioprotecție, acoperită nativ, fără un produs separat.",
+        "**Peer review cu scoring.** Program de calitate integrat: discrepanțe, cosemnare, statistici per radiolog.",
+        "**Screening de siguranță RMN, digital.** Chestionar structurat, completat înainte de examinare, arhivat cu studiul."
+      ]
     },
     {
       "heading": "Noaptea nu e o excepție",

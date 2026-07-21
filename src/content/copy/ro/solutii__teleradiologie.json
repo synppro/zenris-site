@@ -30,7 +30,7 @@
     },
     {
       "heading": "Cifre pe radiolog, factură pe client.",
-      "body": "Rapoartele de productivitate răspund exact la ce te întreabă clienții și contabilitatea: câte examinări a citit fiecare radiolog, în cât timp, cu ce rată de încadrare în termen — pe client, pe modalitate, pe perioadă. Plătești colaboratorii pe cifre, nu pe estimări. Gărzile și acoperirea de noapte se planifică în ZenShift, nu în tabele partajate.\n\nZenBill ține evidența per client: volume, tipuri de examinări, tarifele din contractul fiecăruia. Facturi separate, evidență separată. Iar dacă un client decontează prin CNAS, raportarea instituției lui merge complet automat prin ZenAgent — fără aplicația SIUI pe vreun desktop, fără exporturi manuale.",
+      "body": "Rapoartele de productivitate răspund exact la ce te întreabă clienții și contabilitatea: câte examinări a citit fiecare radiolog, în cât timp, cu ce rată de încadrare în termen — pe client, pe modalitate, pe perioadă. Plătești colaboratorii pe cifre, nu pe estimări. Gărzile și acoperirea de noapte se planifică în ZenShift, nu în tabele partajate.\n\nZenBill ține evidența per client: volume, tipuri de examinări, tarifele din contractul fiecăruia. Facturi separate, evidență separată. Iar dacă un client decontează prin CNAS, raportarea instituției lui merge complet automat prin ZenAgent — fără aplicația SIUI pe vreun desktop, fără exporturi manuale.\n\nȘi calitatea se măsoară la fel de ușor: peer review cu scoring și discrepanțe pe fiecare membru al pool-ului — dovada pe care o pui pe masă când clientul întreabă de calitate.",
       "visual_note": "Două mockup-uri alăturate: tabel de productivitate pe radiologi și listă de facturi pe clienți."
     },
     {

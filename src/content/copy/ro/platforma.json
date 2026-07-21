@@ -37,6 +37,17 @@
       "visual_note": "Mockup: ZenView în browser alături de un raport ZenReport cu dictarea ZenVoice activă."
     },
     {
+      "heading": "Calitatea e inclusă, nu vândută separat",
+      "body": "Capabilitățile pe care piața le vinde ca produse dedicate sunt aici parte din platformă. Registrul de doze urmărește fiecare expunere și doza cumulată per pacient, cu alerte când se depășesc nivelurile de referință. Peer review-ul cu scoring, cosemnarea și second opinion-ul rulează în același worklist, nu într-o aplicație paralelă.\n\nChestionarul de siguranță RMN e digital, în fluxul de programare — nu o hârtie rătăcită la recepție. Iar activitatea fiecărui radiolog se măsoară continuu, cu metrici gata de raport.",
+      "bullets": [
+        "**Registru de doze + alerte DRL.** Doză per studiu și cumulativă per pacient, cu alertă la depășirea nivelurilor de referință.",
+        "**Peer review cu scoring.** Discrepanțe, cosemnare, second opinion — integrate în citirea de zi cu zi.",
+        "**Screening RMN digital.** Chestionar structurat de siguranță, completat înainte de examinare, arhivat cu studiul.",
+        "**Metrici per radiolog.** Volum, timpi, calitate — vizibile live."
+      ],
+      "visual_note": "patru carduri sobre, fără iconografie medicală clișeu"
+    },
+    {
       "heading": "Distanța nu se vede în raport",
       "body": "ZenTelerad duce studiile la radiologi din alte orașe sau din alte instituții. Ei citesc în același viewer, în același browser, iar raportul se întoarce în același sistem — nu pe e-mail, nu pe CD. Pentru spitalul fără radiolog de gardă, raportul de noapte nu mai așteaptă dimineața.\n\nZenPortal e capătul dinspre pacient. Rezultatele și imaginile ajung online, prin acces securizat: pacientul își citește raportul din browser și îl poate arăta oricărui alt medic, fără drumuri pentru un CD.",
       "bullets": [
