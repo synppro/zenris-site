@@ -28,6 +28,7 @@ const modHref = {
       </div>
       <div class="chips">
         {h.hero.chips_html.map((c) => <span class="chip" set:html={c} />)}
+        <span class="chip"><b>Storage</b>-based licensing — not per user</span>
       </div>
     </div>
     <div class="stage-glow">
@@ -254,6 +255,8 @@ const modHref = {
     <div class="wrap">
       <p class="eyebrow">{h.modules.eyebrow}</p>
       <h2 set:html={h.modules.h2_html} />
+      <p class="lead">You don’t buy modules — you get the platform. And licensing is by storage:
+        not per user, not per workstation, not per module.</p>
       <div class="grid grid-3 mods">
         {h.modules.cards.map((m) => {
           const href = modHref[m.name.split(' ')[0]];
@@ -274,6 +277,9 @@ const modHref = {
           <span class="chip">Per-radiologist <b>productivity</b> metrics</span>
           <span class="chip">Bank statement <b>reconciliation</b></span>
         </div>
+        <p class="vna-teaser">Archiving only? <a href="/en/platforma/#vna"><b>ZenVNA</b></a> — the same
+          DICOM archive, technical catalog and storage quotas, without the clinical workflow. For practices
+          with an ultrasound machine and an archiving obligation, not a radiology department.</p>
       </div>
     </div>
   </section>

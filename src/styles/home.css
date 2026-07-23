@@ -135,6 +135,9 @@
 .mods { margin-top: 40px; }
 .included { margin-top: 34px; border-top: 1px dashed var(--line); padding-top: 26px; }
 .inc-head { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mut); font-weight: 700; margin: 0 0 14px; }
+.vna-teaser { margin: 22px 0 0; font-size: 15px; color: var(--mut); max-width: 52em; }
+.vna-teaser a { color: var(--blue-soft); }
+.vna-teaser a:hover { text-decoration: underline; }
 .mod { display: flex; flex-direction: column; gap: 10px; }
 .mod h3 span { color: var(--blue-soft); }
 .mod p { margin: 0; font-size: 14.5px; color: var(--mut); flex: 1; }

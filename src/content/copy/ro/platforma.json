@@ -27,6 +27,18 @@
       "visual_note": "Schemă: echipamente → arhive PACS separate per instituție → ZenFlow distribuie către worklist-uri prioritizate."
     },
     {
+      "id": "vna",
+      "heading": "Doar arhivă? Există ZenVNA.",
+      "body": "Nu orice cabinet are nevoie de un RIS. Un ecograf, un aparat de radiologie, un flux mic — dar aceleași obligații de arhivare. ZenVNA e profilul minimal al platformei: aceeași arhivă DICOM sigură, cu izolare per instituție, catalog tehnic cu căutare și cote de stocare transparente — fără fluxul clinic pe care nu-l folosești.\n\nIar când crești, treci la ZenRIS complet fără migrare: e aceeași arhivă, în același standard.",
+      "bullets": [
+        "**Orice echipament DICOM trimite direct.** Ecograf, RX, orice — arhivat în câteva secunde.",
+        "**Catalog tehnic cu căutare.** Studii și serii, filtrabile, cu statistici per instituție.",
+        "**Cote de stocare transparente.** Vezi exact cât ocupi și cât mai ai — fără surprize.",
+        "**Datele rămân în DICOM standard.** Le recuperezi oricând, pe orice sistem."
+      ],
+      "visual_note": "card sobru cu un contor de stocare (folosit X din Y) + listă de studii"
+    },
+    {
       "heading": "Citirea și raportul, în browser",
       "body": "ZenView deschide studiul în browser, cu instrumente de diagnostic: măsurători, comparație cu examinările anterioare, lucru pe mai multe monitoare. Nicio instalare pe stație. Cine preferă un viewer desktop nu e forțat să renunțe: ZenRIS se integrează cu RadiAnt, OsiriX și Horos, iar ZenView Desktop există ca opțiune, nu ca cerință.\n\nRaportul se scrie în ZenReport, pe șabloanele secției, cu istoricul pacientului la un click distanță. Cu ZenVoice, medicul dictează în română: textul se așază structurat pe secțiunile raportului, iar la final sistemul propune o concluzie. Medicul o validează sau o rescrie — semnătura rămâne a radiologului.",
       "bullets": [

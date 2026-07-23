@@ -29,7 +29,7 @@ const demoLabel = lang === 'ro' ? 'Programează un demo' : 'Book a demo';
   </section>
 
   {data.sections.map((s, i) => (
-    <section class={'section c-sec' + (i % 2 ? ' alt' : '')}>
+    <section class={'section c-sec' + (i % 2 ? ' alt' : '')} id={s.id}>
       <div class="wrap c-grid">
         <div class="c-main">
           <h2>{s.heading}</h2>

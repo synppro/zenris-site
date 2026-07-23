@@ -24,8 +24,9 @@ node scripts/verify.mjs   # verificare headless: screenshots + crawl linkuri (ne
 
 1. **„Deschide un studiu demo”** — CTA-ul secundar din hero devine link către viewerul demo public
    când instanța e gata (acum: ancoră la narativă / „Vezi cum funcționează”).
-2. **Prețuri / filozofia de licențiere** — secțiune nescrisă încă; și subtitlul „Nu cumperi module —
-   primești platforma” din grid ține de aceeași decizie.
+2. ~~Prețuri / filozofia de licențiere~~ — REZOLVAT (2026-07-22): model confirmat de business =
+   licențiere pe spațiu de stocare, nu pe utilizatori/stații/module, pe toată platforma (RIS + ZenVNA).
+   Afișat: chip în hero + subtitlul „Nu cumperi module — primești platforma” la grid-ul de module.
 3. **ISO 9001 / 13485** — NU sunt menționate pe site până nu se confirmă certificatele cu documente.
 4. **Formularul de demo** — funcțional: POST la `/api/demo-request`, servit de `deploy/demo-mailer`
    (config SMTP din fișier pe server, protecții anti-abuz — vezi `deploy/README.md`); fallback

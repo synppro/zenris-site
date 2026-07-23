@@ -27,6 +27,18 @@
       "visual_note": "Diagram: machines → separate PACS archives per institution → ZenFlow distributes to prioritized worklists."
     },
     {
+      "id": "vna",
+      "heading": "Archive only? There’s ZenVNA.",
+      "body": "Not every practice needs a RIS. An ultrasound machine, an X-ray unit, a small workflow — but the same archiving obligations. ZenVNA is the platform’s minimal profile: the same secure DICOM archive, with per-institution isolation, a searchable technical catalog and transparent storage quotas — without the clinical workflow you don’t use.\n\nAnd when you grow, you move to the full ZenRIS with no migration: it’s the same archive, in the same standard.",
+      "bullets": [
+        "**Any DICOM device sends directly.** Ultrasound, X-ray, anything — archived in seconds.",
+        "**A searchable technical catalog.** Studies and series, filterable, with per-institution statistics.",
+        "**Transparent storage quotas.** See exactly how much you use and how much is left — no surprises.",
+        "**Data stays in standard DICOM.** Retrieve it any time, onto any system."
+      ],
+      "visual_note": "sober card with a storage meter (X of Y used) + study list"
+    },
+    {
       "heading": "Reading and reporting, in the browser",
       "body": "ZenView opens the study in the browser, with diagnostic tools: measurements, comparison with prior exams, multi-monitor work. Nothing to install on the workstation. Anyone who prefers a desktop viewer isn't forced to give it up: ZenRIS integrates with RadiAnt, OsiriX, and Horos, and ZenView Desktop exists as an option, not a requirement.\n\nThe report is written in ZenReport, on the department's own templates, with the patient's history one click away. With ZenVoice, the radiologist uses voice dictation in Romanian: the text lands structured into the report's sections, and at the end the system proposes a conclusion. The physician validates it or rewrites it — the signature stays the radiologist's.",
       "bullets": [
