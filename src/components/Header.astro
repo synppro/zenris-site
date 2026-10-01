@@ -3,14 +3,14 @@ const { lang = 'ro', altHref = '/en/' } = Astro.props;
 const t = lang === 'ro'
   ? {
       platform: 'Platformă', solutions: 'Soluții', architecture: 'Arhitectură', news: 'Noutăți',
-      demo: 'Programează un demo', langLabel: 'EN', theme: 'Comută tema',
+      demo: 'Programează un demo', za: 'Descarcă ZenAssist', langLabel: 'EN', theme: 'Comută tema',
       p1: 'Ansamblu', p2: 'ZenView · ZenPACS', p3: 'RIS & raportare', p4: 'Teleradiologie', p5: 'Portal pacient', p6: 'Decont CNAS automat',
       s1: 'Clinici & lanțuri', s2: 'Spitale', s3: 'Rețele de teleradiologie',
       base: '',
     }
   : {
       platform: 'Platform', solutions: 'Solutions', architecture: 'Architecture', news: 'Updates',
-      demo: 'Book a demo', langLabel: 'RO', theme: 'Toggle theme',
+      demo: 'Book a demo', za: 'Download ZenAssist', langLabel: 'RO', theme: 'Toggle theme',
       p1: 'Overview', p2: 'ZenView · ZenPACS', p3: 'RIS & reporting', p4: 'Teleradiology', p5: 'Patient portal', p6: 'Automatic CNAS claims',
       s1: 'Clinics & chains', s2: 'Hospitals', s3: 'Teleradiology networks',
       base: '/en',
@@ -47,6 +47,9 @@ const b = t.base;
       <button type="button" class="icon-btn" id="theme-toggle" aria-label={t.theme}>◐</button>
       <a class="lang" href={altHref}>{t.langLabel}</a>
       <a class="btn btn-solid btn-sm" href={b + '/demo/'}>{t.demo}</a>
+      <a class="za-dl" href="/downloads/ZenAssist-qs.exe" download aria-label={t.za} title={t.za}>
+        <img src="/rustdesk.svg" alt="" width="22" height="22" />
+      </a>
       <button type="button" class="icon-btn nav-burger" id="nav-toggle" aria-label="Meniu" aria-expanded="false">☰</button>
     </div>
   </div>
@@ -72,6 +75,9 @@ const b = t.base;
   .lang { font-size: 13.5px; font-weight: 700; color: var(--mut); border: 1px solid var(--line); border-radius: 10px; padding: 7px 11px; }
   .lang:hover { color: var(--hi); border-color: var(--blue-dim); }
   .btn-sm { padding: 9px 16px; font-size: 14px; }
+  .za-dl { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--line); background: color-mix(in srgb, var(--panel) 70%, transparent); }
+  .za-dl:hover { border-color: var(--blue-dim); }
+  .za-dl img { width: 22px; height: 22px; display: block; }
   .nav-burger { display: none; }
   @media (max-width: 920px) {
     .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--panel); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; padding: 16px 28px 22px; gap: 8px; }
